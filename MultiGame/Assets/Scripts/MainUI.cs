@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 public class MainUI : MonoBehaviour
 {
+	/***********************************
+				Fields
+	***********************************/
 	[Header("Make Nick & Room")]
 	[SerializeField] InputField _nickNameInputField;
 	[SerializeField] InputField _roomNameInputField;
@@ -28,4 +32,22 @@ public class MainUI : MonoBehaviour
 	
 	[Header("Start Game Button")]
 	[SerializeField] GameObject _startGameButton;
+	
+	/***********************************
+				Property
+	***********************************/
+	public InputField _NickNameInputField { get{return _nickNameInputField;} }
+	
+	/***********************************
+				Functions
+	***********************************/
+	public void CreateNickNameButton()
+	{
+		if(string.IsNullOrEmpty(_nickNameInputField.text)) return;
+		else
+		{
+			PhotonNetwork.NickName = _nickNameInputField.text;
+			MenuManager._Instance.OpenMenu("TitleMenu");
+		}
+	}
 }

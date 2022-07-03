@@ -23,6 +23,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 				Fields
 	***********************************/
 	private PhotonView _pv;
+	private MainUI _mainUI;
 	
 	private string _gameVersion = "1";
 	private const int _minimumPlayer = 1;
@@ -35,6 +36,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	private void Awake()
 	{
 		_pv = GetComponent<PhotonView>();
+		_mainUI = MenuManager._Instance._MainUI;
 	}
 	
 	private void Start()
@@ -43,6 +45,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 		if(PhotonNetwork.IsConnected)
 		{
 			Cursor.visible = true;
+			MenuManager._Instance.OpenMenu("LoadingMenu");
 		}
 		else
 		{
@@ -65,6 +68,12 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	
 	public override void OnJoinedLobby()
 	{
-		
+		if(PhotonNetwork.NickName == "") MenuManager._Instance.OpenMenu("CreationNickNameMenu");
+		else MenuManager._Instance.OpenMenu("TitleMenu");
 	}
+	
+	/***********************************
+				Functions
+	***********************************/
+	
 }

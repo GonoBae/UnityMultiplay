@@ -20,15 +20,25 @@ public class MenuManager : MonoBehaviour
 	/***********************************
 				Fields
 	***********************************/
-	[SerializeField]
-	Menu[] menus;
+	private MainUI _mainUI;
+	public MainUI _MainUI { get{return _mainUI;} }
+	
+	[SerializeField] private Menu[] _menus;
+	
+	/***********************************
+				Unity Events
+	***********************************/
+	private void Start()
+	{
+		_mainUI = GetComponent<MainUI>();
+	}
 	
 	/***********************************
 				Functions
 	***********************************/
 	public void OpenMenu(string menuName)
 	{
-		foreach(var menu in menus)
+		foreach(var menu in _menus)
 		{
 			if(menu._MenuName == menuName)
 			{
@@ -43,7 +53,7 @@ public class MenuManager : MonoBehaviour
 	
 	public void OpenMenu(Menu menu)
 	{
-		foreach(var m in menus)
+		foreach(var m in _menus)
 		{
 			if(m._Open)
 			{
