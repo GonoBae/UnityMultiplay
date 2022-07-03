@@ -25,16 +25,24 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	private PhotonView _pv;
 	
 	private string _gameVersion = "1";
+	private const int _minimumPlayer = 1;
+	private const int _maximumPlayer = 6;
+	private int _playerCount = 1;
 	
 	/***********************************
 				Unity Events
 	***********************************/
+	private void Awake()
+	{
+		_pv = GetComponent<PhotonView>();
+	}
+	
 	private void Start()
 	{
 		PhotonNetwork.GameVersion = _gameVersion;
 		if(PhotonNetwork.IsConnected)
 		{
-			
+			Cursor.visible = true;
 		}
 		else
 		{
@@ -57,6 +65,6 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	
 	public override void OnJoinedLobby()
 	{
-		Debug.Log("Lobby");
+		
 	}
 }
