@@ -28,6 +28,8 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	private string _gameVersion = "1";
 	private List<RoomListItem> _lstRoom = new List<RoomListItem>();
 	
+	[SerializeField] List<GameObject> objs;
+	
 	/***********************************
 				Unity Events
 	***********************************/
@@ -36,10 +38,18 @@ public class ServerManager : MonoBehaviourPunCallbacks
 		_pv = GetComponent<PhotonView>();
 	}
 	
-	private void Start()
+	IEnumerator Start()
 	{
+		yield return new WaitForSeconds(4.5f);
 		PhotonNetwork.GameVersion = _gameVersion;
 		_mainUI = MenuManager._Instance._MainUI;
+		
+		foreach (var obj in objs)
+		{
+			obj.gameObject.SetActive(true);
+		}
+		
+		yield return new WaitForSeconds(1.5f);
 		
 		if(PhotonNetwork.IsConnected)
 		{
