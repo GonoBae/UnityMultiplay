@@ -28,7 +28,7 @@ public class MenuManager : MonoBehaviour
 	/***********************************
 				Unity Events
 	***********************************/
-	private void Start()
+	private void Awake()
 	{
 		_mainUI = GetComponent<MainUI>();
 	}
@@ -57,7 +57,7 @@ public class MenuManager : MonoBehaviour
 		{
 			if(m._Open)
 			{
-				CloseMenu(menu);
+				CloseMenu(m);
 			}
 		}
 		menu.Open();

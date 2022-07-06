@@ -26,9 +26,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	private MainUI _mainUI;
 	
 	private string _gameVersion = "1";
-	private const int _minimumPlayer = 1;
-	private const int _maximumPlayer = 6;
-	private int _playerCount = 1;
+	private List<RoomListItem> _lstRoom = new List<RoomListItem>();
 	
 	/***********************************
 				Unity Events
@@ -36,12 +34,13 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	private void Awake()
 	{
 		_pv = GetComponent<PhotonView>();
-		_mainUI = MenuManager._Instance._MainUI;
 	}
 	
 	private void Start()
 	{
 		PhotonNetwork.GameVersion = _gameVersion;
+		_mainUI = MenuManager._Instance._MainUI;
+		
 		if(PhotonNetwork.IsConnected)
 		{
 			Cursor.visible = true;
@@ -71,6 +70,47 @@ public class ServerManager : MonoBehaviourPunCallbacks
 		if(PhotonNetwork.NickName == "") MenuManager._Instance.OpenMenu("CreationNickNameMenu");
 		else MenuManager._Instance.OpenMenu("TitleMenu");
 	}
+	
+	public override void OnJoinedRoom()
+	{
+		_mainUI.ResetCreateRoom();
+		MenuManager._Instance.OpenMenu("RoomMenu");
+		_mainUI.SetRoom();
+		
+		Player[] players = PhotonNetwork.PlayerList;
+	}
+	
+	public override void OnLeftRoom()
+	{
+		_mainUI.ResetRoom();
+		MenuManager._Instance.OpenMenu("TitleMenu");
+	}
+	
+	//public override void OnRoomListUpdate(List<RoomInfo> roomList)
+	//{
+	//	foreach(RoomInfo info in roomList)
+	//	{
+	//		// 제거
+	//		if(info.RemovedFromList)
+	//		{
+				
+	//		}
+	//		// 추가
+	//		else
+	//		{
+	//			int index = _lstRoom.FindIndex(x => x._Info.Name == info.Name);
+	//			if(index == -1)
+	//			{
+	//				RoomListItem item = Instantiate(_roomListItemPrefab, _roomListContent).GetComponent<RoomListItem>();
+	//				if(item != null)
+	//				{
+	//					item.SetUp(info);
+	//					_lstRoom.Add(item);
+	//				}
+	//			}
+	//		}
+	//	}
+	//}
 	
 	/***********************************
 				Functions

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
 	[SerializeField] private string _menuName;
-	private bool _open;
+	[SerializeField] private bool _open;
 	
 	public string _MenuName { get{return _menuName;} set{_menuName = value;} }
 	public bool _Open { get{return _open;} set{_open = value;} }
