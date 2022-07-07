@@ -17,6 +17,12 @@ public class RoomListItem : MonoBehaviour
 		_text.text = _info.Name;
 	}
 	
+	public void UnSet()
+	{
+		_info = null;
+		_text.text = "";
+	}
+	
 	public void OnClick()
 	{
 		MenuManager._Instance._MainUI.JoinRoom(_info);

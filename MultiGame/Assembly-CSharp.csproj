@@ -75,6 +75,10 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Pool\ObjectPoolMgr.cs" />
+    <Compile Include="Assets\Scripts\Pool\ObjectPoolData.cs" />
+    <Compile Include="Assets\Scripts\Definition.cs" />
+    <Compile Include="Assets\Scripts\Pool\PoolObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />

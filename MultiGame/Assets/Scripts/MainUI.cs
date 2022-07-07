@@ -45,7 +45,9 @@ public class MainUI : MonoBehaviour
 				Property
 	***********************************/
 	public InputField _NickNameInputField { get{return _nickNameInputField;} }
-	
+	public Transform _RoomListContent { get{return _roomListContent;} }
+	public GameObject _RoomListItemPrefab { get{return _roomListItemPrefab;} }
+	public GameObject _StartGameButton { get{return _startGameButton;} }
 	
 	/***********************************
 				Unity Events

@@ -61,6 +61,7 @@ public class MenuManager : MonoBehaviour
 			}
 		}
 		menu.Open();
+		ServerManager._Instance._CurrentMenu = menu;
 	}
 	
 	public void CloseMenu(Menu menu)
