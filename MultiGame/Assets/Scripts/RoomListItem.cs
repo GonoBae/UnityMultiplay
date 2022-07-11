@@ -25,6 +25,6 @@ public class RoomListItem : MonoBehaviour
 	
 	public void OnClick()
 	{
-		MenuManager._Instance._MainUI.JoinRoom(_info);
+		ServerManager._Instance.JoinRoom(_info);
 	}
 }

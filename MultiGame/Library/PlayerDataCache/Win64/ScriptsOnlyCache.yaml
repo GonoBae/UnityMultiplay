@@ -5,6 +5,7 @@ ScriptsOnlyBuild:
     - Menu
     - MenuManager
     - ObjectPoolMgr
+    - PlayerListItem
     - RoomListItem
     - ServerManager
     PhotonUnityNetworking.Demos.dll:
@@ -117,67 +118,69 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1592}
     - Class: 114
-      Script: {instanceID: 1646}
+      Script: {instanceID: 1648}
     - Class: 114
-      Script: {instanceID: 1710}
+      Script: {instanceID: 1712}
     - Class: 114
-      Script: {instanceID: 1738}
+      Script: {instanceID: 1740}
     - Class: 114
-      Script: {instanceID: 1742}
+      Script: {instanceID: 1744}
     - Class: 114
-      Script: {instanceID: 2230}
+      Script: {instanceID: 2234}
     - Class: 114
-      Script: {instanceID: 2276}
+      Script: {instanceID: 2280}
     - Class: 114
-      Script: {instanceID: 2474}
+      Script: {instanceID: 2478}
     - Class: 114
-      Script: {instanceID: 2602}
+      Script: {instanceID: 2606}
     - Class: 114
-      Script: {instanceID: 2790}
+      Script: {instanceID: 2794}
     - Class: 114
-      Script: {instanceID: 2842}
+      Script: {instanceID: 2846}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 3004}
     - Class: 114
-      Script: {instanceID: 3008}
-    - Class: 114
-      Script: {instanceID: 3010}
+      Script: {instanceID: 3012}
     - Class: 114
       Script: {instanceID: 3014}
     - Class: 114
-      Script: {instanceID: 3104}
+      Script: {instanceID: 3018}
     - Class: 114
-      Script: {instanceID: 3282}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 3408}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3576}
+      Script: {instanceID: 3374}
     - Class: 114
-      Script: {instanceID: 3894}
+      Script: {instanceID: 3414}
     - Class: 114
-      Script: {instanceID: 3898}
+      Script: {instanceID: 3582}
     - Class: 114
-      Script: {instanceID: 3952}
+      Script: {instanceID: 3900}
     - Class: 114
-      Script: {instanceID: 4072}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 4116}
+      Script: {instanceID: 3958}
     - Class: 114
-      Script: {instanceID: 4120}
+      Script: {instanceID: 4080}
     - Class: 114
-      Script: {instanceID: 4500}
+      Script: {instanceID: 4124}
     - Class: 114
-      Script: {instanceID: 4530}
+      Script: {instanceID: 4128}
     - Class: 114
-      Script: {instanceID: 4682}
+      Script: {instanceID: 4508}
     - Class: 114
-      Script: {instanceID: 4988}
+      Script: {instanceID: 4538}
     - Class: 114
-      Script: {instanceID: 5004}
+      Script: {instanceID: 4690}
     - Class: 114
-      Script: {instanceID: 5012}
+      Script: {instanceID: 4996}
     - Class: 114
-      Script: {instanceID: 173828}
+      Script: {instanceID: 5014}
+    - Class: 114
+      Script: {instanceID: 5022}
+    - Class: 114
+      Script: {instanceID: 37170}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -283,7 +286,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: 3989af082d572398efc6cdb7d5895fa6
+      Hash: fbcaede552360681ac32bdfff458f977
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ServerManager
@@ -901,6 +904,12 @@ ScriptsOnlyBuild:
     className: PointedAtGameObjectInfo
   - hash:
       serializedVersion: 2
+      Hash: a0e672ad19cfb7b9d8b52171f63ef9b5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ObjectPoolMgr
+  - hash:
+      serializedVersion: 2
       Hash: 4fdfe530ffd5f502ce72adb104fc64e2
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -1339,7 +1348,7 @@ ScriptsOnlyBuild:
     className: WorldGenerator
   - hash:
       serializedVersion: 2
-      Hash: 98a320ed36ccd5142c7354b2b8f9ab78
+      Hash: d80d8981bda69e312726a1dddbb4aac1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainUI
@@ -1525,6 +1534,12 @@ ScriptsOnlyBuild:
     className: MenuManager
   - hash:
       serializedVersion: 2
+      Hash: bbff6da8da2b9af286153bc5c52f6ab0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PoolObject
+  - hash:
+      serializedVersion: 2
       Hash: 1bbce36c26e06daa73238c07c42b2bc9
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
@@ -1543,16 +1558,16 @@ ScriptsOnlyBuild:
     className: UserIdUiForm
   - hash:
       serializedVersion: 2
-      Hash: a0e672ad19cfb7b9d8b52171f63ef9b5
+      Hash: 4aa1f47e61522e984a6995f0eb8c3d0d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ObjectPoolMgr
+    className: MenuItem
   - hash:
       serializedVersion: 2
-      Hash: bbff6da8da2b9af286153bc5c52f6ab0
+      Hash: 1e75e134a944309b8ed23b56f021700c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: PoolObject
+    className: PlayerListItem
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

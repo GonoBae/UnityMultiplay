@@ -43,6 +43,7 @@ public class MenuManager : MonoBehaviour
 			if(menu._MenuName == menuName)
 			{
 				menu.Open();
+				ServerManager._Instance._CurrentMenu = menu;
 			}
 			else if(menu._Open)
 			{

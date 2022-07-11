@@ -15,8 +15,11 @@ public class MainUI : MonoBehaviour
 	private const int _maximumPlayer = 6;
 	private int _playerCountInt = 1;
 	
+	[Header("NickName")]
 	[SerializeField] InputField _nickNameInputField;
 	[SerializeField] Text _userNickName;
+	
+	[Header("Create Room")]
 	[SerializeField] InputField _roomNameInputField;
 	[SerializeField] Slider _playerCountSlider;
 	[SerializeField] Text _playerCount;
@@ -30,11 +33,13 @@ public class MainUI : MonoBehaviour
 	[SerializeField] Text _roomName;
 	[SerializeField] Text _roomMaxPlayer;
 	[SerializeField] Text _roomCurrentPlayer;
+	[SerializeField] Transform _playerListContent;
+	[SerializeField] GameObject _playerListItemPrefab;
 	
 	[Header("Chat")]
 	[SerializeField] InputField _chatInputField;
 	[SerializeField] Text[] _chatText;
-	[SerializeField] Text _chatBoxPrefab;
+	[SerializeField] GameObject _chatBoxPrefab;
 	[SerializeField] Transform _chatBoxContent;
 	[SerializeField] ScrollRect _scroll;
 	
@@ -45,8 +50,20 @@ public class MainUI : MonoBehaviour
 				Property
 	***********************************/
 	public InputField _NickNameInputField { get{return _nickNameInputField;} }
+	
+	public InputField _ChatInputField { get{return _chatInputField;} }
+	public Text[] _ChatText { get{return _chatText;} }
+	public GameObject _ChatBoxPrefab { get{return _chatBoxPrefab;} }
+	public Transform _ChatBoxContent { get{return _chatBoxContent;} }
+	public ScrollRect _Scroll { get{return _scroll;} }
+	
 	public Transform _RoomListContent { get{return _roomListContent;} }
 	public GameObject _RoomListItemPrefab { get{return _roomListItemPrefab;} }
+	
+	public Transform _PlayerListContent { get{return _playerListContent;}}
+	public GameObject _PlayerListItemPrefab { get{return _playerListItemPrefab;}}
+	public Text _RoomCurrentPlayer { get{return _roomCurrentPlayer;} set{_roomCurrentPlayer = value;} }
+	
 	public GameObject _StartGameButton { get{return _startGameButton;} }
 	
 	/***********************************
@@ -118,6 +135,7 @@ public class MainUI : MonoBehaviour
 		_playerCount.text = "1";
 	}
 	
+	// Room Settings
 	public void SetRoom()
 	{
 		_nickName.text = PhotonNetwork.NickName;
@@ -133,5 +151,16 @@ public class MainUI : MonoBehaviour
 		_roomMaxPlayer.text = "";
 		_roomCurrentPlayer.text = "";
 		_chatInputField.text = "";
+	}
+	
+	public void CurrentPlayerUpdate(string count)
+	{
+		_roomCurrentPlayer.text = count;
+	}
+	
+	// Quit Game
+	public void QuitGame()
+	{
+		Application.Quit();
 	}
 }
