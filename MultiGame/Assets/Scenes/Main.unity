@@ -2463,7 +2463,7 @@ RectTransform:
   m_GameObject: {fileID: 268430196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 246129110}
   m_Father: {fileID: 2129583989}
@@ -4102,11 +4102,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 424436801}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d3d774cff1af245af638424b4aa6c3, type: 3}
+  m_Script: {fileID: 11500000, guid: ea84e2bc2ecb20647acce1b461599fef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _menuName: TitleMenu
   _open: 0
+  _userNickName: {fileID: 1552231236}
 --- !u!1 &444599487
 GameObject:
   m_ObjectHideFlags: 0
@@ -5385,7 +5386,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 555127627}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2032597422}
+        m_TargetAssemblyTypeName: RoomMenu, Assembly-CSharp
+        m_MethodName: Send
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &558773200
 GameObject:
   m_ObjectHideFlags: 0
@@ -8213,7 +8226,7 @@ RectTransform:
   m_Children:
   - {fileID: 1523190326}
   m_Father: {fileID: 2129583989}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8229,11 +8242,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 872091612}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d3d774cff1af245af638424b4aa6c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 4eb163fefcbb1b4499222978074610dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _menuName: MakeRoomMenu
   _open: 0
+  _roomNameInputField: {fileID: 1586425109}
+  _playerCountSlider: {fileID: 5255796409774325833}
+  _playerCount: {fileID: 738922820}
 --- !u!114 &872091615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9044,7 +9060,7 @@ RectTransform:
   - {fileID: 346365669}
   - {fileID: 1993579083}
   m_Father: {fileID: 2129583989}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9060,11 +9076,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 947372490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d3d774cff1af245af638424b4aa6c3, type: 3}
+  m_Script: {fileID: 11500000, guid: fb2528fd223057e43ab03ce92efefdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _menuName: FindRoomMenu
   _open: 0
+  _roomListContent: {fileID: 1420218111}
+  _roomListItemPrefab: {fileID: 1118182478967935466, guid: 85d63b2d59288cf44b59a58fb81dbed6, type: 3}
+  _lstRoom: []
 --- !u!114 &947372493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10825,7 +10844,7 @@ GameObject:
   - component: {fileID: 1189666000}
   - component: {fileID: 1189665999}
   m_Layer: 5
-  m_Name: information box
+  m_Name: ProfileBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12941,7 +12960,7 @@ GameObject:
   - component: {fileID: 1420218113}
   - component: {fileID: 1420218112}
   m_Layer: 5
-  m_Name: RoomItem
+  m_Name: RoomItemContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13278,9 +13297,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2129583991}
-        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
-        m_MethodName: CreateRoomButton
+      - m_Target: {fileID: 872091614}
+        m_TargetAssemblyTypeName: MakeRoomMenu, Assembly-CSharp
+        m_MethodName: MakeRoomButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14853,7 +14872,7 @@ GameObject:
   - component: {fileID: 1552231237}
   - component: {fileID: 1552231236}
   m_Layer: 5
-  m_Name: NickName
+  m_Name: Text_NickName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15786,8 +15805,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2129583991}
-        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+      - m_Target: {fileID: 2032597422}
+        m_TargetAssemblyTypeName: RoomMenu, Assembly-CSharp
         m_MethodName: LeaveRoom
         m_Mode: 1
         m_Arguments:
@@ -16343,7 +16362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c434ff0a21dd345b62f525f6d8b907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentMenu: {fileID: 0}
   objs:
   - {fileID: 6557140875316280709}
   - {fileID: 2141060707}
@@ -20180,6 +20198,7 @@ GameObject:
   - component: {fileID: 2032597424}
   - component: {fileID: 2032597423}
   - component: {fileID: 2032597422}
+  - component: {fileID: 2032597425}
   m_Layer: 5
   m_Name: RoomMenu
   m_TagString: Untagged
@@ -20217,11 +20236,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 2032597420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d3d774cff1af245af638424b4aa6c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 89abaa7c2932ba24086518f33249aa84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _menuName: RoomMenu
   _open: 0
+  _nickName: {fileID: 3002760104381834342}
+  _roomName: {fileID: 3019874867620402071}
+  _roomMaxPlayer: {fileID: 2031536216}
+  _roomCurrentPlayer: {fileID: 784252591}
+  _playerListContent: {fileID: 2037873258}
+  _playerListItemPrefab: {fileID: 7716790911709793090, guid: 1a95c10438d15e14d8b0cf8b7c693d0e, type: 3}
+  _startGameButton: {fileID: 3019874868450563697}
+  _chatInputField: {fileID: 1463413692}
+  _lstChat: []
+  _chatBoxPrefab: {fileID: 6800891518211945868, guid: c7f7bfc98074daf48af266f550abc516, type: 3}
+  _chatBoxContent: {fileID: 1408315135}
+  _scroll: {fileID: 60211516}
 --- !u!114 &2032597423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20260,6 +20291,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2032597420}
   m_CullTransparentMesh: 1
+--- !u!114 &2032597425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032597420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 2
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &2037873257
 GameObject:
   m_ObjectHideFlags: 0
@@ -20272,7 +20325,7 @@ GameObject:
   - component: {fileID: 2037873260}
   - component: {fileID: 2037873259}
   m_Layer: 5
-  m_Name: PlayerItem
+  m_Name: PlayerItemContent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21515,8 +21568,8 @@ RectTransform:
   - {fileID: 8752552747500568451}
   - {fileID: 3285986515479750625}
   - {fileID: 424436802}
-  - {fileID: 947372491}
   - {fileID: 872091613}
+  - {fileID: 947372491}
   - {fileID: 2032597421}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -21542,8 +21595,8 @@ MonoBehaviour:
   - {fileID: 268430197}
   - {fileID: 3285986515479750631}
   - {fileID: 424436805}
-  - {fileID: 947372492}
   - {fileID: 872091614}
+  - {fileID: 947372492}
   - {fileID: 2032597422}
 --- !u!114 &2129583991
 MonoBehaviour:
@@ -21557,25 +21610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22d79e1925d7c5c40aa2eda65cace328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _nickNameInputField: {fileID: 824099203}
-  _userNickName: {fileID: 1552231236}
-  _roomNameInputField: {fileID: 1586425109}
-  _playerCountSlider: {fileID: 5255796409774325833}
-  _playerCount: {fileID: 738922820}
-  _roomListContent: {fileID: 1420218111}
-  _roomListItemPrefab: {fileID: 1118182478967935466, guid: 85d63b2d59288cf44b59a58fb81dbed6, type: 3}
-  _nickName: {fileID: 3002760104381834342}
-  _roomName: {fileID: 3019874867620402071}
-  _roomMaxPlayer: {fileID: 2031536216}
-  _roomCurrentPlayer: {fileID: 784252591}
-  _playerListContent: {fileID: 2037873258}
-  _playerListItemPrefab: {fileID: 7716790911709793090, guid: 1a95c10438d15e14d8b0cf8b7c693d0e, type: 3}
-  _chatInputField: {fileID: 1463413692}
-  _chatText: []
-  _chatBoxPrefab: {fileID: 6800891518211945868, guid: c7f7bfc98074daf48af266f550abc516, type: 3}
-  _chatBoxContent: {fileID: 1408315135}
-  _scroll: {fileID: 60211516}
-  _startGameButton: {fileID: 3019874868450563697}
 --- !u!1 &2129890897
 GameObject:
   m_ObjectHideFlags: 0
@@ -23387,7 +23421,7 @@ GameObject:
   - component: {fileID: 3019874867620402068}
   - component: {fileID: 3019874867620402071}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text_RoomName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23516,7 +23550,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3019874868450563703}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &3019874868450563700
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24076,8 +24122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2129583991}
-        m_TargetAssemblyTypeName: MainUI, Assembly-CSharp
+      - m_Target: {fileID: 3285986515479750631}
+        m_TargetAssemblyTypeName: CreationNickName, Assembly-CSharp
         m_MethodName: CreateNickNameButton
         m_Mode: 1
         m_Arguments:
@@ -24173,11 +24219,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3285986515479750630}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20d3d774cff1af245af638424b4aa6c3, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a7d38dd309db2d43b2b3019a27c9754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _menuName: CreationNickNameMenu
   _open: 0
+  _nickNameInputField: {fileID: 824099203}
 --- !u!1 &3292231116017792030
 GameObject:
   m_ObjectHideFlags: 0

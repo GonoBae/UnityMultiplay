@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: ServerManager.cs
+  m_Title: RoomMenu.cs
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -39,16 +39,16 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1417
+    x: 1437
     y: 0
-    width: 503
+    width: 483
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 29}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 26}
   m_Panes:
-  - {fileID: 29}
-  - {fileID: 30}
+  - {fileID: 26}
+  - {fileID: 27}
   - {fileID: 16}
   m_Selected: 0
   m_LastSelected: 2
@@ -73,8 +73,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 579, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 578, y: 321}
+  m_MaxSize: {x: 12003, y: 8021}
   vertical: 0
   controlID: 61
 --- !u!114 &4
@@ -93,21 +93,21 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 632
-    width: 1417
-    height: 315
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
+    y: 679
+    width: 1437
+    height: 268
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 24}
-  - {fileID: 27}
-  - {fileID: 28}
-  - {fileID: 21}
-  - {fileID: 20}
+  - {fileID: 25}
+  - {fileID: 18}
+  - {fileID: 17}
   - {fileID: 15}
-  m_Selected: 4
-  m_LastSelected: 2
+  - {fileID: 21}
+  m_Selected: 3
+  m_LastSelected: 5
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -127,10 +127,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1417
+    width: 1437
     height: 947
-  m_MinSize: {x: 303, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 303, y: 321}
+  m_MaxSize: {x: 8003, y: 8021}
   vertical: 1
   controlID: 62
 --- !u!114 &6
@@ -183,8 +183,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 31}
-  m_MainToolbar: {fileID: 31}
+  - {fileID: 28}
+  m_MainToolbar: {fileID: 28}
   m_LastLoadedLayoutName: 
 --- !u!114 &8
 MonoBehaviour:
@@ -226,8 +226,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1417
-    height: 632
+    width: 1437
+    height: 679
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
@@ -250,12 +250,12 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 327
-    height: 632
+    height: 679
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 23}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 23}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &11
@@ -275,23 +275,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 327
     y: 0
-    width: 1090
-    height: 632
+    width: 1110
+    height: 679
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 14}
   m_Panes:
-  - {fileID: 25}
-  - {fileID: 26}
   - {fileID: 22}
+  - {fileID: 23}
   - {fileID: 19}
-  - {fileID: 17}
-  - {fileID: 18}
   - {fileID: 14}
   - {fileID: 13}
   - {fileID: 12}
   m_Selected: 3
-  m_LastSelected: 4
+  m_LastSelected: 5
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 61
@@ -307,28 +304,28 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: RoomListItem.cs
+    m_Text: ChatItem.cs
     m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/
+    m_Tooltip: in Scripts/UIItems/
   m_Pos:
     serializedVersion: 2
     x: 327
     y: 73
-    width: 1088
-    height: 611
+    width: 1108
+    height: 658
   m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 575db3c79250a314b98045f07b44a690, type: 3}
-  targetAssetGuid: 575db3c79250a314b98045f07b44a690
+  targetAsset: {fileID: 11500000, guid: 334af80a32d2c8e42a707e2e129846ba, type: 3}
+  targetAssetGuid: 334af80a32d2c8e42a707e2e129846ba
   textEditor:
-    scrollPosition: {x: 0, y: 28}
-    scrollPositionLine: 1
-    scrollPositionOffset: 9
+    scrollPosition: {x: 0, y: 0}
+    scrollPositionLine: 0
+    scrollPositionOffset: 0
     searchString: 
     caretPosition:
-      virtualColumn: 31
-      column: 31
-      characterIndex: 25
-      line: 27
+      virtualColumn: 50
+      column: 50
+      characterIndex: 1
+      line: 22
     _selectionStartPosition:
       virtualColumn: 0
       column: 0
@@ -342,9 +339,9 @@ MonoBehaviour:
     codeViewRect:
       serializedVersion: 2
       x: 36
-      y: 28
-      width: 1032
-      height: 565
+      y: 0
+      width: 1067
+      height: 612
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
     collapsedRegions: []
@@ -363,28 +360,28 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: PlayerListItem.cs
+    m_Text: ServerManager.cs
     m_Image: {fileID: 0}
     m_Tooltip: in Scripts/
   m_Pos:
     serializedVersion: 2
     x: 327
     y: 73
-    width: 1088
-    height: 611
+    width: 1108
+    height: 658
   m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 4b6e9cbb05c58e04f89dc893ef40386b, type: 3}
-  targetAssetGuid: 4b6e9cbb05c58e04f89dc893ef40386b
+  targetAsset: {fileID: 11500000, guid: 90c434ff0a21dd345b62f525f6d8b907, type: 3}
+  targetAssetGuid: 90c434ff0a21dd345b62f525f6d8b907
   textEditor:
-    scrollPosition: {x: -0.026318409, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
+    scrollPosition: {x: 0, y: 1875}
+    scrollPositionLine: 98
+    scrollPositionOffset: 13
     searchString: 
     caretPosition:
-      virtualColumn: 32
-      column: 32
-      characterIndex: 2
-      line: 17
+      virtualColumn: 24
+      column: 24
+      characterIndex: 18
+      line: 105
     _selectionStartPosition:
       virtualColumn: 0
       column: 0
@@ -397,10 +394,10 @@ MonoBehaviour:
     yLineOffsets: []
     codeViewRect:
       serializedVersion: 2
-      x: 35.973682
-      y: 0
-      width: 1047
-      height: 565
+      x: 46
+      y: 1875
+      width: 1042
+      height: 597
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
     collapsedRegions: []
@@ -419,28 +416,28 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Menu.cs
+    m_Text: RoomMenu.cs
     m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/
+    m_Tooltip: in Scripts/Menu/
   m_Pos:
     serializedVersion: 2
     x: 327
     y: 73
-    width: 1088
-    height: 611
+    width: 1108
+    height: 658
   m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 20d3d774cff1af245af638424b4aa6c3, type: 3}
-  targetAssetGuid: 20d3d774cff1af245af638424b4aa6c3
+  targetAsset: {fileID: 11500000, guid: 89abaa7c2932ba24086518f33249aa84, type: 3}
+  targetAssetGuid: 89abaa7c2932ba24086518f33249aa84
   textEditor:
     scrollPosition: {x: 0, y: 0}
     scrollPositionLine: 0
     scrollPositionOffset: 0
     searchString: 
     caretPosition:
-      virtualColumn: 5
-      column: 5
-      characterIndex: 2
-      line: 22
+      virtualColumn: 43
+      column: 43
+      characterIndex: 40
+      line: 21
     _selectionStartPosition:
       virtualColumn: 0
       column: 0
@@ -453,10 +450,10 @@ MonoBehaviour:
     yLineOffsets: []
     codeViewRect:
       serializedVersion: 2
-      x: 36
+      x: 46
       y: 0
-      width: 1047
-      height: 565
+      width: 1042
+      height: 597
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
     collapsedRegions: []
@@ -481,16 +478,16 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 705
-    width: 1416
-    height: 294
+    y: 752
+    width: 1436
+    height: 247
   m_ViewDataDictionary: {fileID: 0}
-  infoText: References to ServerManager.OnRoomListUpdate
-  resultsCountText: Found 14 results in 5 files.
+  infoText: References to RoomMenu.LeaveRoom
+  resultsCountText: Found 4 results in 3 files.
   assetGuids: []
   skippedGuids: []
   searchOptions:
-    text: OnRoomListUpdate
+    text: LeaveRoom
     altText1: 
     altText2: 
     matchCase: 1
@@ -516,13 +513,13 @@ MonoBehaviour:
   scrollPosition: {x: 0, y: 0}
   currentItem: 0
   flatResults:
-  - description: public override void OnRoomListUpdate(List<RoomInfo> roomList)
-    assetGuid: 90c434ff0a21dd345b62f525f6d8b907
-    assetPath: Assets/Scripts/ServerManager.cs
-    fileName: ServerManager.cs
-    line: 170
-    characterIndex: 22
-    length: 16
+  - description: public void LeaveRoom()
+    assetGuid: 89abaa7c2932ba24086518f33249aa84
+    assetPath: Assets/Scripts/Menu/RoomMenu.cs
+    fileName: RoomMenu.cs
+    line: 168
+    characterIndex: 13
+    length: 9
     trimOffset: 1
     selected: 1
     resultType: 3
@@ -532,15 +529,32 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-  - description: 'Debug.Log(this.GetFormattedTimestamp() + " SupportLogger OnRoomListUpdate(roomList).
-      roomList.Count: " + roomList.Count);'
-    assetGuid: 9b61c60d38639484ebbd7f2100dd3d08
-    assetPath: Assets/Photon/PhotonRealtime/Code/SupportLogger.cs
-    fileName: SupportLogger.cs
-    line: 366
-    characterIndex: 60
-    length: 16
-    trimOffset: 3
+  - description: /// In a room with playerTTL &lt; 0, LeaveRoom just turns a client
+      inactive. The player stays in the room's player list
+    assetGuid: 88e11b3353de7e94d84b1ec5adbdd15e
+    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs
+    fileName: PhotonNetwork.cs
+    line: 2018
+    characterIndex: 45
+    length: 9
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: 'Debug.LogWarning("PhotonNetwork.CurrentRoom is null. You don''t
+      have to call LeaveRoom() when you''re not in one. State: " + PhotonNetwork.NetworkClientState);'
+    assetGuid: 88e11b3353de7e94d84b1ec5adbdd15e
+    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs
+    fileName: PhotonNetwork.cs
+    line: 2037
+    characterIndex: 96
+    length: 9
+    trimOffset: 20
     selected: 1
     resultType: 14
     rcHighlight:
@@ -549,206 +563,24 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-  - description: /// Called on entering a lobby on the Master Server. The actual
-      room-list updates will call OnRoomListUpdate.
+  - description: if (!this.CheckIfOpCanBeSent(OperationCode.Leave, this.Server, "LeaveRoom"))
     assetGuid: f4e65968c7102bf42a77b6a5cade8743
     assetPath: Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs
     fileName: LoadBalancingClient.cs
-    line: 3693
-    characterIndex: 100
-    length: 16
-    trimOffset: 8
+    line: 1911
+    characterIndex: 76
+    length: 9
+    trimOffset: 12
     selected: 1
-    resultType: 13
+    resultType: 14
     rcHighlight:
       serializedVersion: 2
       x: 0
       y: 0
       width: 0
       height: 0
-  - description: /// The room list gets available via OnRoomListUpdate.
-    assetGuid: f4e65968c7102bf42a77b6a5cade8743
-    assetPath: Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs
-    fileName: LoadBalancingClient.cs
-    line: 3697
-    characterIndex: 45
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: void OnRoomListUpdate(List<RoomInfo> roomList);
-    assetGuid: f4e65968c7102bf42a77b6a5cade8743
-    assetPath: Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs
-    fileName: LoadBalancingClient.cs
-    line: 3717
-    characterIndex: 13
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 7
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: target.OnRoomListUpdate(roomList);
-    assetGuid: f4e65968c7102bf42a77b6a5cade8743
-    assetPath: Assets/Photon/PhotonRealtime/Code/LoadBalancingClient.cs
-    fileName: LoadBalancingClient.cs
-    line: 4328
-    characterIndex: 23
-    length: 16
-    trimOffset: 16
-    selected: 1
-    resultType: 7
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: /// Implement IPunCallbacks.OnRoomListUpdate() for a notification
-      when the list of rooms
-    assetGuid: 88e11b3353de7e94d84b1ec5adbdd15e
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs
-    fileName: PhotonNetwork.cs
-    line: 553
-    characterIndex: 36
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: /// The room list is sent and refreshed by the server using <see
-      cref="ILobbyCallbacks.OnRoomListUpdate"/>.
-    assetGuid: 88e11b3353de7e94d84b1ec5adbdd15e
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs
-    fileName: PhotonNetwork.cs
-    line: 2073
-    characterIndex: 95
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: /// The room list is sent and refreshed by the server using <see
-      cref="ILobbyCallbacks.OnRoomListUpdate"/>.
-    assetGuid: 88e11b3353de7e94d84b1ec5adbdd15e
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs
-    fileName: PhotonNetwork.cs
-    line: 2098
-    characterIndex: 95
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: /// <summary>Fetches a custom list of games from the server, matching
-      a (non-empty) SQL-like filter. Triggers OnRoomListUpdate callback.</summary>
-    assetGuid: 88e11b3353de7e94d84b1ec5adbdd15e
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs
-    fileName: PhotonNetwork.cs
-    line: 2191
-    characterIndex: 118
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: /// When done, OnRoomListUpdate gets called.
-    assetGuid: 88e11b3353de7e94d84b1ec5adbdd15e
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PhotonNetwork.cs
-    fileName: PhotonNetwork.cs
-    line: 2200
-    characterIndex: 23
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: /// Called on entering a lobby on the Master Server. The actual
-      room-list updates will call OnRoomListUpdate.
-    assetGuid: f40f16a0227e5c14293e269c875c0f9b
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PunClasses.cs
-    fileName: PunClasses.cs
-    line: 201
-    characterIndex: 100
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: /// The room list gets available via OnRoomListUpdate.
-    assetGuid: f40f16a0227e5c14293e269c875c0f9b
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PunClasses.cs
-    fileName: PunClasses.cs
-    line: 205
-    characterIndex: 45
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 13
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  - description: public virtual void OnRoomListUpdate(List<RoomInfo> roomList)
-    assetGuid: f40f16a0227e5c14293e269c875c0f9b
-    assetPath: Assets/Photon/PhotonUnityNetworking/Code/PunClasses.cs
-    fileName: PunClasses.cs
-    line: 248
-    characterIndex: 28
-    length: 16
-    trimOffset: 8
-    selected: 1
-    resultType: 7
-    rcHighlight:
-      serializedVersion: 2
-      x: 0
-      y: 0
-      width: 0
-      height: 0
-  resultsCount: 14
-  filesCount: 5
+  resultsCount: 4
+  filesCount: 3
   keepResults: 0
   groupByFile: 1
 --- !u!114 &16
@@ -778,174 +610,6 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &17
 MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: MainUI.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: 327
-    y: 73
-    width: 1088
-    height: 611
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 22d79e1925d7c5c40aa2eda65cace328, type: 3}
-  targetAssetGuid: 22d79e1925d7c5c40aa2eda65cace328
-  textEditor:
-    scrollPosition: {x: 0, y: 2549}
-    scrollPositionLine: 134
-    scrollPositionOffset: 3
-    searchString: 
-    caretPosition:
-      virtualColumn: 37
-      column: 37
-      characterIndex: 31
-      line: 143
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 46
-      y: 2549
-      width: 1022
-      height: 550
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: MenuManager.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: 327
-    y: 73
-    width: 1088
-    height: 611
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: b686e242b2713d848a83a69316ed8a89, type: 3}
-  targetAssetGuid: b686e242b2713d848a83a69316ed8a89
-  textEditor:
-    scrollPosition: {x: 0, y: 598}
-    scrollPositionLine: 31
-    scrollPositionOffset: 9
-    searchString: 
-    caretPosition:
-      virtualColumn: 32
-      column: 32
-      characterIndex: 26
-      line: 56
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 36
-      y: 598
-      width: 1032
-      height: 565
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: ServerManager.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: 327
-    y: 73
-    width: 1088
-    height: 611
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 90c434ff0a21dd345b62f525f6d8b907, type: 3}
-  targetAssetGuid: 90c434ff0a21dd345b62f525f6d8b907
-  textEditor:
-    scrollPosition: {x: 0, y: 4715}
-    scrollPositionLine: 248
-    scrollPositionOffset: 3
-    searchString: 
-    caretPosition:
-      virtualColumn: 61
-      column: 61
-      characterIndex: 3
-      line: 327
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 46
-      y: 4715
-      width: 1022
-      height: 550
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &20
-MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -965,11 +629,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 705
-    width: 1416
-    height: 294
+    y: 752
+    width: 1436
+    height: 247
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &21
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -990,17 +654,17 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 705
-    width: 1416
-    height: 294
+    y: 752
+    width: 1436
+    height: 247
   m_ViewDataDictionary: {fileID: 0}
   m_VertSplit:
-    ID: 6056
+    ID: 285
     splitterInitialOffset: 250
     currentActiveSplitter: -1
     realSizes:
-    - 170
-    - 103
+    - 126
+    - 100
     relativeSizes:
     - 0.62096775
     - 0.37903225
@@ -1010,7 +674,7 @@ MonoBehaviour:
     maxSizes:
     - 0
     - 0
-    lastTotalSize: 273
+    lastTotalSize: 226
     splitSize: 6
     xOffset: 0
     m_Version: 1
@@ -1839,7 +1503,7 @@ MonoBehaviour:
       data:
         m_SortAscending: 0
         m_SortedColumn: -1
---- !u!114 &22
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1861,8 +1525,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 327
     y: 73
-    width: 1088
-    height: 611
+    width: 1108
+    height: 658
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1906,29 +1570,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1088
-      height: 590
-    m_Scale: {x: 0.5462963, y: 0.5462963}
-    m_Translation: {x: 544, y: 295}
+      width: 1108
+      height: 637
+    m_Scale: {x: 0.57708335, y: 0.57708335}
+    m_Translation: {x: 554, y: 318.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -995.79663
-      y: -540
-      width: 1991.5933
-      height: 1080
+      x: -960
+      y: -551.9133
+      width: 1920
+      height: 1103.8267
     m_MinimalGUI: 1
-  m_defaultScale: 0.5462963
-  m_LastWindowPixelSize: {x: 1088, y: 611}
+  m_defaultScale: 0.57708335
+  m_LastWindowPixelSize: {x: 1108, y: 658}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &23
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1951,28 +1615,28 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 326
-    height: 611
+    height: 658
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: caa0fdffeaa0fdff9ca2fdff6cbffdff8cbffdff3ec1fdffcce0fdffece0fdff9ee2fdff820efeffa20efeff5410feff023bfeff223bfeffd43cfeff5058feff7058feff305afeffde79feff027afeffc27bfefffc02ffff2003ffffd204ffff6afbfffff4ffffff98440000d0450000a4490000704a0000bed5000016db00007a280100ca2a0100902c0100002d0100482e01002230010026ec010064ed0100a4ef0100b6f00100c0f0010044f1010010f20100701c0200ae1d0200ee1f0200002102000a2102008e2102005a220200
+      m_ExpandedIDs: 40ddfcff64ddfcff18dffcff6e61fdff8e61fdff4263fdff3c82fdff5c82fdff1084fdffd4c7fdfff4c7fdffa8c9fdffceccfdffaacdfdffe4e8fdff04e9fdffb8eafdff9ec9feffc2c9feff78cbfeff4043ffff6443ffff1645ffff5a74ffff7a74ffff2c76ffff94cfffffb4cfffff6ad1ffff6af6ffff8af6ffff3cf8ffff6afbffff2a6300006e640000b4660000c66700004e6800001a69000076930000b0930000f49400003a9700004c98000056980000d4980000a09900000e36010098390100aa3a0100343b0100003c0100f0860100ae8a0100f28b0100248c0100588e01004a8f0100568f0100aa8f0100d48f01002ef4010062f9010096fb010088fc0100e8fc010012fd0100cafd01007c240200b0290200e42b0200d62c0200362d0200602d0200182e02003e690200c869020032910200089802009a9802008c990200ec990200169a0200ce9a0200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: New Game Object
-        m_OriginalName: New Game Object
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -33310
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -1982,7 +1646,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &24
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2003,9 +1667,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 705
-    width: 1416
-    height: 294
+    y: 752
+    width: 1436
+    height: 247
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -2032,24 +1696,24 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 146}
-    m_SelectedIDs: 724e0000
-    m_LastClickedID: 20082
-    m_ExpandedIDs: 00000000a04d0000a24d0000a44d0000a64d0000a84d0000aa4d0000ac4d0000784e0000
+    scrollPos: {x: 0, y: 129}
+    m_SelectedIDs: 904e0000
+    m_LastClickedID: 20112
+    m_ExpandedIDs: 00000000bc4d0000be4d0000c04d0000c24d0000c44d0000c64d0000c84d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Pool
+      m_OriginalName: Pool
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 20118
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -2063,7 +1727,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a04d0000a24d0000a44d0000a64d0000a84d0000aa4d0000ac4d0000
+    m_ExpandedIDs: 00000000bc4d0000be4d0000c04d0000c24d0000c44d0000c64d0000c84d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2088,8 +1752,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: c24c0000
-    m_LastClickedInstanceID: 19650
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c623000008500000f054000082480000424800006e4d00001e51000094050b00749f000082430000
     m_RenameOverlay:
@@ -2119,7 +1783,7 @@ MonoBehaviour:
     m_GridSize: 71
   m_SkipHiddenPackages: 1
   m_DirectoriesAreaWidth: 229
---- !u!114 &25
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2214,7 +1878,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &26
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2236,8 +1900,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 327
     y: 73
-    width: 1088
-    height: 611
+    width: 1108
+    height: 658
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -2250,9 +1914,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.6860723, y: -0.0829401, z: -6.031205}
+    m_Target: {x: 1137.2333, y: 441.05283, z: 408.86438}
     speed: 2
-    m_Value: {x: 6.6860723, y: -0.0829401, z: -6.031205}
+    m_Value: {x: 1137.2333, y: 441.05283, z: 408.86438}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -2299,13 +1963,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.24951619, y: -0.34329703, z: 0.09513264, w: -0.90050286}
+    m_Target: {x: 0.010192676, y: -0.0057220543, z: -0.00005558094, w: -0.9999647}
     speed: 2
-    m_Value: {x: -0.24950786, y: -0.3432856, z: 0.09512947, w: -0.9004728}
+    m_Value: {x: 0.01019234, y: -0.005721865, z: -0.000055579105, w: -0.9999317}
   m_Size:
-    m_Target: 8.187865
+    m_Target: 571.4103
     speed: 2
-    m_Value: 8.187865
+    m_Value: 571.4103
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -2330,7 +1994,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &27
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2351,14 +2015,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 705
-    width: 1416
-    height: 294
+    y: 752
+    width: 1436
+    height: 247
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 139102
---- !u!114 &28
+  m_LastSelectedObjectID: 168378
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2379,11 +2043,11 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 705
-    width: 1418
-    height: 294
+    y: 752
+    width: 1436
+    height: 247
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &29
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2403,9 +2067,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1417
+    x: 1437
     y: 73
-    width: 502
+    width: 482
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -2420,7 +2084,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &30
+--- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2445,7 +2109,7 @@ MonoBehaviour:
     width: 500
     height: 926
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &31
+--- !u!114 &28
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
