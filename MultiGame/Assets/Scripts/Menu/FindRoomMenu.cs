@@ -65,11 +65,14 @@ public class FindRoomMenu : Menu
 	
 	private void OnDisable()
 	{
-		// 방에 입장하면 룸 목록 모두 초기화
-		RoomListItem[] allRoom = _roomListContent.GetComponentsInChildren<RoomListItem>();
-		foreach(var room in allRoom)
+		if(ServerManager._Instance._CurrentMenu._MenuName == "LoadingMenu")
 		{
-			RoomItemUnSet(room);
+			// 방에 입장하면 룸 목록 모두 초기화
+			RoomListItem[] allRoom = _roomListContent.GetComponentsInChildren<RoomListItem>();
+			foreach(var room in allRoom)
+			{
+				RoomItemUnSet(room);
+			}
 		}
 	}
 	

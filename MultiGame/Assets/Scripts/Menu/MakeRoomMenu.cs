@@ -47,7 +47,8 @@ public class MakeRoomMenu : Menu
 				MaxPlayers = (byte)_playerCountInt,
 				IsVisible = true,
 				IsOpen = true,
-				CleanupCacheOnLeave = true
+				CleanupCacheOnLeave = true,
+				PublishUserId = true
 			};
 			PhotonNetwork.CreateRoom(_roomNameInputField.text, ro);
 			MenuManager._Instance.OpenMenu("LoadingMenu");

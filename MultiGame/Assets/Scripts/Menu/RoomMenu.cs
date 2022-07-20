@@ -237,6 +237,12 @@ public class RoomMenu : Menu
 	
 	void ScrollDelay() => _scroll.verticalScrollbar.value = 0;
 	
+	// 방장이 바뀌게 되는 경우
+	public void OnMasterSwitched()
+	{
+		_startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+	}
+	
 	// 나가기 버튼
 	public void LeaveRoom()
 	{

@@ -79,7 +79,6 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	
 	public override void OnDisconnected(DisconnectCause cause)
 	{
-		MenuManager._Instance.OpenMenu("LoadingMenu");
 		PhotonNetwork.ConnectUsingSettings();
 	}
 	
@@ -122,8 +121,6 @@ public class ServerManager : MonoBehaviourPunCallbacks
 		MenuManager._Instance.OpenMenu("TitleMenu");
 	}
 	
-	
-	
 	/********** 다른 플레이어가 방에 들어오고 나갈 때 **********/
 	public override void OnPlayerEnteredRoom(Player newPlayer)
 	{
@@ -135,4 +132,11 @@ public class ServerManager : MonoBehaviourPunCallbacks
 		// Player List 갱신
 		_room.OtherOutPlayerUpdate(otherPlayer);
 	}
+	
+	/********** 방장이 나가서 방장이 바뀌면 **********/
+	public override void OnMasterClientSwitched(Player newMasterClient)
+	{
+		_room.OnMasterSwitched();
+	}
 }
+

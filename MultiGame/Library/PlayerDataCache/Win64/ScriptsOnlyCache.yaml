@@ -4,11 +4,12 @@ ScriptsOnlyBuild:
     - ChatItem
     - CreationNickName
     - FindRoomMenu
+    - HelperManager
     - MainUI
     - MakeRoomMenu
     - Menu
     - MenuManager
-    - ObjectPoolMgr
+    - PlayerItemHelp
     - PlayerListItem
     - RoomListItem
     - RoomMenu
@@ -56,6 +57,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.InputField
     - UnityEngine.UI.Mask
+    - UnityEngine.UI.Outline
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
@@ -160,7 +162,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3290}
     - Class: 114
-      Script: {instanceID: 3378}
+      Script: {instanceID: 3346}
     - Class: 114
       Script: {instanceID: 3418}
     - Class: 114
@@ -174,31 +176,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3912}
     - Class: 114
-      Script: {instanceID: 3966}
+      Script: {instanceID: 3948}
     - Class: 114
-      Script: {instanceID: 4044}
+      Script: {instanceID: 3968}
     - Class: 114
-      Script: {instanceID: 4090}
+      Script: {instanceID: 4046}
     - Class: 114
-      Script: {instanceID: 4134}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 4138}
+      Script: {instanceID: 4136}
     - Class: 114
-      Script: {instanceID: 4520}
+      Script: {instanceID: 4140}
     - Class: 114
-      Script: {instanceID: 4550}
+      Script: {instanceID: 4522}
     - Class: 114
-      Script: {instanceID: 4702}
+      Script: {instanceID: 4552}
     - Class: 114
-      Script: {instanceID: 4896}
+      Script: {instanceID: 4652}
     - Class: 114
-      Script: {instanceID: 5010}
+      Script: {instanceID: 4706}
     - Class: 114
-      Script: {instanceID: 5028}
+      Script: {instanceID: 4900}
     - Class: 114
-      Script: {instanceID: 5036}
+      Script: {instanceID: 5014}
     - Class: 114
-      Script: {instanceID: 106194}
+      Script: {instanceID: 5032}
+    - Class: 114
+      Script: {instanceID: 5040}
+    - Class: 114
+      Script: {instanceID: 319552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1174,6 +1180,12 @@ ScriptsOnlyBuild:
     className: LobbyMainPanel
   - hash:
       serializedVersion: 2
+      Hash: 8e80c65578888c0c566dd0d2bbddc198
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChatItem
+  - hash:
+      serializedVersion: 2
       Hash: 74c875e0f15c48e0a55f06093aa93e15
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1444,6 +1456,12 @@ ScriptsOnlyBuild:
     className: ToggleExpand
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerItemHelp
+  - hash:
+      serializedVersion: 2
       Hash: d2a2698b314a20912af1eb2b1758dc90
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1618,10 +1636,10 @@ ScriptsOnlyBuild:
     className: UserIdUiForm
   - hash:
       serializedVersion: 2
-      Hash: 8e80c65578888c0c566dd0d2bbddc198
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ChatItem
+    className: HelperManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
