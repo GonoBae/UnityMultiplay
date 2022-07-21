@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\PlayerInput.cs" />
     <Compile Include="Assets\Scripts\Menu\RoomMenu.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
+    <Compile Include="Assets\Scripts\HelperManager.cs" />
     <Compile Include="Assets\Scripts\Test\MenuItem.cs" />
     <Compile Include="Assets\Scripts\MainUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Assets\Scripts\Menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Pool\PoolObject.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu.cs" />
-    <Compile Include="Assets\Scripts\HelperManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />

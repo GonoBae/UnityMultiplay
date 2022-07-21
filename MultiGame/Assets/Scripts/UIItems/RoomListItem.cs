@@ -38,5 +38,23 @@ public class RoomListItem : MonoBehaviour
 		{
 			// 에러 (정원초과. 입장할 수 없습니다.)
 		}
+		
+		
+		//if(info.CustomProperties)
+		//{
+		//	// 비밀번호 후 입장
+		//}
+		//else
+		//{
+		//	if(info.PlayerCount < info.MaxPlayers)
+		//	{
+		//		PhotonNetwork.JoinRoom(info.Name);
+		//		MenuManager._Instance.OpenMenu("LoadingMenu");
+		//	}
+		//	else
+		//	{
+		//		// 에러 (정원초과. 입장할 수 없습니다.)
+		//	}
+		//}
 	}
 }

@@ -45,14 +45,14 @@ public class RoomMenu : Menu
 	/***********************************
 				Unity Events
 	***********************************/
+	private void Awake()
+	{
+		_pv = GetComponent<PhotonView>();
+	}
+	
 	private void OnEnable()
 	{
 		SetRoom();
-	}
-	
-	private void Start()
-	{
-		_pv = GetComponent<PhotonView>();
 	}
 	
 	private void OnDisable()
@@ -187,6 +187,47 @@ public class RoomMenu : Menu
 				}
 			}
 			yield return null;
+		}
+	}
+	
+	public void EnterIntro(string playerID)
+	{
+		_pv.RPC("IntroRPC", RpcTarget.All, playerID + "님이 참가하셨습니다.");
+	}
+	
+	public void LeftIntro(string playerID)
+	{
+		_pv.RPC("IntroRPC", RpcTarget.All, playerID + "님이 떠나셨습니다.");
+	}
+	
+	[PunRPC]
+	private void IntroRPC(string msg)
+	{
+		if(_lstChat.Count == _maximumChatCount && _lstChat[_lstChat.Count - 1].gameObject.activeSelf)
+		{
+			// 0번 인덱스 삭제
+			ChatItem item = _lstChat[0];
+			item.UnSet();
+			_lstChat.RemoveAt(0);
+			_lstChat.Add(item);
+		}
+		bool isFull = false;
+		foreach(var item in _lstChat)
+		{
+			if(item._Chat.text == "")
+			{
+				isFull = true;
+				Color color = Color.yellow;
+				item.SetUp(msg, color);
+				break;
+			}
+		}
+		if(!isFull) // 꽉 찼으면
+		{
+			ChatItem item = Instantiate(_chatBoxPrefab, _chatBoxContent).GetComponent<ChatItem>();
+			Color color = Color.yellow;
+			item.SetUp(msg, color);
+			_lstChat.Add(item);
 		}
 	}
 	

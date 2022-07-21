@@ -13,6 +13,9 @@ public class MakeRoomMenu : Menu
 	[SerializeField] Slider _playerCountSlider;
 	[SerializeField] Text _playerCount;
 	
+	[SerializeField] RawImage _toggleScreteIcon;
+	private bool _toggleScrete;
+	
 	private void Start()
 	{
 		SetPlayerCountSlider();
@@ -42,15 +45,24 @@ public class MakeRoomMenu : Menu
 		if(string.IsNullOrEmpty(_roomNameInputField.text)) return;
 		else
 		{
+			string roomName = _roomNameInputField.text;
+			bool screte = _toggleScrete;
 			RoomOptions ro = new RoomOptions
 			{
 				MaxPlayers = (byte)_playerCountInt,
 				IsVisible = true,
 				IsOpen = true,
 				CleanupCacheOnLeave = true,
-				PublishUserId = true
+				PublishUserId = true,
+				//CustomRoomProperties = new ExitGames.Client.Photon.Hashtable()
+				//{
+				//	{ "Screte", screte}
+				//},
+				//CustomRoomPropertiesForLobby = new string[] {
+				//	"Screte"
+				//}
 			};
-			PhotonNetwork.CreateRoom(_roomNameInputField.text, ro);
+			PhotonNetwork.CreateRoom(roomName, ro);
 			MenuManager._Instance.OpenMenu("LoadingMenu");
 		}
 	}
@@ -61,5 +73,19 @@ public class MakeRoomMenu : Menu
 		_roomNameInputField.text = "";
 		_playerCountSlider.value = _minimumPlayer;
 		_playerCount.text = "1";
+	}
+	
+	// Screte Room
+	public void ToggleScreteButton()
+	{
+		_toggleScrete = !_toggleScrete;
+		if(_toggleScrete)
+		{
+			_toggleScreteIcon.gameObject.SetActive(true);
+		}
+		else
+		{
+			_toggleScreteIcon.gameObject.SetActive(false);
+		}
 	}
 }

@@ -104,7 +104,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 		
 		// 방에 있는 플레이어 체크
 		_room.IEnterPlayerUpdate();
-		
+		if(_pv.IsMine) _room.EnterIntro(PhotonNetwork.NickName);
 		_room._StartGameButton.SetActive(PhotonNetwork.IsMasterClient);
 	}
 	
@@ -117,7 +117,6 @@ public class ServerManager : MonoBehaviourPunCallbacks
 		
 		// Chatting List 초기화
 		_room.IOutChatUpdate();
-		
 		MenuManager._Instance.OpenMenu("TitleMenu");
 	}
 	
@@ -125,12 +124,14 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	public override void OnPlayerEnteredRoom(Player newPlayer)
 	{
 		_room.NewEnteredPlayerUpdate(newPlayer);
+		if(_pv.IsMine) _room.EnterIntro(newPlayer.NickName);
 	}
 	
 	public override void OnPlayerLeftRoom(Player otherPlayer)
 	{
 		// Player List 갱신
 		_room.OtherOutPlayerUpdate(otherPlayer);
+		if(_pv.IsMine) _room.LeftIntro(otherPlayer.NickName);
 	}
 	
 	/********** 방장이 나가서 방장이 바뀌면 **********/

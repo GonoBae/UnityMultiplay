@@ -188,23 +188,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4140}
     - Class: 114
-      Script: {instanceID: 4522}
+      Script: {instanceID: 4370}
     - Class: 114
-      Script: {instanceID: 4552}
+      Script: {instanceID: 4524}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 4554}
     - Class: 114
-      Script: {instanceID: 4706}
+      Script: {instanceID: 4654}
     - Class: 114
-      Script: {instanceID: 4900}
+      Script: {instanceID: 4708}
     - Class: 114
-      Script: {instanceID: 5014}
+      Script: {instanceID: 4902}
     - Class: 114
-      Script: {instanceID: 5032}
+      Script: {instanceID: 5016}
     - Class: 114
-      Script: {instanceID: 5040}
+      Script: {instanceID: 5034}
     - Class: 114
-      Script: {instanceID: 319552}
+      Script: {instanceID: 5042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1036,7 +1036,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: ebc6fb89a736bbacece987746a7fa7ed
+      Hash: d961c8f4dea7d5d4067f9b9da45638a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MakeRoomMenu
@@ -1384,6 +1384,12 @@ ScriptsOnlyBuild:
     className: DocLinkButton
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HelperManager
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1634,12 +1640,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: HelperManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

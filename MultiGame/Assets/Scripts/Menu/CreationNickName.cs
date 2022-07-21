@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 
@@ -11,10 +12,11 @@ public class CreationNickName : Menu
 	// 버튼
 	public void CreateNickNameButton()
 	{
-		if(string.IsNullOrEmpty(_nickNameInputField.text)) return;
+		string nick = _nickNameInputField.text;
+		if(string.IsNullOrEmpty(nick)) return;
 		else
 		{
-			PhotonNetwork.NickName = _nickNameInputField.text;
+			PhotonNetwork.NickName = nick;
 			MenuManager._Instance.OpenMenu("TitleMenu");
 		}
 	}
