@@ -284,6 +284,13 @@ public class RoomMenu : Menu
 		_startGameButton.SetActive(PhotonNetwork.IsMasterClient);
 	}
 	
+	// 시작 버튼
+	public void StartGame()
+	{
+		PhotonNetwork.CurrentRoom.IsVisible = false;
+		PhotonNetwork.LoadLevel(1);
+	}
+	
 	// 나가기 버튼
 	public void LeaveRoom()
 	{
