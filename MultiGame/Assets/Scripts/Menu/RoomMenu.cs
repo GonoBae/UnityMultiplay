@@ -171,7 +171,7 @@ public class RoomMenu : Menu
 	{
 		while(ServerManager._Instance._CurrentMenu._MenuName == "RoomMenu")
 		{
-			if (ServerManager._Instance._PlayerInput._PressEnter)
+			if (Input.GetKeyDown(KeyCode.Return))
 			{
 				if (_chatInputField.text != "")
 				{

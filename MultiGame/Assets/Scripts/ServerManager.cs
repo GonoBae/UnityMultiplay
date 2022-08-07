@@ -24,7 +24,6 @@ public class ServerManager : MonoBehaviourPunCallbacks
 				Fields
 	***********************************/
 	private PhotonView _pv;
-	private PlayerInput _playerInput = new PlayerInput();
 	private string _gameVersion = "1";
 
 	private Menu _currentMenu;
@@ -33,7 +32,6 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	
 	public Menu _CurrentMenu { get{return _currentMenu;} set{_currentMenu = value;} }
 	public RoomMenu _Room { get{return _room;} }
-	public PlayerInput _PlayerInput { get{return _playerInput;} }
 	
 	[SerializeField] List<GameObject> objs;
 	
@@ -75,6 +73,8 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	public override void OnConnectedToMaster()
 	{
 		PhotonNetwork.JoinLobby();
+		// 자동으로 모든 사람들의 Scene을 통일
+		PhotonNetwork.AutomaticallySyncScene = true;
 	}
 	
 	public override void OnDisconnected(DisconnectCause cause)

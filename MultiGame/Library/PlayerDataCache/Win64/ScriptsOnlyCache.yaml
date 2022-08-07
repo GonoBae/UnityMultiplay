@@ -9,8 +9,16 @@ ScriptsOnlyBuild:
     - MakeRoomMenu
     - Menu
     - MenuManager
+    - MoreMountains.Tools.MMDebugOnScreenConsole
+    - MoreMountains.Tools.MMTouchAxis
+    - MoreMountains.Tools.MMTouchButton
+    - MoreMountains.Tools.MMTouchControls
+    - MoreMountains.Tools.MMTouchJoystick
+    - NeckControl
+    - PlayerController
     - PlayerItemHelp
     - PlayerListItem
+    - PlayerManager
     - RoomListItem
     - RoomMenu
     - ServerManager
@@ -40,8 +48,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -81,11 +91,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 81
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -93,9 +111,41 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1458}
+    - Class: 114
+      Script: {instanceID: 2480}
+    - Class: 114
+      Script: {instanceID: 2608}
+    - Class: 114
+      Script: {instanceID: 2796}
+    - Class: 114
+      Script: {instanceID: 3008}
+    - Class: 114
+      Script: {instanceID: 3016}
+    - Class: 114
+      Script: {instanceID: 106348}
+    - Class: 114
+      Script: {instanceID: 106390}
+    - Class: 114
+      Script: {instanceID: 106392}
+    - Class: 114
+      Script: {instanceID: 106436}
+    - Class: 115
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -173,63 +223,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2848}
     - Class: 114
-      Script: {instanceID: 3006}
+      Script: {instanceID: 2890}
     - Class: 114
-      Script: {instanceID: 3014}
+      Script: {instanceID: 3008}
     - Class: 114
       Script: {instanceID: 3016}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 3018}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 3022}
     - Class: 114
-      Script: {instanceID: 3162}
+      Script: {instanceID: 3112}
     - Class: 114
-      Script: {instanceID: 3290}
+      Script: {instanceID: 3164}
     - Class: 114
-      Script: {instanceID: 3346}
+      Script: {instanceID: 3292}
     - Class: 114
-      Script: {instanceID: 3418}
+      Script: {instanceID: 3348}
     - Class: 114
-      Script: {instanceID: 3586}
+      Script: {instanceID: 3420}
     - Class: 114
-      Script: {instanceID: 3592}
+      Script: {instanceID: 3588}
     - Class: 114
-      Script: {instanceID: 3840}
+      Script: {instanceID: 3594}
     - Class: 114
-      Script: {instanceID: 3908}
+      Script: {instanceID: 3842}
     - Class: 114
-      Script: {instanceID: 3912}
+      Script: {instanceID: 3910}
     - Class: 114
-      Script: {instanceID: 3948}
+      Script: {instanceID: 3914}
     - Class: 114
-      Script: {instanceID: 3968}
+      Script: {instanceID: 3950}
     - Class: 114
-      Script: {instanceID: 4046}
+      Script: {instanceID: 3970}
     - Class: 114
-      Script: {instanceID: 4092}
+      Script: {instanceID: 4048}
     - Class: 114
-      Script: {instanceID: 4136}
+      Script: {instanceID: 4094}
     - Class: 114
-      Script: {instanceID: 4140}
+      Script: {instanceID: 4138}
     - Class: 114
-      Script: {instanceID: 4370}
+      Script: {instanceID: 4142}
     - Class: 114
-      Script: {instanceID: 4524}
+      Script: {instanceID: 4372}
     - Class: 114
-      Script: {instanceID: 4554}
+      Script: {instanceID: 4398}
     - Class: 114
-      Script: {instanceID: 4654}
+      Script: {instanceID: 4528}
     - Class: 114
-      Script: {instanceID: 4708}
+      Script: {instanceID: 4558}
     - Class: 114
-      Script: {instanceID: 4902}
+      Script: {instanceID: 4610}
     - Class: 114
-      Script: {instanceID: 5016}
+      Script: {instanceID: 4660}
     - Class: 114
-      Script: {instanceID: 5034}
+      Script: {instanceID: 4714}
     - Class: 114
-      Script: {instanceID: 5042}
+      Script: {instanceID: 4908}
+    - Class: 114
+      Script: {instanceID: 5022}
+    - Class: 114
+      Script: {instanceID: 5040}
+    - Class: 114
+      Script: {instanceID: 5048}
+    - Class: 114
+      Script: {instanceID: 106370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -777,6 +835,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 1b6dcaf0c79cf03fb6d14bcec70e36cc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
@@ -1415,6 +1479,12 @@ ScriptsOnlyBuild:
     className: HelperManager
   - hash:
       serializedVersion: 2
+      Hash: 136927346ff9104e6b50c92cf5751241
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NeckControl
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1479,6 +1549,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerManager
   - hash:
       serializedVersion: 2
       Hash: e37675de1ea5e56da90f5600d33587bd
@@ -1665,6 +1741,114 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit.Forms
     className: UserIdUiForm
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMArray
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMImage
+  - hash:
+      serializedVersion: 2
+      Hash: 522f13e426a34bd4bd1c8f26f4cffd2f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.NiceTouch
+    className: CharacterMovement
+  - hash:
+      serializedVersion: 2
+      Hash: e1b5be58f07f33bb5385fd8495b3b2d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchRepositionableJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMMonoBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 5ec33cf15d2ecec580276466a3408ec6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMBoundsExtensions
+  - hash:
+      serializedVersion: 2
+      Hash: 2d106c4970b21121a1054c33f646bf21
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMDebugOnScreenConsole
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: NiceTouchTestInputManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTime
+  - hash:
+      serializedVersion: 2
+      Hash: b87fd7f9dd4237a8ad9a61185f68fafa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 27fd3a4734587e40447eb6268b4ddf52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchAxis
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMConsole
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMInput
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMControlsTestInputManager
+  - hash:
+      serializedVersion: 2
+      Hash: 9ccb6cdf632b6b64e80c49c15ceba063
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMSwipeZone
+  - hash:
+      serializedVersion: 2
+      Hash: 996ebbfde6915952e4c78ef81933c680
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchControls
+  - hash:
+      serializedVersion: 2
+      Hash: 3364284b56b66be3201d7346261e7b2c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchDynamicJoystick
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
