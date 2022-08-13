@@ -34,6 +34,7 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -48,10 +49,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -112,25 +111,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1458}
+      Script: {instanceID: 1462}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 2796}
+      Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 3008}
+      Script: {instanceID: 2506}
     - Class: 114
-      Script: {instanceID: 3016}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 106348}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 106390}
+      Script: {instanceID: 3440}
     - Class: 114
-      Script: {instanceID: 106392}
+      Script: {instanceID: 4674}
     - Class: 114
-      Script: {instanceID: 106436}
+      Script: {instanceID: 5208}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -191,103 +190,103 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1458}
-    - Class: 114
-      Script: {instanceID: 1460}
+      Script: {instanceID: 1462}
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1562}
+      Script: {instanceID: 1468}
     - Class: 114
-      Script: {instanceID: 1592}
+      Script: {instanceID: 1470}
     - Class: 114
-      Script: {instanceID: 1648}
+      Script: {instanceID: 1472}
     - Class: 114
-      Script: {instanceID: 1712}
+      Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 1740}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 1744}
+      Script: {instanceID: 1660}
     - Class: 114
-      Script: {instanceID: 2234}
+      Script: {instanceID: 1724}
     - Class: 114
-      Script: {instanceID: 2280}
+      Script: {instanceID: 1752}
     - Class: 114
-      Script: {instanceID: 2294}
+      Script: {instanceID: 1756}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2252}
     - Class: 114
-      Script: {instanceID: 2608}
+      Script: {instanceID: 2298}
     - Class: 114
-      Script: {instanceID: 2796}
+      Script: {instanceID: 2312}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2504}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 3008}
+      Script: {instanceID: 2882}
     - Class: 114
-      Script: {instanceID: 3016}
+      Script: {instanceID: 2928}
     - Class: 114
-      Script: {instanceID: 3018}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3022}
+      Script: {instanceID: 3056}
     - Class: 114
-      Script: {instanceID: 3112}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 3164}
+      Script: {instanceID: 3152}
     - Class: 114
-      Script: {instanceID: 3292}
+      Script: {instanceID: 3208}
     - Class: 114
-      Script: {instanceID: 3348}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 3420}
+      Script: {instanceID: 3392}
     - Class: 114
-      Script: {instanceID: 3588}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 3594}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3842}
+      Script: {instanceID: 3652}
     - Class: 114
-      Script: {instanceID: 3910}
+      Script: {instanceID: 3660}
     - Class: 114
-      Script: {instanceID: 3914}
+      Script: {instanceID: 3918}
     - Class: 114
-      Script: {instanceID: 3950}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 3970}
+      Script: {instanceID: 3994}
     - Class: 114
-      Script: {instanceID: 4048}
+      Script: {instanceID: 4030}
     - Class: 114
-      Script: {instanceID: 4094}
+      Script: {instanceID: 4050}
     - Class: 114
-      Script: {instanceID: 4138}
+      Script: {instanceID: 4134}
     - Class: 114
-      Script: {instanceID: 4142}
+      Script: {instanceID: 4184}
     - Class: 114
-      Script: {instanceID: 4372}
+      Script: {instanceID: 4232}
     - Class: 114
-      Script: {instanceID: 4398}
+      Script: {instanceID: 4236}
     - Class: 114
-      Script: {instanceID: 4528}
+      Script: {instanceID: 4470}
     - Class: 114
-      Script: {instanceID: 4558}
+      Script: {instanceID: 4500}
     - Class: 114
-      Script: {instanceID: 4610}
+      Script: {instanceID: 4638}
     - Class: 114
-      Script: {instanceID: 4660}
+      Script: {instanceID: 4668}
     - Class: 114
-      Script: {instanceID: 4714}
+      Script: {instanceID: 4728}
     - Class: 114
-      Script: {instanceID: 4908}
+      Script: {instanceID: 4782}
     - Class: 114
-      Script: {instanceID: 5022}
+      Script: {instanceID: 4836}
     - Class: 114
-      Script: {instanceID: 5040}
+      Script: {instanceID: 5034}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 5152}
     - Class: 114
-      Script: {instanceID: 106370}
+      Script: {instanceID: 5170}
+    - Class: 114
+      Script: {instanceID: 5178}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,10 +338,22 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: 24f79094aff162c9aa69c31d64d777d3
@@ -591,6 +602,12 @@ ScriptsOnlyBuild:
     className: CurrentRoomAutoCleanupProperty
   - hash:
       serializedVersion: 2
+      Hash: 9ccb6cdf632b6b64e80c49c15ceba063
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMSwipeZone
+  - hash:
+      serializedVersion: 2
       Hash: f1d735cc1a21c3704ab52568f4fbfcf8
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -675,6 +692,12 @@ ScriptsOnlyBuild:
     className: PhotonHandler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMImage
+  - hash:
+      serializedVersion: 2
       Hash: b25c2463ba9144686d18d7707733226b
     assemblyName: Assembly-CSharp.dll
     namespaceName: Photon.Chat.Demo
@@ -697,6 +720,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 5ec33cf15d2ecec580276466a3408ec6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchButton
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -795,10 +824,10 @@ ScriptsOnlyBuild:
     className: PunCockpit
   - hash:
       serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
+      Hash: 3364284b56b66be3201d7346261e7b2c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchDynamicJoystick
   - hash:
       serializedVersion: 2
       Hash: d7f7bc402888d42a0dbb080693e6863c
@@ -829,6 +858,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonRealtime.dll
     namespaceName: Photon.Realtime
     className: SupportLogger
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMMonoBehaviour
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -865,12 +900,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
     className: PhotonView
-  - hash:
-      serializedVersion: 2
-      Hash: 748dd2a2a28da4e618912da5ac45684b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.EventSystems
-    className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: 2b1d1de79e4d31f1861f586502176c81
@@ -951,6 +980,12 @@ ScriptsOnlyBuild:
     className: IsConnectedAndReadyProperty
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: NiceTouchTestInputManager
+  - hash:
+      serializedVersion: 2
       Hash: 7ed85bd95240d595e6861f760f871519
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1005,6 +1040,12 @@ ScriptsOnlyBuild:
     className: ConnectToRegionUIForm
   - hash:
       serializedVersion: 2
+      Hash: 2d106c4970b21121a1054c33f646bf21
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMDebugOnScreenConsole
+  - hash:
+      serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1041,6 +1082,12 @@ ScriptsOnlyBuild:
     className: OnClickDestroy
   - hash:
       serializedVersion: 2
+      Hash: b87fd7f9dd4237a8ad9a61185f68fafa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchJoystick
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -1060,6 +1107,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMArray
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayerQuitHandler
@@ -1069,6 +1122,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 522f13e426a34bd4bd1c8f26f4cffd2f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.NiceTouch
+    className: CharacterMovement
   - hash:
       serializedVersion: 2
       Hash: 632731657c90f101a2dca0a2b7a6245c
@@ -1113,6 +1172,12 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTime
+  - hash:
+      serializedVersion: 2
       Hash: a8d3c943d9168cbdd8596f040ff02ff4
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Asteroids
@@ -1135,6 +1200,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMConsole
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1191,6 +1262,12 @@ ScriptsOnlyBuild:
     className: TextToggleIsOnTransition
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMBoundsExtensions
+  - hash:
+      serializedVersion: 2
       Hash: c656dcc13ae391b68d594cc8f9c590b0
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
@@ -1237,6 +1314,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMControlsTestInputManager
   - hash:
       serializedVersion: 2
       Hash: ae1347d9113eee8b83c5c8047dcf31a8
@@ -1323,6 +1406,12 @@ ScriptsOnlyBuild:
     className: PunTeams
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMInput
+  - hash:
+      serializedVersion: 2
       Hash: 7829e932aec962afd9bcfad28ffff27d
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
@@ -1389,6 +1478,12 @@ ScriptsOnlyBuild:
     className: PhotonLagSimulationGui
   - hash:
       serializedVersion: 2
+      Hash: 48804c7edfd2998cdab1bf456d8dbfd0
+    assemblyName: PhotonUnityNetworking.Demos.dll
+    namespaceName: Photon.Pun.Demo.Cockpit
+    className: PlayerListView
+  - hash:
+      serializedVersion: 2
       Hash: 0927e41b46e1bd11671f9b5adda4b832
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
@@ -1399,12 +1494,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
-  - hash:
-      serializedVersion: 2
-      Hash: 48804c7edfd2998cdab1bf456d8dbfd0
-    assemblyName: PhotonUnityNetworking.Demos.dll
-    namespaceName: Photon.Pun.Demo.Cockpit
-    className: PlayerListView
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -1485,6 +1574,12 @@ ScriptsOnlyBuild:
     className: NeckControl
   - hash:
       serializedVersion: 2
+      Hash: e1b5be58f07f33bb5385fd8495b3b2d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchRepositionableJoystick
+  - hash:
+      serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -1537,6 +1632,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 27fd3a4734587e40447eb6268b4ddf52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: MoreMountains.Tools
+    className: MMTouchAxis
   - hash:
       serializedVersion: 2
       Hash: ee1dba1a186ac062d564e9eb73a1c56f
@@ -1743,112 +1844,10 @@ ScriptsOnlyBuild:
     className: UserIdUiForm
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMArray
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMImage
-  - hash:
-      serializedVersion: 2
-      Hash: 522f13e426a34bd4bd1c8f26f4cffd2f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.NiceTouch
-    className: CharacterMovement
-  - hash:
-      serializedVersion: 2
-      Hash: e1b5be58f07f33bb5385fd8495b3b2d6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMTouchRepositionableJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMMonoBehaviour
-  - hash:
-      serializedVersion: 2
-      Hash: 5ec33cf15d2ecec580276466a3408ec6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMTouchButton
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMBoundsExtensions
-  - hash:
-      serializedVersion: 2
-      Hash: 2d106c4970b21121a1054c33f646bf21
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMDebugOnScreenConsole
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: NiceTouchTestInputManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMTime
-  - hash:
-      serializedVersion: 2
-      Hash: b87fd7f9dd4237a8ad9a61185f68fafa
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMTouchJoystick
-  - hash:
-      serializedVersion: 2
-      Hash: 27fd3a4734587e40447eb6268b4ddf52
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMTouchAxis
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMConsole
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMInput
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMControlsTestInputManager
-  - hash:
-      serializedVersion: 2
-      Hash: 9ccb6cdf632b6b64e80c49c15ceba063
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMSwipeZone
-  - hash:
-      serializedVersion: 2
       Hash: 996ebbfde6915952e4c78ef81933c680
     assemblyName: Assembly-CSharp.dll
     namespaceName: MoreMountains.Tools
     className: MMTouchControls
-  - hash:
-      serializedVersion: 2
-      Hash: 3364284b56b66be3201d7346261e7b2c
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: MoreMountains.Tools
-    className: MMTouchDynamicJoystick
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

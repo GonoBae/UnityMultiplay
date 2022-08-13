@@ -46,16 +46,14 @@ public class PlayerController : MonoBehaviour
 			//	transform.Rotate(Vector3.up * mx * _mouseSensitivity);
 			//}
 			
-			if(Input.GetKey(KeyCode.Space))
-			{
-				_ani.SetBool("Walk", true);
-			}
-			else if(Input.GetKeyUp(KeyCode.Space))
-			{
-				_ani.SetBool("Walk", false);
-			}
 			if(_joyStick._joystickValue != Vector2.zero) Movement(_joyStick._joystickValue);
-			else Movement(Vector2.zero);
+			else
+			{
+				Movement(Vector2.zero);
+				
+				_rb.velocity = Vector3.zero;
+				_rb.angularVelocity = Vector3.zero;
+			}
 		}
 	}
 	
@@ -69,8 +67,11 @@ public class PlayerController : MonoBehaviour
 				_ani.SetBool("Walk", false);
 				return;
 			}
-			_rb.MovePosition(_rb.position + movement);
-			_ani.SetBool("Walk", true);
+			else
+			{
+				_rb.MovePosition(_rb.position + movement);
+				_ani.SetBool("Walk", true);
+			}
 		}
 	}
 	
@@ -78,5 +79,13 @@ public class PlayerController : MonoBehaviour
 	{
 		_horizontal = move.x;
 		_vertical = move.y;
+	}
+	
+	// OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider.
+	protected void OnCollisionExit(Collision collisionInfo)
+	{
+		_rb.velocity = Vector3.zero;
+		_rb.angularVelocity = Vector3.zero;
+		_rb.ResetCenterOfMass();
 	}
 }
