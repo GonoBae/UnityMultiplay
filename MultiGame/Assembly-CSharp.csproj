@@ -68,6 +68,7 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\Pool\ObjectPoolData.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMLayers.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMSwipeZone.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMImage.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchButton.cs" />
+    <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMDropdownAttribute.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMScrollRectExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMHiddenPropertiesAttribute.cs" />
@@ -133,8 +135,9 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMMovement.cs" />
     <Compile Include="Assets\Scripts\NeckControl.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMColorAttribute.cs" />
-    <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchRepositionableJoystick.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMRequiresConstantRepaintAttribute.cs" />
+    <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchRepositionableJoystick.cs" />
+    <Compile Include="Assets\Scripts\Player\MyPlayer.cs" />
     <Compile Include="Assets\Scripts\Test\MenuItem.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMGeometry.cs" />
     <Compile Include="Assets\Scripts\MainUI.cs" />
@@ -149,6 +152,7 @@
     <Compile Include="Assets\Scripts\Helper\PlayerItemHelp.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMExecutionOrderAttribute.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMRectExtensions.cs" />
+    <Compile Include="Assets\Scripts\GameUI\UIManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\OnStartDelete.cs" />
     <Compile Include="Assets\Scripts\MainUIItems\PlayerListItem.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMGUI.cs" />
@@ -159,10 +163,7 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector2Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMDictionaryExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchControls.cs" />
-    <Compile Include="Assets\Scripts\GameUI\UIManager.cs" />
-    <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Player\MyPlayer.cs" />
+    <Compile Include="Assets\Scripts\Camera\VirtualCamManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />
@@ -757,8 +758,14 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity 2020.3.25f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
@@ -786,12 +793,6 @@
     </Reference>
     <Reference Include="Unity.PlasticSCM.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

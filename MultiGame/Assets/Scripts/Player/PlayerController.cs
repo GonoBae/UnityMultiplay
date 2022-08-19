@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
 	{
 		if(!_pv.IsMine)
 		{
-			Destroy(GetComponentInChildren<Camera>().gameObject);
 			Destroy(_rb);
 		}
 		else _joyStick = FindObjectOfType<MMTouchJoystick>();
@@ -66,10 +65,15 @@ public class PlayerController : MonoBehaviour
 		if(_pv.IsMine)
 		{
 			Vector3 movement = new Vector3(_horizontal, 0, _vertical) * _walkSpeed * Time.fixedDeltaTime;
-			float cur = this.transform.eulerAngles.y;
-			float tar = _angle;
-			float yrot = Mathf.Lerp(cur, tar, 10) % 360;
-			transform.eulerAngles = new Vector3(transform.eulerAngles.x, yrot, transform.eulerAngles.z);
+			
+			if(_angle != 0)
+			{
+				float cur = this.transform.eulerAngles.y;
+				float tar = _angle;
+				float yrot = Mathf.Lerp(cur, tar, 10) % 360;
+				transform.eulerAngles = new Vector3(transform.eulerAngles.x, yrot, transform.eulerAngles.z);
+			}
+			
 			if(movement.sqrMagnitude == 0)
 			{
 				_ani.SetBool("Walk", false);

@@ -1,6 +1,7 @@
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PlayerScriptAssemblies\Assembly-CSharp.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PlayerScriptAssemblies\PhotonUnityNetworking.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PlayerScriptAssemblies\PhotonChat.dll"
+-a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PlayerScriptAssemblies\Cinemachine.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PlayerScriptAssemblies\PhotonUnityNetworking.Demos.dll"
