@@ -102,8 +102,11 @@ public class PlayerController : MonoBehaviour
 	// OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider.
 	protected void OnCollisionExit(Collision collisionInfo)
 	{
-		_rb.velocity = Vector3.zero;
-		_rb.angularVelocity = Vector3.zero;
-		_rb.ResetCenterOfMass();
+		if(_pv.IsMine)
+		{
+			_rb.velocity = Vector3.zero;
+			_rb.angularVelocity = Vector3.zero;
+			_rb.ResetCenterOfMass();
+		}
 	}
 }

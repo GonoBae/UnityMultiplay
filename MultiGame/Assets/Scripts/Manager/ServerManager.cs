@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Realtime;
 using Photon.Pun;
-
+using Cinemachine;
 
 public class ServerManager : MonoBehaviourPunCallbacks
 {
@@ -35,6 +35,9 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	
 	[SerializeField] List<GameObject> objs;
 	
+	[Header("Virtual Cam")]
+	[SerializeField] private CinemachineVirtualCamera _vCam1;
+	
 	/***********************************
 				Unity Events
 	***********************************/
@@ -47,6 +50,8 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	
 	IEnumerator Start()
 	{
+		_vCam1.gameObject.SetActive(true);
+		
 		yield return new WaitForSeconds(4.5f);
 		PhotonNetwork.GameVersion = _gameVersion;
 		

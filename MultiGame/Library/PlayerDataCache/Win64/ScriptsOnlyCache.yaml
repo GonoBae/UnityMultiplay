@@ -15,11 +15,13 @@ ScriptsOnlyBuild:
     - MoreMountains.Tools.MMTouchButton
     - MoreMountains.Tools.MMTouchControls
     - MoreMountains.Tools.MMTouchJoystick
+    - MyPlayer
     - NeckControl
     - PlayerController
     - PlayerItemHelp
     - PlayerListItem
     - PlayerManager
+    - Quest
     - RoomListItem
     - RoomMenu
     - ServerManager
@@ -27,6 +29,7 @@ ScriptsOnlyBuild:
     - VirtualCamManager
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
+    - Cinemachine.CinemachineCollider
     - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachinePipeline
     - Cinemachine.CinemachineTransposer
@@ -126,6 +129,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1474}
     - Class: 114
+      Script: {instanceID: 2048}
+    - Class: 114
       Script: {instanceID: 2228}
     - Class: 114
       Script: {instanceID: 2546}
@@ -140,17 +145,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 2840}
     - Class: 114
-      Script: {instanceID: 3600}
+      Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 3934}
+      Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 5354}
+      Script: {instanceID: 3936}
     - Class: 114
-      Script: {instanceID: 5514}
+      Script: {instanceID: 5356}
     - Class: 114
-      Script: {instanceID: 51824}
+      Script: {instanceID: 5516}
+    - Class: 114
+      Script: {instanceID: 51156}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -239,77 +246,85 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2374}
     - Class: 114
+      Script: {instanceID: 2546}
+    - Class: 114
       Script: {instanceID: 2586}
     - Class: 114
       Script: {instanceID: 2626}
     - Class: 114
+      Script: {instanceID: 2666}
+    - Class: 114
       Script: {instanceID: 2742}
     - Class: 114
-      Script: {instanceID: 2998}
+      Script: {instanceID: 2818}
     - Class: 114
-      Script: {instanceID: 3044}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3178}
+      Script: {instanceID: 3046}
     - Class: 114
-      Script: {instanceID: 3186}
+      Script: {instanceID: 3180}
     - Class: 114
-      Script: {instanceID: 3190}
+      Script: {instanceID: 3188}
     - Class: 114
-      Script: {instanceID: 3292}
+      Script: {instanceID: 3192}
     - Class: 114
-      Script: {instanceID: 3354}
+      Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 3490}
+      Script: {instanceID: 3356}
     - Class: 114
-      Script: {instanceID: 3550}
+      Script: {instanceID: 3492}
     - Class: 114
-      Script: {instanceID: 3554}
+      Script: {instanceID: 3552}
     - Class: 114
-      Script: {instanceID: 3634}
+      Script: {instanceID: 3556}
     - Class: 114
-      Script: {instanceID: 3830}
+      Script: {instanceID: 3636}
     - Class: 114
-      Script: {instanceID: 3838}
+      Script: {instanceID: 3832}
     - Class: 114
-      Script: {instanceID: 4106}
+      Script: {instanceID: 3840}
     - Class: 114
-      Script: {instanceID: 4182}
+      Script: {instanceID: 4108}
     - Class: 114
-      Script: {instanceID: 4186}
+      Script: {instanceID: 4184}
     - Class: 114
-      Script: {instanceID: 4224}
+      Script: {instanceID: 4188}
     - Class: 114
-      Script: {instanceID: 4244}
+      Script: {instanceID: 4226}
     - Class: 114
-      Script: {instanceID: 4334}
+      Script: {instanceID: 4246}
     - Class: 114
-      Script: {instanceID: 4386}
+      Script: {instanceID: 4336}
     - Class: 114
-      Script: {instanceID: 4434}
+      Script: {instanceID: 4388}
     - Class: 114
-      Script: {instanceID: 4438}
+      Script: {instanceID: 4436}
     - Class: 114
-      Script: {instanceID: 4710}
+      Script: {instanceID: 4440}
     - Class: 114
-      Script: {instanceID: 4740}
+      Script: {instanceID: 4712}
     - Class: 114
-      Script: {instanceID: 4886}
+      Script: {instanceID: 4742}
     - Class: 114
-      Script: {instanceID: 4916}
+      Script: {instanceID: 4800}
     - Class: 114
-      Script: {instanceID: 4978}
+      Script: {instanceID: 4888}
     - Class: 114
-      Script: {instanceID: 5040}
+      Script: {instanceID: 4918}
     - Class: 114
-      Script: {instanceID: 5098}
+      Script: {instanceID: 4980}
     - Class: 114
-      Script: {instanceID: 5318}
+      Script: {instanceID: 5042}
     - Class: 114
-      Script: {instanceID: 5452}
+      Script: {instanceID: 5100}
     - Class: 114
-      Script: {instanceID: 5480}
+      Script: {instanceID: 5320}
     - Class: 114
-      Script: {instanceID: 5484}
+      Script: {instanceID: 5454}
+    - Class: 114
+      Script: {instanceID: 5482}
+    - Class: 114
+      Script: {instanceID: 5486}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -439,7 +454,7 @@ ScriptsOnlyBuild:
     className: PlayerUI
   - hash:
       serializedVersion: 2
-      Hash: a052ecf501d38beb9654a969a2cb7f1d
+      Hash: 89a027dc8aa286d3b30e65c4d92ae4f7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ServerManager
@@ -679,7 +694,7 @@ ScriptsOnlyBuild:
     className: CurrentRoomAutoCleanupProperty
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 3d8223868cac2e7768ccad602dbadc8e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -941,6 +956,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.dll
     namespaceName: Photon.Pun
     className: PhotonRigidbody2DView
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VirtualCamManager
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1873,7 +1894,7 @@ ScriptsOnlyBuild:
     className: EventSystemSpawner
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 00416bc507b1454bb6e2704190442ba6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MyPlayer
@@ -2185,10 +2206,10 @@ ScriptsOnlyBuild:
     className: MMTouchControls
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 62bf61aea6fa7d558d1705c569d68acb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: VirtualCamManager
+    className: Quest
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

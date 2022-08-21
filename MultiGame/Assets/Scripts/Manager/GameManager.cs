@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-	private MyPlayer _player;
-	public MyPlayer _Player {get{return _player;} set{_player = value;}}
+	public List<Quest> _lstQuest;
 	
 	private static GameManager _instance = null;
 	public static GameManager _Instance
@@ -20,14 +19,9 @@ public class GameManager : MonoBehaviour
 		}
 	}
 	
-	private void Awake()
+	public Quest GetQuest()
 	{
-		_instance = this;
-	}
-	
-	public MyPlayer GetPlayer()
-	{
-		Debug.Log(_player);
-		return _player;
+		int rand = Random.Range(0, _lstQuest.Count);
+		return _lstQuest[rand];
 	}
 }

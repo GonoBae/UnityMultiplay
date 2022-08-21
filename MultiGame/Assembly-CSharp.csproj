@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMDropdownAttribute.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMScrollRectExtensions.cs" />
+    <Compile Include="Assets\Scripts\Camera\VirtualCamManager.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMHiddenPropertiesAttribute.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMListExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchDynamicJoystick.cs" />
@@ -163,7 +164,7 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector2Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMDictionaryExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchControls.cs" />
-    <Compile Include="Assets\Scripts\Camera\VirtualCamManager.cs" />
+    <Compile Include="Assets\Scripts\Quest\Quest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.xml" />

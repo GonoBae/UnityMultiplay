@@ -742,6 +742,7 @@ GameObject:
   m_Component:
   - component: {fileID: 367075310}
   - component: {fileID: 367075309}
+  - component: {fileID: 367075311}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -799,6 +800,36 @@ Transform:
   m_Father: {fileID: 1047523896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367075311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367075308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 0
+  m_MaximumEffort: 4
+  m_SmoothingTime: 0
+  m_Damping: 0.2
+  m_DampingWhenOccluded: 0.2
+  m_OptimalTargetDistance: 0
 --- !u!1 &384719964
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1547,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 0
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -1655,6 +1686,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa3d11d66e7bc84cab81a23a6ca9ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lstQuest:
+  - {fileID: 11400000, guid: 0fb51deb3bbaa564288e770c295df684, type: 2}
+  - {fileID: 11400000, guid: e4aa0a86b9dfd33449049772445a8052, type: 2}
+  - {fileID: 11400000, guid: bb211021344c80a43b935b539fec8f3c, type: 2}
 --- !u!1 &928411287
 GameObject:
   m_ObjectHideFlags: 0
@@ -2971,7 +3006,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 0
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
