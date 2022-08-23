@@ -4,28 +4,23 @@ using MoreMountains.Tools;
 
 public class PlayerController : MonoBehaviour
 {
-	[SerializeField] GameObject _camHolder;
-	[SerializeField] Transform _characterNeck;
 	[SerializeField] float _mouseSensitivity, _walkSpeed;
 	private Rigidbody _rb;
-	private Animator _ani;
+	
 	private PhotonView _pv;
 	private MMTouchJoystick _joyStick;
 	
-	private float _aniTime;
 	private float _horizontal;
 	private float _vertical;
-	[SerializeField] private float _angle;
-	[SerializeField] private float _charDirection;
-	private float mx;
-	private float my;
+	private float _angle;
 	
 	[SerializeField] private LayerMask _groundLayer;
+	
+	public Vector2 _PlayerInput {get{return new Vector2(_horizontal, _vertical);}}
 	
 	private void Awake()
 	{
 		_rb = GetComponent<Rigidbody>();
-		_ani = GetComponent<Animator>();
 		_pv = GetComponent<PhotonView>();
 	}
 	
@@ -42,13 +37,6 @@ public class PlayerController : MonoBehaviour
 	{
 		if(_pv.IsMine)
 		{
-			//mx = Input.GetAxisRaw("Mouse X");
-		
-			//if(mx != 0)
-			//{
-			//	transform.Rotate(Vector3.up * mx * _mouseSensitivity);
-			//}
-			
 			if(_joyStick._joystickValue != Vector2.zero)
 			{
 				Movement(_joyStick._joystickValue);
@@ -74,15 +62,9 @@ public class PlayerController : MonoBehaviour
 				transform.eulerAngles = new Vector3(transform.eulerAngles.x, yrot, transform.eulerAngles.z);
 			}
 			
-			if(movement.sqrMagnitude == 0)
-			{
-				_ani.SetBool("Walk", false);
-				return;
-			}
-			else
+			if(movement.sqrMagnitude != 0)
 			{
 				_rb.MovePosition(_rb.position + movement);
-				_ani.SetBool("Walk", true);
 			}
 		}
 	}
@@ -99,8 +81,7 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 	
-	// OnCollisionExit is called when this collider/rigidbody has stopped touching another rigidbody/collider.
-	protected void OnCollisionExit(Collision collisionInfo)
+	private void OnCollisionExit(Collision collisionInfo)
 	{
 		if(_pv.IsMine)
 		{

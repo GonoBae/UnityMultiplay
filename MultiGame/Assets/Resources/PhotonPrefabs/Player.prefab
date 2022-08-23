@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3955389759717661944}
   - component: {fileID: 3955389759714761944}
   - component: {fileID: 3955389759715892760}
+  - component: {fileID: 6576246882492495657}
   m_Layer: 0
-  m_Name: KnifeDefault
+  m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6576246882492495657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955389759718146264}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 0.050957166, y: 0.14935704, z: 0.4794916}
+  m_Center: {x: 0.00000011094618, y: -0.00000069331895, z: 0.362046}
 --- !u!1 &5632619011263831134
 GameObject:
   m_ObjectHideFlags: 0
@@ -828,12 +842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d675232f2e341c84b881479cbae95a10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camHolder: {fileID: 5632619011263831134}
-  _characterNeck: {fileID: 8752801173106816627}
   _mouseSensitivity: 3
   _walkSpeed: 5
-  _angle: 0
-  _charDirection: 0
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
