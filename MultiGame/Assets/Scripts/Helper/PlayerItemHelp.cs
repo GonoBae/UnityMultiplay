@@ -34,7 +34,7 @@ public class PlayerItemHelp : MonoBehaviour
 		CloseUI();
 	}
 	
-	public void CloseUI()
+	private void CloseUI()
 	{
 		transform.parent.gameObject.SetActive(false);
 		gameObject.SetActive(false);

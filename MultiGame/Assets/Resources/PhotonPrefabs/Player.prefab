@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3955389759714761944}
   - component: {fileID: 3955389759715892760}
   - component: {fileID: 6576246882492495657}
+  - component: {fileID: 8398672934340669529}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -90,11 +91,23 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3955389759718146264}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.050957166, y: 0.14935704, z: 0.4794916}
   m_Center: {x: 0.00000011094618, y: -0.00000069331895, z: 0.362046}
+--- !u!114 &8398672934340669529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3955389759718146264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2304d729c2a538a439ac4457552a35b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5632619011263831134
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,8 +705,8 @@ GameObject:
   - component: {fileID: 1426098912648950965}
   - component: {fileID: -8228610248985529992}
   - component: {fileID: 2454490407658850122}
-  - component: {fileID: 4394661968329667812}
   - component: {fileID: 3681147227360502718}
+  - component: {fileID: 4394661968329667812}
   - component: {fileID: 3992758102540615096}
   m_Layer: 0
   m_Name: Player
@@ -827,9 +840,24 @@ MonoBehaviour:
   - Type: 4
     SynchronizeType: 1
     Name: Walk
+  - Type: 9
+    SynchronizeType: 1
+    Name: Attack
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &3681147227360502718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8752801172065044881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b81cdd2ee1ba04eab924a19cd468c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4394661968329667812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,18 +875,6 @@ MonoBehaviour:
   _groundLayer:
     serializedVersion: 2
     m_Bits: 256
---- !u!114 &3681147227360502718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8752801172065044881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b81cdd2ee1ba04eab924a19cd468c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3992758102540615096
 MonoBehaviour:
   m_ObjectHideFlags: 0

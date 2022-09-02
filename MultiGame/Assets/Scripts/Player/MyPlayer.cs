@@ -9,16 +9,17 @@ public class MyPlayer : MonoBehaviour
 	private PlayerController _playerController;
 	private PhotonView _pv;
 	private Animator _ani;
-	private MMTouchButton _touchButton;
+	private Knife _knife;
 	
 	public List<Quest> _lstQuest;
 	public List<Quest> _lstSucQuest;
 	
+	private bool _canAttack = true;
+	public bool _CanAttack { get{return _canAttack;} }
+	
 	private void Awake()
 	{
 		_pv = GetComponent<PhotonView>();
-		_ani = GetComponent<Animator>();
-		_playerController = GetComponent<PlayerController>();
 	}
 	
 	private void Start()
@@ -28,8 +29,11 @@ public class MyPlayer : MonoBehaviour
 			int questIndex = Random.Range(0, 5);
 			_pv.RPC("GetQuest", RpcTarget.All, questIndex);
 			
-			_touchButton = FindObjectOfType<MMTouchButton>();
-			_touchButton.ButtonPressedFirstTime.AddListener(AttackPressed);
+			_ani = GetComponent<Animator>();
+			_playerController = GetComponent<PlayerController>();
+			_knife = GetComponentInChildren<Knife>();
+			
+			UIManager._Instance.SetQuestUI(_lstQuest[0]._questName);
 		}
 	}
 	
@@ -55,9 +59,20 @@ public class MyPlayer : MonoBehaviour
 		}
 	}
 	
-	public void AttackPressed()
+	public void Attack()
 	{
 		_ani.SetTrigger("Attack");
+		_knife.gameObject.SetActive(true);
+		StartCoroutine("DelayAttack");
+	}
+	
+	private IEnumerator DelayAttack()
+	{
+		_canAttack = false;
+		yield return new WaitForSeconds(3f);
+		_canAttack = true;
+		_knife.gameObject.SetActive(false);
+		_playerController._AttackButton.SetOpacity(1f);
 	}
 	
 	[PunRPC]

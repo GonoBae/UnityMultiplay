@@ -6,9 +6,13 @@ public class PlayerController : MonoBehaviour
 {
 	[SerializeField] float _mouseSensitivity, _walkSpeed;
 	private Rigidbody _rb;
+	private MyPlayer _player;
 	
 	private PhotonView _pv;
 	private MMTouchJoystick _joyStick;
+	private MMTouchButton _attackButton;
+	
+	public MMTouchButton _AttackButton { get{return _attackButton;} }
 	
 	private float _horizontal;
 	private float _vertical;
@@ -22,6 +26,7 @@ public class PlayerController : MonoBehaviour
 	{
 		_rb = GetComponent<Rigidbody>();
 		_pv = GetComponent<PhotonView>();
+		_player = GetComponent<MyPlayer>();
 	}
 	
 	private void Start()
@@ -30,7 +35,14 @@ public class PlayerController : MonoBehaviour
 		{
 			Destroy(_rb);
 		}
-		else _joyStick = FindObjectOfType<MMTouchJoystick>();
+		else
+		{
+			// 조이스틱은 각각 하나씩 가지고 있음
+			_joyStick = FindObjectOfType<MMTouchJoystick>();
+			// 버튼은 여러개가 있음 => 구별해서 찾아야 함
+			_attackButton = FindObjectOfType<MMTouchButton>();
+			_attackButton.ButtonPressedFirstTime.AddListener(AttackPressed);
+		}
 	}
 	
 	private void Update()
@@ -78,6 +90,15 @@ public class PlayerController : MonoBehaviour
 		if(_angle < 0)
 		{
 			_angle += 360;
+		}
+	}
+	
+	public void AttackPressed()
+	{
+		if(_player._CanAttack)
+		{
+			_player.Attack();
+			_attackButton.SetOpacity(0.3f);
 		}
 	}
 	

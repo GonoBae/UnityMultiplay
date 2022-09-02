@@ -14,7 +14,7 @@ namespace MoreMountains.Tools
     [RequireComponent(typeof(Rect))]
     [RequireComponent(typeof(CanvasGroup))]
     [AddComponentMenu("More Mountains/Tools/Controls/MMTouchButton")]
-    public class MMTouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler, ISubmitHandler
+	public class MMTouchButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ISubmitHandler//, IPointerExitHandler, IPointerEnterHandler
 	{
 		/// The different possible states for the button : 
 		/// Off (default idle state), ButtonDown (button pressed for the first time), ButtonPressed (button being pressed), ButtonUp (button being released), Disabled (unclickable but still present on screen)
@@ -127,7 +127,7 @@ namespace MoreMountains.Tools
 			switch (CurrentState)
 			{
 				case ButtonStates.Off:
-					SetOpacity (IdleOpacity);
+					//SetOpacity (IdleOpacity);
 					if ((_image != null) && (ReturnToInitialSpriteAutomatically))
 					{
 						_image.color = _initialColor;
@@ -174,7 +174,7 @@ namespace MoreMountains.Tools
 					break;
 
 				case ButtonStates.ButtonPressed:
-					SetOpacity (PressedOpacity);
+					//SetOpacity (PressedOpacity);
 					OnPointerPressed();
 					if (_image != null)
 					{
@@ -298,24 +298,24 @@ namespace MoreMountains.Tools
 		/// <summary>
 		/// Triggers the bound pointer enter action when touch enters zone
 		/// </summary>
-		public virtual void OnPointerEnter(PointerEventData data)
-		{
-			if (!MouseMode)
-			{
-				OnPointerDown (data);
-			}
-		}
+		//public virtual void OnPointerEnter(PointerEventData data)
+		//{
+		//	if (!MouseMode)
+		//	{
+		//		OnPointerDown (data);
+		//	}
+		//}
 
 		/// <summary>
 		/// Triggers the bound pointer exit action when touch is out of zone
 		/// </summary>
-		public virtual void OnPointerExit(PointerEventData data)
-		{
-			if (!MouseMode)
-			{
-				OnPointerUp(data);	
-			}
-		}
+		//public virtual void OnPointerExit(PointerEventData data)
+		//{
+		//	if (!MouseMode)
+		//	{
+		//		OnPointerUp(data);	
+		//	}
+		//}
 		/// <summary>
 		/// OnEnable, we reset our button state
 		/// </summary>
@@ -337,7 +337,7 @@ namespace MoreMountains.Tools
 			}
 		}
 
-		protected virtual void SetOpacity(float newOpacity)
+		public virtual void SetOpacity(float newOpacity)
 		{
 			if (_canvasGroup!=null)
 			{
