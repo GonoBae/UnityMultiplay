@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf2a832abcb73c4ea6e48b2fdc0f10a, type: 3}
   m_Name: Spin Quest
   m_EditorClassIdentifier: 
+  _questType: 0
   _questName: "\uBE59\uAE00\uBE59\uAE00"
   _id: 0
   _description: "\uC815\uD574\uC9C4 \uC704\uCE58\uC5D0\uC11C 3\uBC14\uD034\uB97C

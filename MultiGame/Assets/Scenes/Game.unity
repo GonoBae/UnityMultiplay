@@ -1884,6 +1884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa3d11d66e7bc84cab81a23a6ca9ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lstPlayer: []
   _lstQuest:
   - {fileID: 11400000, guid: 0fb51deb3bbaa564288e770c295df684, type: 2}
   - {fileID: 11400000, guid: e4aa0a86b9dfd33449049772445a8052, type: 2}

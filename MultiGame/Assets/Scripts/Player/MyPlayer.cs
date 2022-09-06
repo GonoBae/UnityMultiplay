@@ -6,6 +6,8 @@ using MoreMountains.Tools;
 
 public class MyPlayer : MonoBehaviour
 {
+	public PlayerType _playerType = PlayerType.THIEF;
+	
 	private PlayerController _playerController;
 	private PhotonView _pv;
 	private Animator _ani;
@@ -24,16 +26,12 @@ public class MyPlayer : MonoBehaviour
 	
 	private void Start()
 	{
+		GameManager._Instance.AddPlayer(this);
 		if(_pv.IsMine)
 		{
-			int questIndex = Random.Range(0, 5);
-			_pv.RPC("GetQuest", RpcTarget.All, questIndex);
-			
 			_ani = GetComponent<Animator>();
 			_playerController = GetComponent<PlayerController>();
 			_knife = GetComponentInChildren<Knife>();
-			
-			UIManager._Instance.SetQuestUI(_lstQuest[0]._questName);
 		}
 	}
 	
@@ -79,5 +77,33 @@ public class MyPlayer : MonoBehaviour
 	private void GetQuest(int index)
 	{
 		_lstQuest.Add(GameManager._Instance._lstQuest[index]);
+	}
+	
+	[PunRPC]
+	private void ChangePlayerType(int index)
+	{
+		_playerType = (PlayerType)index;
+	}
+	
+	public void QuestTest()
+	{
+		if(_pv.IsMine) _pv.RPC("Quest", RpcTarget.All);
+	}
+	
+	[PunRPC]
+	public void Quest()
+	{
+		if(_pv.IsMine)
+		{
+			int questIndex = Random.Range(0, 5);
+			_pv.RPC("GetQuest", RpcTarget.All, questIndex);
+			UIManager._Instance.SetQuestUI(_lstQuest[0]._questName);
+		}
+	}
+	
+	
+	public void Change(int index)
+	{
+		_pv.RPC("ChangePlayerType", RpcTarget.All, index);
 	}
 }
