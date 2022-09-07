@@ -59,9 +59,20 @@ public class MyPlayer : MonoBehaviour
 	
 	public void Attack()
 	{
+		_knife.ActiveCollider(true);
 		_ani.SetTrigger("Attack");
-		_knife.gameObject.SetActive(true);
 		StartCoroutine("DelayAttack");
+	}
+	
+	public void TakeDamage()
+	{
+		_pv.RPC("RPC_TakeDamage", RpcTarget.All);
+	}
+	
+	[PunRPC]
+	private void RPC_TakeDamage()
+	{
+		this.gameObject.SetActive(false);
 	}
 	
 	private IEnumerator DelayAttack()
@@ -69,7 +80,7 @@ public class MyPlayer : MonoBehaviour
 		_canAttack = false;
 		yield return new WaitForSeconds(3f);
 		_canAttack = true;
-		_knife.gameObject.SetActive(false);
+		_knife.ActiveCollider(false);
 		_playerController._AttackButton.SetOpacity(1f);
 	}
 	

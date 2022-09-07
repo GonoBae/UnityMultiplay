@@ -20,7 +20,7 @@ public class CameraController : MonoBehaviour
 		_pv = GetComponent<PhotonView>();
 		if(_pv.IsMine)
 		{
-			_mainCam = VirtualCamManager._Instance._VCam1;
+			_mainCam = VirtualCamManager._Instance._VCharCam;
 			_mainCam.Follow = this.transform.GetChild(transform.childCount - 1);
 			_mainCam.LookAt = this.transform.GetChild(transform.childCount - 1);
 		

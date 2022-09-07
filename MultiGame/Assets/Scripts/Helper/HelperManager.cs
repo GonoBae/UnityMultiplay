@@ -66,10 +66,28 @@ public class HelperManager : MonoBehaviour
 	
 	private void OnSceneLoaded(Scene scene, LoadSceneMode load)
 	{
-		if(scene.buildIndex == 1)
+		if(scene.buildIndex == 0 && PhotonNetwork.InRoom)
+		{
+			if(PhotonNetwork.CurrentRoom.Name != "")
+			{
+				
+			}
+		}
+		else if(scene.buildIndex == 1)
 		{
 			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
 		}
+	}
+	
+	private IEnumerator Room()
+	{
+		while(ServerManager._Instance._CurrentMenu._MenuName != "RoomMenu")
+		{
+			yield return null;
+		}
+		
+		RoomMenu menu = ServerManager._Instance._CurrentMenu as RoomMenu;
+		
 	}
 	
 	#endregion
