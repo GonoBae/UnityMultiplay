@@ -26,7 +26,7 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	private PhotonView _pv;
 	private string _gameVersion = "1";
 
-	private Menu _currentMenu;
+	[SerializeField] private Menu _currentMenu;
 	private RoomMenu _room;
 	private FindRoomMenu _findRoom;
 	
@@ -50,21 +50,32 @@ public class ServerManager : MonoBehaviourPunCallbacks
 	
 	IEnumerator Start()
 	{
-		_vCam1.gameObject.SetActive(true);
-		
-		yield return new WaitForSeconds(4.5f);
 		PhotonNetwork.GameVersion = _gameVersion;
-		
-		foreach (var obj in objs)
+		_vCam1.gameObject.SetActive(true);
+		if(HelperManager._Instance._first) // 처음 시작할 때
 		{
-			obj.gameObject.SetActive(true);
+			yield return new WaitForSeconds(4.5f);
+			
+			foreach (var obj in objs)
+			{
+				obj.gameObject.SetActive(true);
+			}
+			yield return new WaitForSeconds(1.5f);
+			
+			MenuManager._Instance.OpenMenu("LoadingMenu");
 		}
-		yield return new WaitForSeconds(1.5f);
+		else // 게임에서 나왔을 때
+		{
+			yield return null;
+			foreach (var obj in objs)
+			{
+				obj.gameObject.SetActive(true);
+			}
+		}
 		
 		if(PhotonNetwork.IsConnected)
 		{
 			Cursor.visible = true;
-			MenuManager._Instance.OpenMenu("LoadingMenu");
 		}
 		else
 		{

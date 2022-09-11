@@ -14863,6 +14863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c434ff0a21dd345b62f525f6d8b907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentMenu: {fileID: 0}
   objs:
   - {fileID: 6557140875316280709}
   - {fileID: 2141060707}
@@ -18794,6 +18795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4141469305fb6a44868a49a5fbff46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _first: 1
 --- !u!114 &2059257000
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,8 +31,6 @@ public class RoomMenu : Menu
 	/***********************************
 				Property
 	***********************************/
-	public Text _RoomName { get{return _roomName;} }
-	public Text _RoomMaxPlayer { get{return _roomMaxPlayer;} }
 	public Text _RoomCurrentPlayer { get{return _roomCurrentPlayer;} set{_roomCurrentPlayer = value;} }
 	public Transform _PlayerListContent { get{return _playerListContent;}}
 	public GameObject _PlayerListItemPrefab { get{return _playerListItemPrefab;}}

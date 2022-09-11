@@ -98,6 +98,7 @@
     <Compile Include="Assets\NiceTouch\Demos\NiceTouchTestScene\Scripts\NiceTouchTestInputManager.cs" />
     <Compile Include="Assets\Scripts\Menu\TitleMenu.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMMaths.cs" />
+    <Compile Include="Assets\Scripts\GameUI\OptionUI.cs" />
     <Compile Include="Assets\Scripts\Quest\SpinQuest.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMDebugOnScreen\MMDebugOnScreenConsole.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />
@@ -170,7 +171,6 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector2Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMDictionaryExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchControls.cs" />
-    <Compile Include="Assets\Scripts\GameUI\OptionUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
