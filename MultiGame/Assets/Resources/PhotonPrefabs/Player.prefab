@@ -890,6 +890,8 @@ MonoBehaviour:
   _playerType: 0
   _lstQuest: []
   _lstSucQuest: []
+  _body: {fileID: 8752801172729010680}
+  _head: {fileID: 8752801173144598439}
 --- !u!1 &8752801172133836005
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ public class MyPlayer : MonoBehaviour
 	public List<Quest> _lstQuest;
 	public List<Quest> _lstSucQuest;
 	
+	public Renderer _body;
+	public Renderer _head;
+	
 	private bool _canAttack = true;
 	public bool _CanAttack { get{return _canAttack;} }
 	
@@ -72,7 +75,29 @@ public class MyPlayer : MonoBehaviour
 	[PunRPC]
 	private void RPC_TakeDamage()
 	{
-		this.gameObject.SetActive(false);
+		if(_pv.IsMine)
+		{
+			this._body.material.SetOverrideTag("RenderType", "Transparent");
+			this._body.material.SetInt("_SrcBlend", (int) UnityEngine.Rendering.BlendMode.SrcAlpha);
+			this._body.material.SetInt("_DstBlend", (int) UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+			this._body.material.SetInt("_ZWrite", 0);
+			this._body.material.DisableKeyword("_ALPHATEST_ON");
+			this._body.material.EnableKeyword("_ALPHABLEND_ON");
+			this._body.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+			this._body.material.renderQueue = (int) UnityEngine.Rendering.RenderQueue.Transparent;
+			this._head.material.SetOverrideTag("RenderType", "Transparent");
+			this._head.material.SetInt("_SrcBlend", (int) UnityEngine.Rendering.BlendMode.SrcAlpha);
+			this._head.material.SetInt("_DstBlend", (int) UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+			this._head.material.SetInt("_ZWrite", 0);
+			this._head.material.DisableKeyword("_ALPHATEST_ON");
+			this._head.material.EnableKeyword("_ALPHABLEND_ON");
+			this._head.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+			this._head.material.renderQueue = (int) UnityEngine.Rendering.RenderQueue.Transparent;
+		}
+		else
+		{
+			this.gameObject.SetActive(false);
+		}
 	}
 	
 	private IEnumerator DelayAttack()

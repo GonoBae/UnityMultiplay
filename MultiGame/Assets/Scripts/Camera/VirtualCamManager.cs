@@ -31,4 +31,13 @@ public class VirtualCamManager : MonoBehaviour
 		_vCharCam = transform.GetChild(0).GetComponent<CinemachineVirtualCamera>();
 		_vBackCam = transform.GetChild(1).GetComponent<CinemachineVirtualCamera>();
 	}
+	
+	#region Custom Methods
+	
+	public void DeadCam()
+	{
+		
+	}
+	
+	#endregion
 }
