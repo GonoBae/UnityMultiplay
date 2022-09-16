@@ -18,6 +18,10 @@ public class MyPlayer : MonoBehaviour
 	
 	public Renderer _body;
 	public Renderer _head;
+	public List<Material> _lstthiefMaterials;
+	public List<Material> _lstPoliceMaterials;
+	public Material _bodyGhost;
+	public Material _headGhost;
 	
 	private bool _canAttack = true;
 	public bool _CanAttack { get{return _canAttack;} }
@@ -25,14 +29,16 @@ public class MyPlayer : MonoBehaviour
 	private void Awake()
 	{
 		_pv = GetComponent<PhotonView>();
+		_bodyGhost = Resources.Load<Material>("BodyGhost");
+		_headGhost = Resources.Load<Material>("HeadGhost");
 	}
 	
 	private void Start()
 	{
 		GameManager._Instance.AddPlayer(this);
+		_ani = GetComponent<Animator>();
 		if(_pv.IsMine)
 		{
-			_ani = GetComponent<Animator>();
 			_playerController = GetComponent<PlayerController>();
 			_knife = GetComponentInChildren<Knife>();
 		}
@@ -77,26 +83,14 @@ public class MyPlayer : MonoBehaviour
 	{
 		if(_pv.IsMine)
 		{
-			this._body.material.SetOverrideTag("RenderType", "Transparent");
-			this._body.material.SetInt("_SrcBlend", (int) UnityEngine.Rendering.BlendMode.SrcAlpha);
-			this._body.material.SetInt("_DstBlend", (int) UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-			this._body.material.SetInt("_ZWrite", 0);
-			this._body.material.DisableKeyword("_ALPHATEST_ON");
-			this._body.material.EnableKeyword("_ALPHABLEND_ON");
-			this._body.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-			this._body.material.renderQueue = (int) UnityEngine.Rendering.RenderQueue.Transparent;
-			this._head.material.SetOverrideTag("RenderType", "Transparent");
-			this._head.material.SetInt("_SrcBlend", (int) UnityEngine.Rendering.BlendMode.SrcAlpha);
-			this._head.material.SetInt("_DstBlend", (int) UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
-			this._head.material.SetInt("_ZWrite", 0);
-			this._head.material.DisableKeyword("_ALPHATEST_ON");
-			this._head.material.EnableKeyword("_ALPHABLEND_ON");
-			this._head.material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
-			this._head.material.renderQueue = (int) UnityEngine.Rendering.RenderQueue.Transparent;
+			ChangeMaterial(_bodyGhost, _headGhost);
 		}
 		else
 		{
-			this.gameObject.SetActive(false);
+			_ani.SetTrigger("Hit");
+			GetComponent<PhotonTransformView>().enabled = false;
+			GetComponent<CapsuleCollider>().enabled = false;
+			GetComponentInChildren<Knife>().enabled = false;
 		}
 	}
 	
@@ -141,5 +135,11 @@ public class MyPlayer : MonoBehaviour
 	public void Change(int index)
 	{
 		_pv.RPC("ChangePlayerType", RpcTarget.All, index);
+	}
+	
+	private void ChangeMaterial(Material body, Material head)
+	{
+		_body.material = body;
+		_head.material = head;
 	}
 }

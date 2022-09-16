@@ -70,6 +70,7 @@ public class HelperManager : MonoBehaviour
 		if(scene.buildIndex == 0 && PhotonNetwork.InRoom)
 		{
 			_first = false;
+			
 			StartCoroutine("OutRoom");
 		}
 		else if(scene.buildIndex == 1)
@@ -83,13 +84,12 @@ public class HelperManager : MonoBehaviour
 		yield return null;
 		
 		PhotonNetwork.LeaveRoom();
-		
-		// ProtoType 코드 참고하여 제작할 것
-		// ProtoType 은 뒤로가면 방으로 가지지만 이 게임은 게임도중 나가면 그냥 로비로 나가야함
-		// Loading -> TitleMenu
-		
-		// Title Menu 에서 캐릭터가 누운 상태로 시작해야함
 	}
 	
+	[PunRPC]
+	public void DestroyObject()
+	{
+		Destroy(HelperManager._Instance.gameObject);
+	}
 	#endregion
 }
