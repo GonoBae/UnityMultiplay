@@ -7,6 +7,7 @@ using MoreMountains.Tools;
 public class MyPlayer : MonoBehaviour
 {
 	public PlayerType _playerType = PlayerType.THIEF;
+	public PlayerLife _playerLife = PlayerLife.Alive;
 	
 	private PlayerController _playerController;
 	private PhotonView _pv;
@@ -68,7 +69,7 @@ public class MyPlayer : MonoBehaviour
 	
 	public void Attack()
 	{
-		_knife.ActiveCollider(true);
+		if(_playerLife == PlayerLife.Alive) _knife.ActiveCollider(true);
 		_ani.SetTrigger("Attack");
 		StartCoroutine("DelayAttack");
 	}
@@ -81,6 +82,7 @@ public class MyPlayer : MonoBehaviour
 	[PunRPC]
 	private void RPC_TakeDamage()
 	{
+		_playerLife = PlayerLife.Ghost;
 		if(_pv.IsMine)
 		{
 			ChangeMaterial(_bodyGhost, _headGhost);
@@ -90,8 +92,8 @@ public class MyPlayer : MonoBehaviour
 			_ani.SetTrigger("Hit");
 			GetComponent<PhotonTransformView>().enabled = false;
 			GetComponent<CapsuleCollider>().enabled = false;
-			GetComponentInChildren<Knife>().enabled = false;
 		}
+		GetComponent<PhotonAnimatorView>().enabled = false;
 	}
 	
 	private IEnumerator DelayAttack()

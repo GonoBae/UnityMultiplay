@@ -86,10 +86,5 @@ public class HelperManager : MonoBehaviour
 		PhotonNetwork.LeaveRoom();
 	}
 	
-	[PunRPC]
-	public void DestroyObject()
-	{
-		Destroy(HelperManager._Instance.gameObject);
-	}
 	#endregion
 }
