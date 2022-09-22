@@ -16,7 +16,8 @@ public class Knife : MonoBehaviour
 		if(other.tag == "Player")
 		{
 			MyPlayer player = other.GetComponent<MyPlayer>();
-			player.TakeDamage();
+			
+			player.TakeDamage(GetComponentInParent<MyPlayer>()._NickName);
 		}
 	}
 	

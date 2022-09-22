@@ -892,6 +892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerType: 0
   _playerLife: 0
+  _nickName: 
   _lstQuest: []
   _lstSucQuest: []
   _body: {fileID: 8752801172729010680}

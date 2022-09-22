@@ -14842,8 +14842,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1700953727}
-  - component: {fileID: 1700953726}
   - component: {fileID: 1700953728}
+  - component: {fileID: 1700953726}
   m_Layer: 0
   m_Name: ServerManager
   m_TagString: Untagged

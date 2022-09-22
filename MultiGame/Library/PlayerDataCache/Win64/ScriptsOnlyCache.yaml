@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - FindRoomMenu
     - GameManager
     - HelperManager
+    - KillLog
     - Knife
     - MainUI
     - MakeRoomMenu
@@ -181,6 +182,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5398}
     - Class: 114
       Script: {instanceID: 5558}
+    - Class: 114
+      Script: {instanceID: 34638}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -362,6 +365,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5524}
     - Class: 114
       Script: {instanceID: 5528}
+    - Class: 114
+      Script: {instanceID: 34638}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1901,7 +1906,7 @@ ScriptsOnlyBuild:
     className: ConnectionHandler
   - hash:
       serializedVersion: 2
-      Hash: 0c8d7bb7a752a8c21c4a92573e640367
+      Hash: 4a5ee81058677a805f71932e520bb444
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ObjectPooler
@@ -1967,7 +1972,7 @@ ScriptsOnlyBuild:
     className: EventSystemSpawner
   - hash:
       serializedVersion: 2
-      Hash: f05dea461b92d20aefd9a3f49c19f6bc
+      Hash: 92c90a2db51c1aad854a59cdc3de09e2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MyPlayer
@@ -2135,7 +2140,7 @@ ScriptsOnlyBuild:
     className: ThirdPersonUserControl
   - hash:
       serializedVersion: 2
-      Hash: 7259923b78930d484f30e6e39236cebe
+      Hash: ae1ef7dd63c4948a9579bf6da0b337b8
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -2277,6 +2282,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: MoreMountains.Tools
     className: MMTouchControls
+  - hash:
+      serializedVersion: 2
+      Hash: 42e283484e53d0c848f824599708c83e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KillLog
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using MoreMountains.Tools;
+using System.IO;
 
 public class MyPlayer : MonoBehaviour
 {
 	public PlayerType _playerType = PlayerType.THIEF;
 	public PlayerLife _playerLife = PlayerLife.Alive;
+	[SerializeField] private string _nickName;
+	public string _NickName { get{return _nickName;} }
 	
 	private PlayerController _playerController;
 	private PhotonView _pv;
@@ -42,6 +45,7 @@ public class MyPlayer : MonoBehaviour
 		{
 			_playerController = GetComponent<PlayerController>();
 			_knife = GetComponentInChildren<Knife>();
+			_nickName = PhotonNetwork.NickName;
 		}
 	}
 	
@@ -74,18 +78,24 @@ public class MyPlayer : MonoBehaviour
 		StartCoroutine("DelayAttack");
 	}
 	
-	public void TakeDamage()
+	public void TakeDamage(string attacker)
 	{
 		_pv.RPC("RPC_TakeDamage", RpcTarget.All);
+		//UIManager._Instance._PV.RPC("ShowKillLog", RpcTarget.All, attacker, attacked);
+		
+		_pv.RPC("RPC_ShowKillLog", RpcTarget.All, attacker);
 	}
 	
+	// 내 화면 : 고스트 , 다른 화면 : 시체
 	[PunRPC]
 	private void RPC_TakeDamage()
 	{
 		_playerLife = PlayerLife.Ghost;
-		if(_pv.IsMine)
+		
+		if (_pv.IsMine)
 		{
 			ChangeMaterial(_bodyGhost, _headGhost);
+			RemoveGravityCollider();
 		}
 		else
 		{
@@ -94,6 +104,21 @@ public class MyPlayer : MonoBehaviour
 			GetComponent<CapsuleCollider>().enabled = false;
 		}
 		GetComponent<PhotonAnimatorView>().enabled = false;
+	}
+	
+	// 모두의 화면 : 킬로그 ( ㅇㅇㅇ -> ㅇㅇㅇ )
+	[PunRPC]
+	private void RPC_ShowKillLog(string attacker)
+	{
+		Debug.LogError(attacker + " " + _nickName);
+		if(_pv.IsMine) 
+		{
+			//ObjectPooler._Instance.PoolInstantiate("KillLog").GetComponent<KillLog>().SetUp(attacker, _nickName);
+		}
+		else
+		{
+			//Debug.LogError(attacker + " " + _nickName);
+		}
 	}
 	
 	private IEnumerator DelayAttack()
@@ -133,7 +158,6 @@ public class MyPlayer : MonoBehaviour
 		}
 	}
 	
-	
 	public void Change(int index)
 	{
 		_pv.RPC("ChangePlayerType", RpcTarget.All, index);
@@ -143,5 +167,11 @@ public class MyPlayer : MonoBehaviour
 	{
 		_body.material = body;
 		_head.material = head;
+	}
+	
+	private void RemoveGravityCollider()
+	{
+		GetComponent<Rigidbody>().useGravity = false;
+		GetComponent<CapsuleCollider>().isTrigger = true;
 	}
 }

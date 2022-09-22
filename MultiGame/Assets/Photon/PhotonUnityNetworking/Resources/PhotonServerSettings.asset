@@ -52,6 +52,11 @@ MonoBehaviour:
   - TestSettings
   - RPC_TakeDamage
   - DestroyObject
+  - SetParent
+  - ActiveRPC
+  - RPC_ShowKillLog
+  - ShowKillLog
+  - SetUp
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 0
