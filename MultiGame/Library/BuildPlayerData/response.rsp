@@ -15,7 +15,6 @@
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Assets\Photon\PhotonLibs\netstandard2.0\Photon3Unity3D.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Portable\Newtonsoft.Json.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Assets\Photon\PhotonLibs\Metro\Photon3Unity3D.dll"
--a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Assets\Plugins\RainbowAssets\!Core\Assemblies\RainbowCore.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0\Runtime\Newtonsoft.Json.dll"
 -a="C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom\nunit.framework.dll"
 -s="C:\Program Files\Unity 2020.3.25f1\Editor\Data\Managed\UnityEngine"

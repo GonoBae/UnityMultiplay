@@ -110,14 +110,9 @@ public class MyPlayer : MonoBehaviour
 	[PunRPC]
 	private void RPC_ShowKillLog(string attacker)
 	{
-		Debug.LogError(attacker + " " + _nickName);
 		if(_pv.IsMine) 
 		{
-			//ObjectPooler._Instance.PoolInstantiate("KillLog").GetComponent<KillLog>().SetUp(attacker, _nickName);
-		}
-		else
-		{
-			//Debug.LogError(attacker + " " + _nickName);
+			ObjectPooler._Instance.PoolInstantiate("KillLog").GetComponent<PhotonView>().RPC("SetUp", RpcTarget.All, attacker, _nickName);
 		}
 	}
 	

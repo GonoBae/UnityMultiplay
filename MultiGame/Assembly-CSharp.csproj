@@ -73,13 +73,14 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMLayers.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMSwipeZone.cs" />
+    <Compile Include="Assets\Scripts\GameUI\KillLog.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Scripts\Menu\CreationNickName.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMVectorAttribute.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMString.cs" />
-    <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMImage.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
+    <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMImage.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchButton.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMDropdownAttribute.cs" />
@@ -172,7 +173,6 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector2Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMDictionaryExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchControls.cs" />
-    <Compile Include="Assets\Scripts\GameUI\KillLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
