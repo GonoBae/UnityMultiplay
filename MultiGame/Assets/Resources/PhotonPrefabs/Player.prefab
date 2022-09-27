@@ -897,8 +897,6 @@ MonoBehaviour:
   _lstSucQuest: []
   _body: {fileID: 8752801172729010680}
   _head: {fileID: 8752801173144598439}
-  _lstthiefMaterials: []
-  _lstPoliceMaterials: []
   _bodyGhost: {fileID: 0}
   _headGhost: {fileID: 0}
 --- !u!1 &8752801172133836005

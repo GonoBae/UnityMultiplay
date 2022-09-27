@@ -22,8 +22,6 @@ public class MyPlayer : MonoBehaviour
 	
 	public Renderer _body;
 	public Renderer _head;
-	public List<Material> _lstthiefMaterials;
-	public List<Material> _lstPoliceMaterials;
 	public Material _bodyGhost;
 	public Material _headGhost;
 	
