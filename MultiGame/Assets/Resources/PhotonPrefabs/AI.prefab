@@ -704,6 +704,7 @@ GameObject:
   - component: {fileID: 1426098912648950965}
   - component: {fileID: -8228610248985529992}
   - component: {fileID: 2454490407658850122}
+  - component: {fileID: 1445060848140002054}
   m_Layer: 10
   m_Name: AI
   m_TagString: AI
@@ -739,7 +740,7 @@ Animator:
   m_GameObject: {fileID: 8752801172065044881}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 9f078227c6f09b54392514bfaa25c741, type: 3}
-  m_Controller: {fileID: 9100000, guid: 97b438bc097f40d4fb5ff04dbe4ced42, type: 2}
+  m_Controller: {fileID: 9100000, guid: c3a8e5abea05d24418509d5497bf0a55, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -826,10 +827,22 @@ MonoBehaviour:
     Name: Walk
   - Type: 9
     SynchronizeType: 1
-    Name: Attack
+    Name: Hit
   m_SynchronizeLayers:
   - SynchronizeType: 0
     LayerIndex: 0
+--- !u!114 &1445060848140002054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8752801172065044881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 161956fbd0be4ea448ad87c1a070e4ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8752801172133836005
 GameObject:
   m_ObjectHideFlags: 0

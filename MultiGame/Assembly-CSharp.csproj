@@ -71,6 +71,7 @@
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Scripts\Pool\ObjectPoolData.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMLayers.cs" />
+    <Compile Include="Assets\Scripts\AI\AIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMSwipeZone.cs" />
     <Compile Include="Assets\Scripts\GameUI\KillLog.cs" />
@@ -173,7 +174,8 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector2Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMDictionaryExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchControls.cs" />
-    <Compile Include="Assets\Scripts\AI\AIManager.cs" />
+    <Compile Include="Assets\Scripts\AI\AIController.cs" />
+    <Compile Include="Assets\Scripts\AI\AISettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

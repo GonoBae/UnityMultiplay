@@ -21,6 +21,9 @@ public class AIManager : MonoBehaviour
 	
 	private void CreateController()
 	{
-		PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "AI"), new Vector3(Random.Range(-20, 30), 0, Random.Range(0, 100)) + Vector3.up, Quaternion.identity, 0, new object[] {_pv.ViewID});
+		for(int i = 0; i < 50; i++)
+		{
+			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "AI"), new Vector3(Random.Range(-17, 17), 0, Random.Range(-18, 18)) + Vector3.up, Quaternion.identity, 0, new object[] {_pv.ViewID});
+		}
 	}
 }
