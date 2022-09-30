@@ -78,6 +78,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
     <Compile Include="Assets\Scripts\Menu\CreationNickName.cs" />
+    <Compile Include="Assets\Scripts\AI\AISettings.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMVectorAttribute.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMString.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMImage.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMRectTransformExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMMonoBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\AI\AI.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMColors.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMHiddenAttribute.cs" />
@@ -174,8 +176,8 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector2Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMDictionaryExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchControls.cs" />
-    <Compile Include="Assets\Scripts\AI\AIController.cs" />
-    <Compile Include="Assets\Scripts\AI\AISettings.cs" />
+    <Compile Include="Assets\Scripts\AI\AIBaseState.cs" />
+    <Compile Include="Assets\Scripts\AI\AIWanderState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
