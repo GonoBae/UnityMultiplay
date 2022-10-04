@@ -85,6 +85,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchButton.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraController.cs" />
+    <Compile Include="Assets\Scripts\AI\AIBaseState.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMAttributes\MMDropdownAttribute.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMScrollRectExtensions.cs" />
     <Compile Include="Assets\Scripts\Camera\VirtualCamManager.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMHelpers\MMHelpers.cs" />
     <Compile Include="Assets\Scripts\MEMO.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMBoundsExtensions.cs" />
+    <Compile Include="Assets\Scripts\AI\AIWanderState.cs" />
     <Compile Include="Assets\Scripts\Menu\FindRoomMenu.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector3Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMControlsTestInputManager.cs" />
@@ -176,8 +178,7 @@
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMVector2Extensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMExtensions\MMDictionaryExtensions.cs" />
     <Compile Include="Assets\NiceTouch\Common\Scripts\MMTools\MMControls\MMTouchControls.cs" />
-    <Compile Include="Assets\Scripts\AI\AIBaseState.cs" />
-    <Compile Include="Assets\Scripts\AI\AIWanderState.cs" />
+    <Compile Include="Assets\Scripts\AI\AIStateMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

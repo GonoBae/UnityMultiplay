@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class AI : MonoBehaviour
 {
@@ -10,8 +11,18 @@ public class AI : MonoBehaviour
 	private float _stoppingDistance = 1.5f;
 	private Vector3 _direction;
 	
-	private void Update()
+	private void Awake()
 	{
-		Debug.DrawRay(transform.position + new Vector3(0, 1, 0), _direction * _rayDistance, Color.red);
+		InitializeStateMachine();
+	}
+	
+	private void InitializeStateMachine()
+	{
+		var states = new Dictionary<Type, AIBaseState>()
+		{
+			{ typeof(AIWanderState), new AIWanderState(this) }
+		};
+		
+		GetComponent<AIStateMachine>().SetStates(states);
 	}
 }
