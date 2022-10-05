@@ -14,7 +14,7 @@ public class AIWanderState : AIBaseState
 	private Quaternion _desiredRotation;
 	private Vector3 _direction;
 
-	public readonly LayerMask _layerMask;
+	public readonly LayerMask _layerMask = LayerMask.NameToLayer("Obstacle");
 	
 	public AIWanderState(AI ai) : base(ai.gameObject)
 	{
@@ -35,11 +35,11 @@ public class AIWanderState : AIBaseState
 
 		if(IsForwardBlocked())
         {
-			FindRandomDestination();
+			_transform.rotation = Quaternion.Lerp(_transform.rotation, _desiredRotation, 0.2f);
         }
 		else
-        {
-
+		{
+			_transform.Translate(Vector3.forward * Time.fixedDeltaTime * AISettings.AISpeed);
         }
 
 		
@@ -51,7 +51,7 @@ public class AIWanderState : AIBaseState
 	private void FindRandomDestination()
     {
 		Vector3 pos = (_transform.position + (_transform.forward * 4f))
-			+ new Vector3(UnityEngine.Random.Range(-10f, 10), 0f, UnityEngine.Random.Range(-10f, 10));
+			+ new Vector3(UnityEngine.Random.Range(-5f, 5f), 0f, UnityEngine.Random.Range(-5f, 5f));
 
 		_destination = new Vector3(pos.x, 0f, pos.z);
 

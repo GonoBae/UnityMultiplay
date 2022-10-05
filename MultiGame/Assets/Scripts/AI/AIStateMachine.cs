@@ -22,7 +22,10 @@ public class AIStateMachine : MonoBehaviour
 		{
 			_CurrentState = _availableStates.Values.First();
 		}
-		
+	}
+	
+	private void FixedUpdate()
+	{
 		var nextState = _CurrentState?.Tick();
 		
 		if(nextState != null && nextState != _CurrentState?.GetType())
