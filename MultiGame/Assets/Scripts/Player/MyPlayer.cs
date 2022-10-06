@@ -99,7 +99,7 @@ public class MyPlayer : MonoBehaviour
 		{
 			_ani.SetTrigger("Hit");
 			GetComponent<PhotonTransformView>().enabled = false;
-			GetComponent<CapsuleCollider>().enabled = false;
+			GetComponent<CapsuleCollider>().isTrigger = true;
 		}
 		GetComponent<PhotonAnimatorView>().enabled = false;
 	}

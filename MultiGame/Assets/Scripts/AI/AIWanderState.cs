@@ -26,60 +26,8 @@ public class AIWanderState : AIBaseState
 		//CheckForAggro();
 		Debug.DrawRay(_transform.position + new Vector3(0, 1, 0), _direction * _rayDistance, Color.green);
 		
-		if(_destination.HasValue == false || Vector3.Distance(_transform.position, _destination.Value) <= _stopDistance)
-		{
-			FindRandomDestination();
-		}
-
-		_transform.rotation = Quaternion.Slerp(_transform.rotation, _desiredRotation, Time.deltaTime * _turnSpeed);
-
-		if(IsForwardBlocked())
-        {
-			_transform.rotation = Quaternion.Lerp(_transform.rotation, _desiredRotation, 0.2f);
-        }
-		else
-		{
-			_transform.Translate(Vector3.forward * Time.fixedDeltaTime * AISettings.AISpeed);
-        }
-
 		
-
+		
 		return null;
 	}
-
-	// 랜덤한 위치 설정
-	private void FindRandomDestination()
-    {
-		Vector3 pos = (_transform.position + (_transform.forward * 4f))
-			+ new Vector3(UnityEngine.Random.Range(-5f, 5f), 0f, UnityEngine.Random.Range(-5f, 5f));
-
-		_destination = new Vector3(pos.x, 0f, pos.z);
-
-		_direction = Vector3.Normalize(_destination.Value - _transform.position);
-		_direction = new Vector3(_direction.x, 0f, _direction.z);
-		_desiredRotation = Quaternion.LookRotation(_direction);
-    }
-
-	private bool IsForwardBlocked()
-    {
-		Ray ray = new Ray(_transform.position + new Vector3(0, 1, 0), _direction);
-		return Physics.SphereCast(ray, 0.5f, _rayDistance, _layerMask);
-    }
-
-	Quaternion startingAngle = Quaternion.AngleAxis(-60, Vector3.up);
-
-	private void CheckForAggro()
-    {
-		RaycastHit hit;
-		var angle = _transform.rotation * startingAngle;
-		var dir = angle * Vector3.forward;
-		var pos = _transform.position + new Vector3(0, 1, 0);
-		for(var i = 0; i < 24; i++)
-        {
-			if(Physics.Raycast(pos, dir, out hit, AISettings.AggroRadius))
-            {
-				Debug.DrawRay(pos, dir * hit.distance, Color.green);
-            }
-        }
-    }
 }

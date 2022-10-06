@@ -9,10 +9,9 @@ public class AI : MonoBehaviour
 	public Rigidbody _Rb { get{return _rb;} }
 	
 	[SerializeField] private PlayerType _type = PlayerType.AI;
-	
-	private float _rayDistance = 5.0f;
-	private float _stoppingDistance = 1.5f;
+	[SerializeField] private bool _showGizmos;
 	private Vector3 _direction;
+	
 	
 	private void Awake()
 	{
