@@ -243,6 +243,7 @@ public class RoomMenu : Menu
 	[PunRPC]
 	private void ChatRPC(string msg)
 	{
+		// 채팅 목록이 꽉 차있다면
 		if(_lstChat.Count == _maximumChatCount && _lstChat[_lstChat.Count - 1].gameObject.activeSelf)
 		{
 			// 0번 인덱스 삭제
@@ -255,6 +256,7 @@ public class RoomMenu : Menu
 		string[] words = msg.Split('\t');
 		foreach(var item in _lstChat)
 		{
+			// 비활성화 상태인 채팅 목록 세팅
 			if(item._Chat.text == "")
 			{
 				isFull = true;
@@ -265,6 +267,7 @@ public class RoomMenu : Menu
 				break;
 			}
 		}
+		// 프리팹으로 채팅 목록 세팅
 		if(!isFull)
 		{
 			ChatItem item = Instantiate(_chatBoxPrefab, _chatBoxContent).GetComponent<ChatItem>();

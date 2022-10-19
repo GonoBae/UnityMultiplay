@@ -7,6 +7,7 @@ public class FindRoomMenu : Menu
 {
 	[SerializeField] Transform _roomListContent;
 	[SerializeField] GameObject _roomListItemPrefab;
+	// 오버젝트 풀을 위한 Queue
 	private Queue<RoomListItem> _waitingRoom = new Queue<RoomListItem>();
 	[SerializeField] private List<RoomListItem> _lstRoom = new List<RoomListItem>();
 	
@@ -18,11 +19,12 @@ public class FindRoomMenu : Menu
 	{
 		foreach(RoomInfo info in roomList)
 		{
-			// 제거
+			int index = _lstRoom.FindIndex(x => x._Info.Name == info.Name);
+			// 사라진 방이 존재한다면
 			if(info.RemovedFromList)
 			{
-				int index = _lstRoom.FindIndex(x => x._Info.Name == info.Name);
-				// 있으면
+				
+				// 있으면 해당 방을 리스트에서 제거
 				if(index != -1)
 				{
 					RoomListItem room = _lstRoom[index];
@@ -30,20 +32,20 @@ public class FindRoomMenu : Menu
 					_lstRoom.RemoveAt(index);
 				}
 			}
-			// 추가
 			else
 			{
-				int index = _lstRoom.FindIndex(x => x._Info.Name == info.Name);
-				// 없으면
+				// 사라진 방이 없으면
 				if(index == -1)
 				{
 					RoomListItem item;
+					// 현재 풀링할 수 있는 룸 목록이 있다면 세팅 후 활성화
 					if(_waitingRoom.Count > 0)
 					{
 						item = _waitingRoom.Dequeue();
 						item.SetUp(info);
 						item.gameObject.SetActive(true);
 					}
+					// 없다면 프리팹을 가져온 후 세팅 후 리스트에 담아준다.
 					else
 					{
 						item = Instantiate(_roomListItemPrefab, _roomListContent).GetComponent<RoomListItem>();
