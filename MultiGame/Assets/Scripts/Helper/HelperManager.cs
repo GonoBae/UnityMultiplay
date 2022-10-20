@@ -59,6 +59,7 @@ public class HelperManager : MonoBehaviour
 	
 	#region Custom Methods
 	
+	// 강퇴
 	[PunRPC]
 	public void KickPlayer()
 	{
@@ -75,8 +76,8 @@ public class HelperManager : MonoBehaviour
 		}
 		else if(scene.buildIndex == 1)
 		{
-			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
 			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "AIManager"), Vector3.zero, Quaternion.identity);
+			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
 		}
 	}
 	
