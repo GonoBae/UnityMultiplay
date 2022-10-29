@@ -858,6 +858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 161956fbd0be4ea448ad87c1a070e4ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _aiState: -1
   _type: 2
   _showGizmos: 0
 --- !u!114 &2642224000786043989
@@ -867,7 +868,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8752801172065044881}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 692275c19c2339948ae4b0162b409c38, type: 3}
   m_Name: 
@@ -885,7 +886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 3
-  viewAngle: 150
+  viewAngle: 65
   aiMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -893,6 +894,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   visibleAI: []
+  visibleObstacle: []
 --- !u!1 &8752801172133836005
 GameObject:
   m_ObjectHideFlags: 0

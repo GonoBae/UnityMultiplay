@@ -21,7 +21,7 @@ public class AIManager : MonoBehaviour
 		}
 	}
 	private LayerMask spawnObjLayer;
-	private float overlapBoxSize = 5f;
+	private float overlapBoxSize = 100f;
 	
 	// AI Spawn
 	private void CreateController()

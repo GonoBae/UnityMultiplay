@@ -2,7 +2,9 @@
 
 public class AISettings : MonoBehaviour
 {
-	[SerializeField] private float aiSpeed = 1f;
+	// rigidbody.moveposition?
+	
+	[SerializeField] private float aiSpeed = 10f;
 	[SerializeField] private float aggroRadius = 4f;
 	
 	public static float AISpeed => Instance.aiSpeed;
