@@ -13,11 +13,28 @@ public class FieldOfView : MonoBehaviour
 	public LayerMask obstacleMask;
 	
 	public List<Transform> visibleAI;
-	public List<Transform> visibleObstacle;
+	private List<Vector3> viewPoints = new List<Vector3>();
+	public List<Vector3> _hitPoints = new List<Vector3>();
+	
+	public float meshResolution;
+	
+	public MeshFilter viewMeshFilter;
+	private Mesh viewMesh;
+	
+	public bool _isView = false;
 	
 	private void Start()
 	{
+		viewMesh = new Mesh();
+		viewMesh.name = "View Mesh";
+		viewMeshFilter.mesh = viewMesh;
+		
 		StartCoroutine("FindObstacleWithDelay", .1f);
+	}
+	
+	private void Update()
+	{
+		DrawFieldOfView();
 	}
 	
 	IEnumerator FindObstacleWithDelay(float delay)
@@ -36,7 +53,7 @@ public class FieldOfView : MonoBehaviour
 	
 		for(int i = 0; i < aiInViewRadius.Length; i++)
 		{
-			Transform ai = aiInViewRadius[i].transform.GetChild(3).transform;
+			Transform ai = aiInViewRadius[i].transform.GetChild(4).transform;
 			Vector3 dirToAI = (ai.position - pos).normalized;
 			if(Vector3.Angle(transform.forward, dirToAI) < viewAngle / 2)
 			{
@@ -47,31 +64,61 @@ public class FieldOfView : MonoBehaviour
 				}
 			}
 		}
+	}
+	
+	private void DrawFieldOfView()
+	{
+		viewPoints.Clear();
+		_hitPoints.Clear();
+		int stepCount = Mathf.RoundToInt(viewAngle * meshResolution);
+		float stepAngleSize = viewAngle / stepCount;
 		
-		visibleObstacle.Clear();
-		Collider[] obstacleInViewRadius = Physics.OverlapSphere(pos, viewRadius, obstacleMask);
-		RaycastHit hit;
-		for(int i = 0; i < obstacleInViewRadius.Length; i++)
+		for(int i = 0; i <= stepCount; i++)
 		{
-			Collider ob = obstacleInViewRadius[i];
-			//Transform ob = obstacleInViewRadius[i].transform;
-			if(Physics.Raycast(pos, transform.forward, out hit, viewRadius))
+			float angle = transform.eulerAngles.y - viewAngle / 2 + stepAngleSize * i;
+			//Debug.DrawLine(pos, pos + DirFromAngle(angle, true) * viewRadius, Color.red);
+			ViewCastInfo newViewCast = ViewCast(angle);
+			if(newViewCast.hit) _hitPoints.Add(newViewCast.point);
+			viewPoints.Add(newViewCast.point);
+		}
+		
+		if(_isView)
+		{
+			int vertexCount = viewPoints.Count + 1;
+			Vector3[] vertices = new Vector3[vertexCount];
+			int[] triangles = new int[(vertexCount - 2) * 3];
+		
+			vertices[0] = new Vector3(0, pos.y, 0);
+			for(int i = 0; i < vertexCount - 1; i++)
 			{
-				if(hit.collider == ob) {
-					Vector3 dirToObstacle = (hit.point - pos).normalized;
-					if(Vector3.Angle(transform.forward, dirToObstacle) < viewAngle / 2)
-					{
-						Debug.Log(Vector3.Angle(transform.forward, dirToObstacle));
-						visibleObstacle.Add(hit.transform);
-					}
+				vertices[i + 1] = transform.InverseTransformPoint(viewPoints[i]);
+				if(i < vertexCount - 2)
+				{
+					triangles[i * 3] = 0;
+					triangles[i * 3 + 1] = i + 1;
+					triangles[i * 3 + 2] = i + 2;
 				}
 			}
-			//Vector3 dirToObstacle = (ob.position - pos).normalized;
-			//if(Vector3.Angle(transform.forward, dirToObstacle) < viewAngle / 2)
-			//{
-			//	Debug.Log(Vector3.Angle(transform.forward, dirToObstacle));
-			//	visibleObstacle.Add(ob);
-			//}
+			viewMesh.Clear();
+			viewMesh.vertices = vertices;
+			viewMesh.triangles = triangles;
+			viewMesh.RecalculateNormals();
+		}
+		else viewMesh.Clear();
+	}
+	
+	private ViewCastInfo ViewCast(float globalAngle)
+	{
+		Vector3 dir = DirFromAngle(globalAngle, true);
+		RaycastHit hit;
+		
+		if(Physics.Raycast(pos, dir, out hit, viewRadius, obstacleMask))
+		{
+			return new ViewCastInfo(true, hit.point, hit.distance, globalAngle);
+		}
+		else
+		{
+			return new ViewCastInfo(false, pos + dir * viewRadius, viewRadius, globalAngle);
 		}
 	}
 	
@@ -82,5 +129,21 @@ public class FieldOfView : MonoBehaviour
 			angleInDegrees += transform.eulerAngles.y;
 		}
 		return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), 0, Mathf.Cos(angleInDegrees * Mathf.Deg2Rad));
+	}
+	
+	public struct ViewCastInfo
+	{
+		public bool hit;
+		public Vector3 point;
+		public float dst;
+		public float angle;
+		
+		public ViewCastInfo(bool _hit, Vector3 _point, float _dst, float _angle)
+		{
+			hit = _hit;
+			point = _point;
+			dst = _dst;
+			angle = _angle;
+		}
 	}
 }

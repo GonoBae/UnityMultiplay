@@ -22,9 +22,5 @@ public class FieldOfViewEditor : Editor
 		{
 			Handles.DrawLine(fow.pos, visibleAI.position);
 		}
-		foreach(Transform visibleObstacle in fow.visibleObstacle)
-		{
-			Handles.DrawLine(fow.pos, visibleObstacle.position);
-		}
 	}
 }
