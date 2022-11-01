@@ -58,7 +58,6 @@ public class HelperManager : MonoBehaviour
 	#endregion
 	
 	#region Custom Methods
-	
 	// 강퇴
 	[PunRPC]
 	public void KickPlayer()
@@ -71,16 +70,16 @@ public class HelperManager : MonoBehaviour
 		if(scene.buildIndex == 0 && PhotonNetwork.InRoom)
 		{
 			_first = false;
-			
 			StartCoroutine("OutRoom");
 		}
 		else if(scene.buildIndex == 1)
 		{
-			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "AIManager"), Vector3.zero, Quaternion.identity);
+			PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "AIManager"), Vector3.zero, Quaternion.identity);
 			PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerManager"), Vector3.zero, Quaternion.identity);
 		}
 	}
 	
+	// 방장이 나가게 되면 자동으로 마스터는 바뀜
 	private IEnumerator OutRoom()
 	{
 		yield return null;

@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: AI.cs
   m_RootView: {fileID: 9}
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -41,13 +41,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 749
-    height: 348
+    width: 737
+    height: 380
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 30}
+  m_ActualView: {fileID: 27}
   m_Panes:
-  - {fileID: 30}
+  - {fileID: 27}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
@@ -68,13 +68,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 599
-    width: 1422
-    height: 348
-  m_MinSize: {x: 333, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+    y: 567
+    width: 1401
+    height: 380
+  m_MinSize: {x: 331, y: 271}
+  m_MaxSize: {x: 14001, y: 10021}
   vertical: 0
-  controlID: 97
+  controlID: 68
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -90,15 +90,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1422
+    x: 1401
     y: 0
-    width: 498
+    width: 519
     height: 947
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 29}
+  m_ActualView: {fileID: 26}
   m_Panes:
-  - {fileID: 29}
+  - {fileID: 26}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &5
@@ -122,10 +122,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 609, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 606, y: 492}
+  m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 157
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -141,20 +141,20 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 749
+    x: 737
     y: 0
-    width: 673
-    height: 348
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 23}
+    width: 664
+    height: 380
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 25}
-  - {fileID: 23}
-  - {fileID: 27}
-  - {fileID: 21}
-  m_Selected: 1
-  m_LastSelected: 2
+  - {fileID: 22}
+  - {fileID: 24}
+  - {fileID: 20}
+  - {fileID: 18}
+  m_Selected: 2
+  m_LastSelected: 3
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,12 +174,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1422
+    width: 1401
     height: 947
-  m_MinSize: {x: 333, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
+  m_MinSize: {x: 331, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
-  controlID: 18
+  controlID: 158
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -197,13 +197,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 384
-    height: 599
+    width: 377
+    height: 567
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 28}
+  m_ActualView: {fileID: 25}
   m_Panes:
-  - {fileID: 28}
+  - {fileID: 25}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
@@ -256,8 +256,8 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LoadedToolbars:
-  - {fileID: 31}
-  m_MainToolbar: {fileID: 31}
+  - {fileID: 28}
+  m_MainToolbar: {fileID: 28}
   m_LastLoadedLayoutName: 
 --- !u!114 &11
 MonoBehaviour:
@@ -278,12 +278,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1422
-    height: 599
+    width: 1401
+    height: 567
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 159
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -315,31 +315,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: FGCodeWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 384
+    x: 377
     y: 0
-    width: 1038
-    height: 599
+    width: 1024
+    height: 567
   m_MinSize: {x: 102, y: 121}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 22}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 26}
-  - {fileID: 22}
-  - {fileID: 24}
-  - {fileID: 20}
+  - {fileID: 23}
   - {fileID: 19}
-  - {fileID: 18}
+  - {fileID: 21}
   - {fileID: 17}
   - {fileID: 16}
   - {fileID: 15}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 3
+  m_Selected: 5
+  m_LastSelected: 2
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 61
@@ -355,308 +352,28 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: AIStateMachine.cs
+    m_Text: PlayerController.cs
     m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/AI/
+    m_Tooltip: in Scripts/Player/
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 377
     y: 73
-    width: 1036
-    height: 578
+    width: 1022
+    height: 546
   m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 692275c19c2339948ae4b0162b409c38, type: 3}
-  targetAssetGuid: 692275c19c2339948ae4b0162b409c38
+  targetAsset: {fileID: 11500000, guid: d675232f2e341c84b881479cbae95a10, type: 3}
+  targetAssetGuid: d675232f2e341c84b881479cbae95a10
   textEditor:
-    scrollPosition: {x: 0, y: 375}
-    scrollPositionLine: 17
-    scrollPositionOffset: 18
+    scrollPosition: {x: 0, y: 483}
+    scrollPositionLine: 23
+    scrollPositionOffset: 0
     searchString: 
     caretPosition:
       virtualColumn: 12
       column: 12
       characterIndex: 3
-      line: 22
-    _selectionStartPosition:
-      virtualColumn: 60
-      column: 60
-      characterIndex: 51
-      line: 22
-    hasSelection: 1
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 38
-      y: 375
-      width: 978
-      height: 532
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: AIManager.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/AI/
-  m_Pos:
-    serializedVersion: 2
-    x: 384
-    y: 73
-    width: 1036
-    height: 578
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: fdfb12629d1c23649946b43eca982509, type: 3}
-  targetAssetGuid: fdfb12629d1c23649946b43eca982509
-  textEditor:
-    scrollPosition: {x: 0, y: 346}
-    scrollPositionLine: 16
-    scrollPositionOffset: 10
-    searchString: 
-    caretPosition:
-      virtualColumn: 36
-      column: 36
-      characterIndex: 33
-      line: 23
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 38
-      y: 346
-      width: 978
-      height: 517
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Definition.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/
-  m_Pos:
-    serializedVersion: 2
-    x: 384
-    y: 73
-    width: 1036
-    height: 578
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 2fbeea365afed354aa39ec9b3332a948, type: 3}
-  targetAssetGuid: 2fbeea365afed354aa39ec9b3332a948
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 41
-      column: 41
-      characterIndex: 41
-      line: 3
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 27
-      y: 0
-      width: 1004
-      height: 532
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: AISettings.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/AI/
-  m_Pos:
-    serializedVersion: 2
-    x: 384
-    y: 73
-    width: 1036
-    height: 578
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 7eb8e98afe775e842ab4c5f634ffe2b6, type: 3}
-  targetAssetGuid: 7eb8e98afe775e842ab4c5f634ffe2b6
-  textEditor:
-    scrollPosition: {x: 0, y: 0}
-    scrollPositionLine: 0
-    scrollPositionOffset: 0
-    searchString: 
-    caretPosition:
-      virtualColumn: 47
-      column: 47
-      characterIndex: 44
-      line: 6
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 38
-      y: 0
-      width: 993
-      height: 532
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &18
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: FieldOfViewEditor.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Editor/
-  m_Pos:
-    serializedVersion: 2
-    x: 384
-    y: 73
-    width: 1036
-    height: 578
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: 57d76f1993c34aa4591df23be9c94c63, type: 3}
-  targetAssetGuid: 57d76f1993c34aa4591df23be9c94c63
-  textEditor:
-    scrollPosition: {x: 0, y: 39}
-    scrollPositionLine: 1
-    scrollPositionOffset: 18
-    searchString: 
-    caretPosition:
-      virtualColumn: 9
-      column: 9
-      characterIndex: 3
-      line: 23
-    _selectionStartPosition:
-      virtualColumn: 0
-      column: 0
-      characterIndex: 0
-      line: 0
-    hasSelection: 0
-    hiddenLinesStart: 
-    hiddenLinesCount: 
-    lineNumbersOffset: 0
-    yLineOffsets: []
-    codeViewRect:
-      serializedVersion: 2
-      x: 38
-      y: 39
-      width: 978
-      height: 532
-    tokenTooltip: {fileID: 0}
-    argumentsHint: {fileID: 0}
-    collapsedRegions: []
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 61
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: FieldOfView.cs
-    m_Image: {fileID: 0}
-    m_Tooltip: in Scripts/AI/
-  m_Pos:
-    serializedVersion: 2
-    x: 384
-    y: 73
-    width: 1036
-    height: 578
-  m_ViewDataDictionary: {fileID: 0}
-  targetAsset: {fileID: 11500000, guid: e1fefa1007c78044a9b316b374084052, type: 3}
-  targetAssetGuid: e1fefa1007c78044a9b316b374084052
-  textEditor:
-    scrollPosition: {x: 0, y: 1776}
-    scrollPositionLine: 84
-    scrollPositionOffset: 12
-    searchString: 
-    caretPosition:
-      virtualColumn: 31
-      column: 31
-      characterIndex: 20
-      line: 101
+      line: 35
     _selectionStartPosition:
       virtualColumn: 0
       column: 0
@@ -670,13 +387,13 @@ MonoBehaviour:
     codeViewRect:
       serializedVersion: 2
       x: 49
-      y: 1776
-      width: 967
-      height: 517
+      y: 483
+      width: 953
+      height: 485
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
     collapsedRegions: []
---- !u!114 &20
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 61
   m_CorrespondingSourceObject: {fileID: 0}
@@ -696,23 +413,23 @@ MonoBehaviour:
     m_Tooltip: in Scripts/AI/
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 377
     y: 73
-    width: 1036
-    height: 578
+    width: 1022
+    height: 546
   m_ViewDataDictionary: {fileID: 0}
   targetAsset: {fileID: 11500000, guid: 161956fbd0be4ea448ad87c1a070e4ec, type: 3}
   targetAssetGuid: 161956fbd0be4ea448ad87c1a070e4ec
   textEditor:
-    scrollPosition: {x: 0, y: 661}
-    scrollPositionLine: 31
-    scrollPositionOffset: 10
+    scrollPosition: {x: 0, y: 2}
+    scrollPositionLine: 0
+    scrollPositionOffset: 2
     searchString: 
     caretPosition:
-      virtualColumn: 18
-      column: 18
-      characterIndex: 6
-      line: 75
+      virtualColumn: 9
+      column: 9
+      characterIndex: 3
+      line: 32
     _selectionStartPosition:
       virtualColumn: 0
       column: 0
@@ -726,13 +443,125 @@ MonoBehaviour:
     codeViewRect:
       serializedVersion: 2
       x: 38
-      y: 661
-      width: 978
-      height: 517
+      y: 2
+      width: 964
+      height: 485
     tokenTooltip: {fileID: 0}
     argumentsHint: {fileID: 0}
     collapsedRegions: []
---- !u!114 &21
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: MyPlayer.cs
+    m_Image: {fileID: 0}
+    m_Tooltip: in Scripts/Player/
+  m_Pos:
+    serializedVersion: 2
+    x: 377
+    y: 73
+    width: 1022
+    height: 546
+  m_ViewDataDictionary: {fileID: 0}
+  targetAsset: {fileID: 11500000, guid: 267a8869866aef8428f9eba917f6476d, type: 3}
+  targetAssetGuid: 267a8869866aef8428f9eba917f6476d
+  textEditor:
+    scrollPosition: {x: 0, y: 1807}
+    scrollPositionLine: 86
+    scrollPositionOffset: 1
+    searchString: 
+    caretPosition:
+      virtualColumn: 39
+      column: 39
+      characterIndex: 2
+      line: 100
+    _selectionStartPosition:
+      virtualColumn: 0
+      column: 0
+      characterIndex: 0
+      line: 0
+    hasSelection: 0
+    hiddenLinesStart: 
+    hiddenLinesCount: 
+    lineNumbersOffset: 0
+    yLineOffsets: []
+    codeViewRect:
+      serializedVersion: 2
+      x: 49
+      y: 1807
+      width: 953
+      height: 485
+    tokenTooltip: {fileID: 0}
+    argumentsHint: {fileID: 0}
+    collapsedRegions: []
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 61
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233c5be4b3c6a2f42af54a964d938960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: GameManager.cs
+    m_Image: {fileID: 0}
+    m_Tooltip: in Scripts/Manager/
+  m_Pos:
+    serializedVersion: 2
+    x: 377
+    y: 73
+    width: 1022
+    height: 546
+  m_ViewDataDictionary: {fileID: 0}
+  targetAsset: {fileID: 11500000, guid: faa3d11d66e7bc84cab81a23a6ca9ea7, type: 3}
+  targetAssetGuid: faa3d11d66e7bc84cab81a23a6ca9ea7
+  textEditor:
+    scrollPosition: {x: -0.04540817, y: 1105}
+    scrollPositionLine: 52
+    scrollPositionOffset: 13
+    searchString: 
+    caretPosition:
+      virtualColumn: 21
+      column: 21
+      characterIndex: 12
+      line: 64
+    _selectionStartPosition:
+      virtualColumn: 0
+      column: 0
+      characterIndex: 0
+      line: 0
+    hasSelection: 0
+    hiddenLinesStart: 
+    hiddenLinesCount: 
+    lineNumbersOffset: 0
+    yLineOffsets: []
+    codeViewRect:
+      serializedVersion: 2
+      x: 48.954594
+      y: 1105
+      width: 953
+      height: 485
+    tokenTooltip: {fileID: 0}
+    argumentsHint: {fileID: 0}
+    collapsedRegions: []
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -752,17 +581,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: -1181
-    y: 734
-    width: 658
-    height: 265
+    x: 737
+    y: 640
+    width: 662
+    height: 359
   m_ViewDataDictionary: {fileID: 0}
-  infoText: References to HelperManager.OutRoom
-  resultsCountText: Found 2 results in 1 files.
+  infoText: References to UnityEngine.Rigidbody.velocity
+  resultsCountText: Found 80 results in 7 files.
   assetGuids: []
   skippedGuids: []
   searchOptions:
-    text: OutRoom
+    text: velocity
     altText1: 
     altText2: 
     matchCase: 1
@@ -788,14 +617,31 @@ MonoBehaviour:
   scrollPosition: {x: 0, y: 0}
   currentItem: 0
   flatResults:
-  - description: StartCoroutine("OutRoom");
-    assetGuid: e4141469305fb6a44868a49a5fbff46a
-    assetPath: Assets/Scripts/Helper/HelperManager.cs
-    fileName: HelperManager.cs
-    line: 74
-    characterIndex: 19
-    length: 7
+  - description: _rb.velocity = Vector3.zero;
+    assetGuid: d675232f2e341c84b881479cbae95a10
+    assetPath: Assets/Scripts/Player/PlayerController.cs
+    fileName: PlayerController.cs
+    line: 108
+    characterIndex: 7
+    length: 8
     trimOffset: 3
+    selected: 1
+    resultType: 2
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Camera-velocity", "Get the world-space speed of the camera (Read
+      Only)." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 1079
+    characterIndex: 10
+    length: 8
+    trimOffset: 0
     selected: 1
     resultType: 14
     rcHighlight:
@@ -804,14 +650,1030 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-  - description: private IEnumerator OutRoom()
-    assetGuid: e4141469305fb6a44868a49a5fbff46a
-    assetPath: Assets/Scripts/Helper/HelperManager.cs
-    fileName: HelperManager.cs
-    line: 83
-    characterIndex: 21
-    length: 7
-    trimOffset: 1
+  - description: '{ "CharacterController-velocity", "The current relative velocity
+      of the Character (see notes)." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 1127
+    characterIndex: 23
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "CharacterController-velocity", "The current relative velocity
+      of the Character (see notes)." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 1127
+    characterIndex: 56
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Collision-relativeVelocity", "The relative linear velocity of
+      the two colliding objects (Read Only)." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 1202
+    characterIndex: 53
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Collision2D-relativeVelocity", "The relative linear velocity
+      of the two colliding objects (Read Only)." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 1209
+    characterIndex: 55
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ConfigurableJoint-targetAngularVelocity", "This is a Vector3.
+      It defines the desired angular velocity that the joint should rotate into."
+      },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 1351
+    characterIndex: 96
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ConfigurableJoint-targetVelocity", "The desired velocity that
+      the joint should move along." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 1354
+    characterIndex: 51
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ForceMode.VelocityChange", "Add an instant velocity change to
+      the rigidbody, ignoring its mass." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2006
+    characterIndex: 46
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "HingeJoint-motor", "The motor will apply a force up to a maximum
+      force to achieve the target velocity in degrees per second." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2495
+    characterIndex: 96
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "HingeJoint-velocity", "The angular velocity of the joint in
+      degrees per second." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2500
+    characterIndex: 14
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "HingeJoint-velocity", "The angular velocity of the joint in
+      degrees per second." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2500
+    characterIndex: 38
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "JointDrive-mode", "Whether the drive should attempt to reach
+      position, velocity, both or nothing." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2768
+    characterIndex: 74
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "JointDriveMode", "The ConfigurableJoint attempts to attain position
+      / velocity targets based on this flag." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2771
+    characterIndex: 73
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "JointDriveMode.PositionAndVelocity", "Try to reach the specified
+      target position and velocity." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2774
+    characterIndex: 88
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "JointDriveMode.Velocity", "Try to reach the specified target
+      velocity." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 2775
+    characterIndex: 64
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "NavMeshAgent-desiredVelocity", "The desired velocity of the
+      agent including any potential contribution from avoidance. (Read Only)" },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3694
+    characterIndex: 47
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "NavMeshAgent-velocity", "The current velocity of the NavMeshAgent
+      component." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3713
+    characterIndex: 16
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "NavMeshAgent-velocity", "The current velocity of the NavMeshAgent
+      component." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3713
+    characterIndex: 40
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "NavMeshObstacle-velocity", "Velocity at which the obstacle moves
+      around the NavMesh." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3747
+    characterIndex: 19
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Particle-angularVelocity", "The angular velocity of the particle."
+      },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3967
+    characterIndex: 43
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Particle-velocity", "The velocity of the particle." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3974
+    characterIndex: 12
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Particle-velocity", "The velocity of the particle." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3974
+    characterIndex: 28
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleEmitter-angularVelocity", "The angular velocity of new
+      particles in degrees per second." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3986
+    characterIndex: 50
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleEmitter-rndAngularVelocity", "A random angular velocity
+      modifier for new particles." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 3999
+    characterIndex: 58
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleEmitter-rndVelocity", "A random speed along X, Y, and
+      Z that is added to the velocity." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4001
+    characterIndex: 88
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleSystem.CollisionEvent-velocity", "Incident velocity
+      at the intersection point of the collision." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4050
+    characterIndex: 33
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleSystem.CollisionEvent-velocity", "Incident velocity
+      at the intersection point of the collision." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4050
+    characterIndex: 54
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleSystem.Particle-angularVelocity", "The angular velocity
+      of the particle." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4056
+    characterIndex: 58
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleSystem.Particle-velocity", "The velocity of the particle."
+      },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4064
+    characterIndex: 27
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "ParticleSystem.Particle-velocity", "The velocity of the particle."
+      },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4064
+    characterIndex: 43
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Physics-bounceThreshold", "Two colliding objects with a relative
+      velocity below this will not bounce (default 2). Must be positive." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4110
+    characterIndex: 68
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Physics-maxAngularVelocity", "The default maximum angular velocity
+      permitted for any rigid bodies (default 7). Must be positive." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4112
+    characterIndex: 61
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Physics-sleepAngularVelocity", "The default angular velocity,
+      below which objects start sleeping (default 0.14). Must be positive." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4114
+    characterIndex: 55
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Physics-sleepVelocity", "The default linear velocity, below
+      which objects start going to sleep (default 0.15). Must be positive." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4115
+    characterIndex: 47
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Physics2D-angularSleepTolerance", "A rigid-body cannot sleep
+      if its angular velocity is above this tolerance." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4134
+    characterIndex: 79
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Physics2D-linearSleepTolerance", "A rigid-body cannot sleep
+      if its linear velocity is above this tolerance." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4138
+    characterIndex: 77
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Physics2D-velocityThreshold", "Any collisions with a relative
+      linear velocity below this threshold will be treated as inelastic." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4147
+    characterIndex: 72
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody-angularVelocity", "The angular velocity vector of
+      the rigidbody." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4852
+    characterIndex: 44
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody-maxAngularVelocity", "The maximimum angular velocity
+      of the rigidbody. (Default 7) range { 0, infinity }." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4864
+    characterIndex: 57
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody-sleepAngularVelocity", "The angular velocity below
+      which objects start going to sleep. (Default 0.14) range { 0, infinity }."
+      },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4867
+    characterIndex: 49
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody-sleepVelocity", "The linear velocity below which objects
+      start going to sleep. (Default 0.14) range { 0, infinity }." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4868
+    characterIndex: 41
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody-velocity", "The velocity vector of the rigidbody."
+      },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4872
+    characterIndex: 13
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody-velocity", "The velocity vector of the rigidbody."
+      },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4872
+    characterIndex: 29
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody.GetPointVelocity", "The velocity of the rigidbody
+      at the point worldPoint in global space." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4881
+    characterIndex: 37
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody.GetRelativePointVelocity", "The velocity relative
+      to the rigidbody at the point relativePoint." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4882
+    characterIndex: 45
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody2D-angularVelocity", "Angular velocity in degrees per
+      second." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4896
+    characterIndex: 42
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody2D-velocity", "Linear velocity of the rigidbody." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4910
+    characterIndex: 15
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody2D-velocity", "Linear velocity of the rigidbody." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4910
+    characterIndex: 34
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody2D.GetPointVelocity", "The velocity of the rigidbody
+      at the point Point in global space." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4917
+    characterIndex: 39
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "Rigidbody2D.GetRelativePointVelocity", "The velocity of the
+      rigidbody at the point Point in local space." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4919
+    characterIndex: 47
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '{ "RigidbodyInterpolation.Extrapolate", "Extrapolation will predict
+      the position of the rigidbody based on the current velocity." },'
+    assetGuid: 720d77d290f0ac445a82822055639b9d
+    assetPath: Assets/Plugins/Editor/ScriptInspector3/Scripts/UnitySymbols.cs
+    fileName: UnitySymbols.cs
+    line: 4940
+    characterIndex: 119
+    length: 8
+    trimOffset: 0
+    selected: 1
+    resultType: 14
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// Internal method used to compute the spring velocity
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 14
+    characterIndex: 55
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity"></param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 18
+    characterIndex: 25
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 35
+    characterIndex: 25
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 35
+    characterIndex: 37
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 53
+    characterIndex: 25
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 53
+    characterIndex: 37
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 73
+    characterIndex: 25
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 73
+    characterIndex: 37
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 95
+    characterIndex: 25
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: /// <param name="velocity">a velocity value, passed as ref, used
+      to compute the current speed of the springed value</param>
+    assetGuid: fc798aa25d3634ebbb996c8d60ace648
+    assetPath: Assets/Store/NiceTouch/Common/Scripts/MMTools/MMHelpers/MMMaths.cs
+    fileName: MMMaths.cs
+    line: 95
+    characterIndex: 37
+    length: 8
+    trimOffset: 8
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: if (rigidbody.velocity.magnitude > (MaxSpeed * 1000.0f))
+    assetGuid: c565458f43b8ad4469a2ca341c210318
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Game/Spaceship.cs
+    fileName: Spaceship.cs
+    line: 109
+    characterIndex: 26
+    length: 8
+    trimOffset: 12
     selected: 1
     resultType: 3
     rcHighlight:
@@ -820,11 +1682,290 @@ MonoBehaviour:
       y: 0
       width: 0
       height: 0
-  resultsCount: 2
-  filesCount: 1
+  - description: rigidbody.velocity = rigidbody.velocity.normalized * MaxSpeed *
+      1000.0f;
+    assetGuid: c565458f43b8ad4469a2ca341c210318
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Game/Spaceship.cs
+    fileName: Spaceship.cs
+    line: 111
+    characterIndex: 26
+    length: 8
+    trimOffset: 16
+    selected: 1
+    resultType: 2
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: rigidbody.velocity = rigidbody.velocity.normalized * MaxSpeed *
+      1000.0f;
+    assetGuid: c565458f43b8ad4469a2ca341c210318
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Game/Spaceship.cs
+    fileName: Spaceship.cs
+    line: 111
+    characterIndex: 47
+    length: 8
+    trimOffset: 16
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: rigidbody.velocity = Vector3.zero;
+    assetGuid: c565458f43b8ad4469a2ca341c210318
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Game/Spaceship.cs
+    fileName: Spaceship.cs
+    line: 135
+    characterIndex: 22
+    length: 8
+    trimOffset: 12
+    selected: 1
+    resultType: 2
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: rigidbody.velocity = originalDirection * 200.0f;
+    assetGuid: 6321a7d9112988841b7223ac6a925bfc
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Game/Bullet.cs
+    fileName: Bullet.cs
+    line: 26
+    characterIndex: 22
+    length: 8
+    trimOffset: 12
+    selected: 1
+    resultType: 2
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: rigidbody.position += rigidbody.velocity * lag;
+    assetGuid: 6321a7d9112988841b7223ac6a925bfc
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/DemoAsteroids/Scripts/Game/Bullet.cs
+    fileName: Bullet.cs
+    line: 27
+    characterIndex: 44
+    length: 8
+    trimOffset: 12
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: stream.SendNext(this.m_Body.velocity);
+    assetGuid: 64179f3720bbfe947b7724caa67b7c1d
+    assetPath: Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonRigidbodyView.cs
+    fileName: PhotonRigidbodyView.cs
+    line: 65
+    characterIndex: 48
+    length: 8
+    trimOffset: 20
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: this.m_Body.velocity = (Vector3)stream.ReceiveNext();
+    assetGuid: 64179f3720bbfe947b7724caa67b7c1d
+    assetPath: Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonRigidbodyView.cs
+    fileName: PhotonRigidbodyView.cs
+    line: 92
+    characterIndex: 36
+    length: 8
+    trimOffset: 24
+    selected: 1
+    resultType: 2
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: this.m_NetworkPosition += this.m_Body.velocity * lag;
+    assetGuid: 64179f3720bbfe947b7724caa67b7c1d
+    assetPath: Assets/Photon/PhotonUnityNetworking/Code/Views/PhotonRigidbodyView.cs
+    fileName: PhotonRigidbodyView.cs
+    line: 94
+    characterIndex: 62
+    length: 8
+    trimOffset: 24
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: '// control and velocity handling is different when grounded and
+      airborne:'
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 60
+    characterIndex: 18
+    length: 8
+    trimOffset: 3
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: m_Animator.SetFloat("Jump", m_Rigidbody.velocity.y);
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 126
+    characterIndex: 44
+    length: 8
+    trimOffset: 4
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: 'm_GroundCheckDistance = m_Rigidbody.velocity.y < 0 ? m_OrigGroundCheckDistance
+      : 0.01f;'
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 161
+    characterIndex: 39
+    length: 8
+    trimOffset: 3
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower,
+      m_Rigidbody.velocity.z);
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 171
+    characterIndex: 16
+    length: 8
+    trimOffset: 4
+    selected: 1
+    resultType: 2
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower,
+      m_Rigidbody.velocity.z);
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 171
+    characterIndex: 51
+    length: 8
+    trimOffset: 4
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: m_Rigidbody.velocity = new Vector3(m_Rigidbody.velocity.x, m_JumpPower,
+      m_Rigidbody.velocity.z);
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 171
+    characterIndex: 88
+    length: 8
+    trimOffset: 4
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: // we preserve the existing y part of the current velocity.
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 194
+    characterIndex: 54
+    length: 8
+    trimOffset: 4
+    selected: 1
+    resultType: 13
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: v.y = m_Rigidbody.velocity.y;
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 195
+    characterIndex: 22
+    length: 8
+    trimOffset: 4
+    selected: 1
+    resultType: 3
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  - description: m_Rigidbody.velocity = v;
+    assetGuid: d8bc6cf2d5b0fa7468adcfed2d0454aa
+    assetPath: Assets/Photon/PhotonUnityNetworking/Demos/Shared Assets/Scripts/ThirdPersonCharacter.cs
+    fileName: ThirdPersonCharacter.cs
+    line: 196
+    characterIndex: 16
+    length: 8
+    trimOffset: 4
+    selected: 1
+    resultType: 2
+    rcHighlight:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+  resultsCount: 80
+  filesCount: 7
   keepResults: 0
   groupByFile: 1
---- !u!114 &22
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -844,10 +1985,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 377
     y: 73
-    width: 1036
-    height: 578
+    width: 1022
+    height: 546
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: 369d9de129d6d4c4091cc1128677bc07
@@ -860,9 +2001,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.10395002, y: -34.14949, z: 21.263199}
+    m_Target: {x: -17.71878, y: -61.276115, z: 28.906036}
     speed: 2
-    m_Value: {x: 0.10395002, y: -34.14949, z: 21.263199}
+    m_Value: {x: -17.71878, y: -61.276115, z: 28.906036}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -909,13 +2050,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.5732122, y: -0.014536814, z: 0.01026896, w: -0.81927323}
+    m_Target: {x: -0.4281819, y: -0.011982777, z: 0.0057681836, w: -0.90365106}
     speed: 2
-    m_Value: {x: -0.57318425, y: -0.014536105, z: 0.010268459, w: -0.8192333}
+    m_Value: {x: -0.4281601, y: -0.011982167, z: 0.0057678903, w: -0.90360504}
   m_Size:
-    m_Target: 66.70429
+    m_Target: 48.590645
     speed: 2
-    m_Value: 66.70429
+    m_Value: 48.590645
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -940,7 +2081,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &23
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -960,12 +2101,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 749
-    y: 672
-    width: 671
-    height: 327
+    x: 737
+    y: 640
+    width: 662
+    height: 359
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &24
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -985,10 +2126,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 384
+    x: 377
     y: 73
-    width: 1036
-    height: 578
+    width: 1022
+    height: 546
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1004,7 +2145,7 @@ MonoBehaviour:
   m_UseMipMap: 0
   m_VSyncEnabled: 0
   m_Gizmos: 0
-  m_Stats: 1
+  m_Stats: 0
   m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
@@ -1032,29 +2173,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 1036
-      height: 557
-    m_Scale: {x: 0.51574075, y: 0.51574075}
-    m_Translation: {x: 518, y: 278.5}
+      width: 1022
+      height: 525
+    m_Scale: {x: 0.4861111, y: 0.4861111}
+    m_Translation: {x: 511, y: 262.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1004.3806
+      x: -1051.2001
       y: -540
-      width: 2008.7612
+      width: 2102.4001
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.51574075
-  m_LastWindowPixelSize: {x: 1036, y: 578}
+  m_defaultScale: 0.4861111
+  m_LastWindowPixelSize: {x: 1022, y: 546}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &25
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1081,8 +2222,8 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -209668
---- !u!114 &26
+  m_LastSelectedObjectID: 418362
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1179,9 +2320,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: c3a8e5abea05d24418509d5497bf0a55, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 97b438bc097f40d4fb5ff04dbe4ced42, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1999131394386385780, guid: c3a8e5abea05d24418509d5497bf0a55, type: 2}
+  - m_Target: {fileID: 1999131394386385780, guid: 97b438bc097f40d4fb5ff04dbe4ced42, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1194,7 +2335,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &27
+--- !u!114 &24
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1214,12 +2355,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 791
-    y: 734
-    width: 711
-    height: 265
+    x: 738
+    y: 742
+    width: 661
+    height: 257
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &28
+--- !u!114 &25
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1241,15 +2382,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 383
-    height: 578
+    width: 376
+    height: 546
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: dccbfeff66e6feff8a01ffffe002ffffa203ffff1857ffffb658ffff36d9ffff7ae0ffffbef2ffff80f5ffff68fbffff70d100008a560200f6bc0200
+      m_ExpandedIDs: 26dafaff46dafaffbadcfaffd8dcfafff6fefaff1afffaff8001fbffa001fbff4a17fbff6e17fbffd419fbfff419fbff7a2ffbff9e2ffbff0432fbff2432fbff8e50fbffb250fbff1853fbff3853fbff0e7ffbff327ffbff9881fbffb881fbffee9efbff129ffbff78a1fbff98a1fbff10bbfbff34bbfbff9abdfbffbabdfbffccd7fbff70d9fbff94d9fbfff8dbfbff18dcfbff1012fcff7813fcff9813fcff0a16fcff2616fcffac2bfcffd02bfcff442efcff622efcff4a50fcff5250fcffa674fcff5c76fcff8076fcfff278fcff0e79fcffb08ffcff96aafcffb6aafcff10adfcff14adfcff8abbfcffaabbfcff1ebefcff3cbefcff9ed9fcffbed9fcff24dcfcff42dcfcffb2f7fcffd2f7fcff30fafcff38fafcff2605fdff1c0dfdff7a0efdff9a0efdfff410fdfff810fdff3019fdff9a20fdfff821fdff1822fdff7224fdff7624fdff1630fdff7431fdff9431fdffee33fdfff233fdff8a3cfdffaa3cfdff043ffdff083ffdffae45fdff1a47fdff3a47fdff9449fdff9849fdffd258fdff305afdff505afdffae5cfdffb65cfdff746efdffde6ffdfffe6ffdff5872fdff5c72fdff747efdff8e7ffdfff480fdff1481fdff6e83fdff7283fdffd891fdfff891fdff5294fdff5694fdff68b0fdff16b2fdff36b2fdff90b4fdff94b4fdff5ac7fdfff6c8fdff16c9fdff8acbfdffa8cbfdff00ebfdffaaf1fdffcaf1fdff24f4fdff28f4fdffb204feff120ffeff1a16feffbe17feffde17feff381afeff3c1afeff8839feff543bfeff743bfeffce3dfeffd23dfeff6847feff0649feff2649feff804bfeff844bfeffa857feff4a59feff6a59feffc45bfeffc85bfeffae60feff3062feff8a69feff0a6ffeffd870feff1272feff3272feff7674feff9e74feffc275feffba83feff5085feff7085feffc087feffc887feff7a9afeff109cfeff309cfeff8a9efeff8e9efeff86f8feff8a07ffffaa07ffff080affff100affff740affffa612ffff3613ffff5013ffff6e13ffff9e1bffff881cfffff01dffff101effff6a20ffff6e20ffff1632ffff3632ffff8834ffff9034ffffbe3cffffa83dffff9241ffff7c42ffffdc43fffffc43ffff5646ffff5a46ffff7e53ffff9e53fffff855fffffc55ffffc45dffffae5effff0460ffff2460ffff7e62ffff8262ffff5669ffffb06affffd06affff2a6dffff2e6dffff706effff906effffea70ffffee70fffff689ffff168affff708cffff748cffff6e92ffff6e93ffffc494ffffe494ffff3297ffff3697ffffe29fffff02a0ffff74a2ffff90a2ffff32dbffff1cdcffff7addffff9addffffe6dfffffeadfffff68fbfffffe3b0400d65f0400be0505005e580500d0aa050016b505003ab90500f4c30500285206003a62060026a40900
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1273,7 +2414,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 68a4b28cf5a604245824ef3c53215358
---- !u!114 &29
+--- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1293,9 +2434,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1422
+    x: 1401
     y: 73
-    width: 497
+    width: 518
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -1310,7 +2451,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &30
+--- !u!114 &27
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1331,9 +2472,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 672
-    width: 748
-    height: 327
+    y: 640
+    width: 736
+    height: 359
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -1348,22 +2489,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Resources/PhotonPrefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Resources/PhotonPrefabs
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\PC\Documents\GitHub\UnityMultiplay\MultiGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: da530000
-    m_LastClickedID: 21466
-    m_ExpandedIDs: 00000000825300008453000086530000885300008a5300008c5300008e53000090530000925300009453000096530000
+    scrollPos: {x: 0, y: 168}
+    m_SelectedIDs: 8a4f0000
+    m_LastClickedID: 20362
+    m_ExpandedIDs: 000000005a4f00005c4f00005e4f0000604f0000624f0000644f0000664f0000684f00006a4f00006c4f00006e4f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1391,7 +2532,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000825300008453000086530000885300008a5300008c5300008e53000090530000925300009453000096530000
+    m_ExpandedIDs: 000000005a4f00005c4f00005e4f0000604f0000624f0000644f0000664f0000684f00006a4f00006c4f00006e4f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1447,7 +2588,7 @@ MonoBehaviour:
     m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &31
+--- !u!114 &28
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

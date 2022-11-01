@@ -17,8 +17,8 @@ public class MyPlayer : MonoBehaviour
 	private Animator _ani;
 	private Knife _knife;
 	
-	public List<Quest> _lstQuest;
-	public List<Quest> _lstSucQuest;
+	public Quest _quest;
+	public Quest _sucQuest;
 	
 	public Renderer _body;
 	public Renderer _head;
@@ -31,8 +31,14 @@ public class MyPlayer : MonoBehaviour
 	private void Awake()
 	{
 		_pv = GetComponent<PhotonView>();
-		_bodyGhost = Resources.Load<Material>("BodyGhost");
-		_headGhost = Resources.Load<Material>("HeadGhost");
+		if(_pv.IsMine)
+		{
+			_playerController = GetComponent<PlayerController>();
+			_knife = GetComponentInChildren<Knife>();
+			
+			_pv.RPC("SetNickName", RpcTarget.All, PhotonNetwork.NickName);
+			UIManager._Instance.SetTypeUI((_playerType).ToString());
+		}
 	}
 	
 	private void Start()
@@ -41,22 +47,24 @@ public class MyPlayer : MonoBehaviour
 		_ani = GetComponent<Animator>();
 		if(_pv.IsMine)
 		{
-			_playerController = GetComponent<PlayerController>();
-			_knife = GetComponentInChildren<Knife>();
-			_nickName = PhotonNetwork.NickName;
+			_bodyGhost = Resources.Load<Material>("BodyGhost");
+			_headGhost = Resources.Load<Material>("HeadGhost");
+			
+			UIManager._Instance.SetmasterUI();
 		}
 	}
-	
+	bool _ismaster = false;
 	private void Update()
 	{
 		if(_pv.IsMine)
 		{
-			if(Input.GetKeyDown(KeyCode.Space))
-			{
-				_lstSucQuest.Add(_lstQuest[0]);
-				_lstQuest.RemoveAt(0);
-				Debug.LogError("Successed Quest : " + _lstSucQuest[0]._questName);
-			}
+			// 테스트용 코드
+			//if(Input.GetKeyDown(KeyCode.Space))
+			//{
+			//	_lstSucQuest.Add(_lstQuest[0]);
+			//	_lstQuest.RemoveAt(0);
+			//	Debug.LogError("Successed Quest : " + _lstSucQuest[0]._questName);
+			//}
 			
 			if(_playerController._PlayerInput == Vector2.zero)
 			{
@@ -66,9 +74,57 @@ public class MyPlayer : MonoBehaviour
 			{
 				_ani.SetBool("Walk", true);
 			}
+			// 마스터 클라이언트는 바뀐다.
+			if(PhotonNetwork.IsMasterClient && !_ismaster) {
+				UIManager._Instance.SetmasterUI();
+				AI[] ais = GameObject.FindObjectsOfType<AI>();
+				for(int i = 0; i < ais.Length; i++)
+				{
+					ais[i].GetComponent<AI>()._owner = ais[i].GetComponent<PhotonView>().Owner.NickName;
+				}
+				_ismaster = true;
+			}
 		}
 	}
 	
+	// 닉네임 저장
+	[PunRPC]
+	private void SetNickName(string nick)
+	{
+		_nickName = nick;
+	}
+	
+	// 플레이어 역할 바꾸기
+	public void ChangeType(int index)
+	{
+		_pv.RPC("ChangePlayerType", RpcTarget.All, index);
+	}
+	
+	[PunRPC]
+	private void ChangePlayerType(int index)
+	{
+		_playerType = (PlayerType)index;
+		if(_pv.IsMine) UIManager._Instance.SetTypeUI((_playerType).ToString());
+	}
+	
+	// 퀘스트 받기
+	public void QuestTest()
+	{
+		if(_pv.IsMine) 
+		{
+			int questIndex = Random.Range(0, 5);
+			_pv.RPC("GetQuest", RpcTarget.All, questIndex);
+			UIManager._Instance.SetQuestUI(_quest._questName);
+		}
+	}
+	
+	[PunRPC]
+	private void GetQuest(int index)
+	{
+		_quest = GameManager._Instance._lstQuest[index];
+	}
+	
+	// 공격
 	public void Attack()
 	{
 		if(_playerLife == PlayerLife.Alive) _knife.ActiveCollider(true);
@@ -110,7 +166,9 @@ public class MyPlayer : MonoBehaviour
 	{
 		if(_pv.IsMine) 
 		{
-			ObjectPooler._Instance.PoolInstantiate("KillLog").GetComponent<PhotonView>().RPC("SetUp", RpcTarget.All, attacker, _nickName);
+			ObjectPooler._Instance.PoolInstantiate("KillLog")
+				.GetComponent<PhotonView>()
+				.RPC("SetUp", RpcTarget.All, attacker, _nickName);
 		}
 	}
 	
@@ -121,39 +179,6 @@ public class MyPlayer : MonoBehaviour
 		_canAttack = true;
 		_knife.ActiveCollider(false);
 		_playerController._AttackButton.SetOpacity(1f);
-	}
-	
-	[PunRPC]
-	private void GetQuest(int index)
-	{
-		_lstQuest.Add(GameManager._Instance._lstQuest[index]);
-	}
-	
-	[PunRPC]
-	private void ChangePlayerType(int index)
-	{
-		_playerType = (PlayerType)index;
-	}
-	
-	public void QuestTest()
-	{
-		if(_pv.IsMine) _pv.RPC("Quest", RpcTarget.All);
-	}
-	
-	[PunRPC]
-	public void Quest()
-	{
-		if(_pv.IsMine)
-		{
-			int questIndex = Random.Range(0, 5);
-			_pv.RPC("GetQuest", RpcTarget.All, questIndex);
-			UIManager._Instance.SetQuestUI(_lstQuest[0]._questName);
-		}
-	}
-	
-	public void Change(int index)
-	{
-		_pv.RPC("ChangePlayerType", RpcTarget.All, index);
 	}
 	
 	private void ChangeMaterial(Material body, Material head)

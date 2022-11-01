@@ -8,8 +8,11 @@ public class UIManager : MonoBehaviour
 	private PhotonView _pv;
 	public PhotonView _PV { get{return _pv;} }
 	
+	[SerializeField] Text _type;
 	[SerializeField] Text _quest;
+	[SerializeField] Text _master;
 	
+	[Header("KillLog")]
 	[SerializeField] GameObject _killLogPrefab;
 	[SerializeField] Transform _killLogContent;
 	
@@ -39,6 +42,16 @@ public class UIManager : MonoBehaviour
 	public void SetQuestUI(string quest)
 	{
 		_quest.text = quest;
+	}
+	
+	public void SetTypeUI(string type)
+	{
+		_type.text = type;
+	}
+	
+	public void SetmasterUI()
+	{
+		_master.text = PhotonNetwork.MasterClient.NickName.ToString();
 	}
 	
 	//[PunRPC]

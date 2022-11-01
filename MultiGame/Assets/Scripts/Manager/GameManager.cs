@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour
 	public List<Quest> _lstQuest;
 	
 	private PhotonView _pv;
-	private bool _test;
+	// 방장이 정하도록 할 것인가? 아니면 총 인원의 20% 로 자동으로 정해줄 것인가?
+	private const int _policeCount = 1;
 	
 	private static GameManager _instance = null;
 	public static GameManager _Instance
@@ -29,15 +30,61 @@ public class GameManager : MonoBehaviour
 	private void Awake()
 	{
 		_pv = GetComponent<PhotonView>();
-		if(_pv.IsMine)
-		{
-			StartCoroutine("GameReady");
-		}
 	}
 	
 	private void Start()
 	{
+		if(_pv.IsMine)
+		{
+			StartCoroutine("GetCharacterType");
+		}
+	}
+	
+	// 역할 부여하기
+	private IEnumerator GetCharacterType()
+	{
+		// 모든 플레이어 스폰 기다리기
+		int n = PhotonNetwork.CurrentRoom.Players.Count;
+		while(n != _lstPlayer.Count)
+		{
+			yield return new WaitForSeconds(0.03f);
+		}
 		
+		// 역할 부여하기 기본 : 도둑 => 정해진 수만큼 경찰이 배치됨
+		
+		
+		for(int i = 0; i < _policeCount; i++)
+		{
+			int ix = Random.Range(0, _lstPlayer.Count);
+			var player = _lstPlayer[ix];
+			
+			if(player._playerType != PlayerType.POLICE)
+			{
+				player.ChangeType((int)PlayerType.POLICE);
+			}
+			else i--;
+		}
+		
+		_pv.RPC("PlayerSettings", RpcTarget.All);
+	}
+	
+	[PunRPC]
+	private void PlayerSettings()
+	{
+		for(int i = 0; i < _lstPlayer.Count; i++)
+		{
+			MyPlayer player = _lstPlayer[i];
+			
+			if(player._playerType == PlayerType.THIEF)
+			{
+				player.QuestTest();
+				_lstThief.Add(player.gameObject);
+			}
+			else
+			{
+				_lstPolice.Add(player.gameObject);
+			}
+		}
 	}
 	
 	public Quest GetQuest()
@@ -51,46 +98,8 @@ public class GameManager : MonoBehaviour
 		_lstPlayer.Add(player);
 	}
 	
-	private IEnumerator GameReady()
+	private void Update()
 	{
-		while(PhotonNetwork.CurrentRoom.Players.Count != _lstPlayer.Count)
-		{
-			yield return null;
-		}
 		
-		for(int i = 0; i < 1; i++)
-		{
-			var player = _lstPlayer[Random.Range(0, _lstPlayer.Count)];
-			
-			if(player._playerType != PlayerType.POLICE)
-			{
-				player.Change((int)PlayerType.POLICE);
-			}
-			else
-			{
-				i--;
-				continue;
-			}
-		}
-		
-		_pv.RPC("TestSettings", RpcTarget.All);
-	}
-	
-	[PunRPC]
-	private void TestSettings()
-	{
-		for(int i = 0; i < _lstPlayer.Count; i++)
-		{
-			MyPlayer player = _lstPlayer[i];
-			if(player._playerType == PlayerType.THIEF)
-			{
-				player.QuestTest();
-				_lstThief.Add(player.gameObject);
-			}
-			else
-			{
-				_lstPolice.Add(player.gameObject);
-			}
-		}
 	}
 }

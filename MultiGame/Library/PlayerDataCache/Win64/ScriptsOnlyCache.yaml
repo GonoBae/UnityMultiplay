@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - AI
     - AIManager
     - AISettings
-    - AIStateMachine
     - CameraController
     - ChatItem
     - CreationNickName
@@ -55,6 +54,9 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
     PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PhotonAnimatorViewEditor
+    - Photon.Pun.PhotonTransformViewEditor
+    - Photon.Pun.PhotonViewInspector
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
@@ -72,8 +74,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -154,8 +158,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2358}
     - Class: 114
-      Script: {instanceID: 2468}
-    - Class: 114
       Script: {instanceID: 2568}
     - Class: 114
       Script: {instanceID: 2608}
@@ -184,11 +186,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4676}
     - Class: 114
-      Script: {instanceID: 5276}
+      Script: {instanceID: 5274}
     - Class: 114
-      Script: {instanceID: 5396}
+      Script: {instanceID: 5394}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 5552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -355,8 +357,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4536}
     - Class: 114
-      Script: {instanceID: 4596}
-    - Class: 114
       Script: {instanceID: 4600}
     - Class: 114
       Script: {instanceID: 4752}
@@ -365,25 +365,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4840}
     - Class: 114
-      Script: {instanceID: 4928}
+      Script: {instanceID: 4926}
+    - Class: 114
+      Script: {instanceID: 4956}
     - Class: 114
       Script: {instanceID: 4958}
     - Class: 114
-      Script: {instanceID: 4960}
+      Script: {instanceID: 5018}
     - Class: 114
-      Script: {instanceID: 5020}
+      Script: {instanceID: 5080}
     - Class: 114
-      Script: {instanceID: 5082}
+      Script: {instanceID: 5138}
     - Class: 114
-      Script: {instanceID: 5140}
+      Script: {instanceID: 5358}
     - Class: 114
-      Script: {instanceID: 5360}
+      Script: {instanceID: 5492}
     - Class: 114
-      Script: {instanceID: 5494}
+      Script: {instanceID: 5518}
     - Class: 114
-      Script: {instanceID: 5520}
-    - Class: 114
-      Script: {instanceID: 5524}
+      Script: {instanceID: 5522}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1155,7 +1155,7 @@ ScriptsOnlyBuild:
     className: SplinePosition
   - hash:
       serializedVersion: 2
-      Hash: 4fcdecf2c674dd76c98bcfea87628e3e
+      Hash: 4d487942f51bf56cce5527fd6827d9f0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AI
@@ -1875,7 +1875,7 @@ ScriptsOnlyBuild:
     className: CinemachineTouchInputMapper
   - hash:
       serializedVersion: 2
-      Hash: 3f53a41e0a87f81e9613f74d0491acbd
+      Hash: cfdbe2d7f47e189f090d61fad85632db
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FieldOfView
@@ -2019,16 +2019,10 @@ ScriptsOnlyBuild:
     className: EventSystemSpawner
   - hash:
       serializedVersion: 2
-      Hash: b7708b294b0622e92a72de9815664a24
+      Hash: fc3719f0d96fa819393be6a2342e854b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MyPlayer
-  - hash:
-      serializedVersion: 2
-      Hash: 4aa1f47e61522e984a6995f0eb8c3d0d
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuItem
   - hash:
       serializedVersion: 2
       Hash: f0c4eb24258257daca58a9939f0894d2
@@ -2187,7 +2181,7 @@ ScriptsOnlyBuild:
     className: ThirdPersonUserControl
   - hash:
       serializedVersion: 2
-      Hash: ae1ef7dd63c4948a9579bf6da0b337b8
+      Hash: 8483b5e7acfda797f61b5b4bef557a75
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager

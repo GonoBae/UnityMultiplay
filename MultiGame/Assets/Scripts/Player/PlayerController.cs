@@ -102,13 +102,13 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 	
-	private void OnCollisionExit(Collision collisionInfo)
-	{
-		if(_pv.IsMine)
-		{
-			_rb.velocity = Vector3.zero;
-			_rb.angularVelocity = Vector3.zero;
-			_rb.ResetCenterOfMass();
-		}
-	}
+	//private void OnCollisionExit(Collision collisionInfo)
+	//{
+	//	if(_pv.IsMine)
+	//	{
+	//		_rb.velocity = Vector3.zero;
+	//		_rb.angularVelocity = Vector3.zero;
+	//		_rb.ResetCenterOfMass();
+	//	}
+	//}
 }

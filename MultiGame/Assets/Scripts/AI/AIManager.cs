@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using Photon.Pun;
 using System.IO;
 
@@ -19,13 +21,21 @@ public class AIManager : MonoBehaviour
 		{
 			CreateController();
 		}
+		else {
+			Transform parent = FindObjectOfType<AIManager>().transform;
+			AI[] ais = GameObject.FindObjectsOfType<AI>();
+			for(int i = 0; i < ais.Length; i++) {
+				ais[i].transform.SetParent(parent);
+			}
+		}
 	}
 	private LayerMask spawnObjLayer;
-	private float overlapBoxSize = 3f;
+	private float overlapBoxSize = 100f;
 	
 	// AI Spawn
 	private void CreateController()
 	{
+		Transform parent = FindObjectOfType<AIManager>().transform;
 		int num = 0;
 		while(num < _aiNumber)
 		{
@@ -37,7 +47,11 @@ public class AIManager : MonoBehaviour
 			
 			if(numOfColliderFound == 0)
 			{
-				GameObject obj = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "AI"), spawnPos + Vector3.up, Quaternion.identity, 0, new object[] {_pv.ViewID});
+				GameObject obj = PhotonNetwork.InstantiateRoomObject(Path.Combine("PhotonPrefabs", "AI"), spawnPos + Vector3.up, Quaternion.identity, 0, new object[] {_pv.ViewID});
+				if(parent != null)
+				{
+					obj.transform.SetParent(parent);
+				}
 			}
 			
 			num++;

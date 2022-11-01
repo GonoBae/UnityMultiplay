@@ -1,31 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class AI : MonoBehaviour
 {
+	public string _owner;
+	private PhotonView _pv;
 	public AIState _aiState = AIState.NONE;
 	private Rigidbody _rb;
 	private Animator _ani;
 	public Rigidbody _Rb { get{return _rb;} }
 	
-	[SerializeField] private PlayerType _type = PlayerType.AI;
-	[SerializeField] private bool _showGizmos;
-	
 	private FieldOfView _fow;
 	private Quaternion _target;
-	private float _rotSpeed = 30;
 	
 	private void Awake()
 	{
-		_rb = GetComponent<Rigidbody>();
-		_ani = GetComponent<Animator>();
-		_fow = GetComponent<FieldOfView>();
+		_pv = GetComponent<PhotonView>();
+		_owner = _pv.Owner.NickName;
+		if(_pv.IsMine) {
+			_rb = GetComponent<Rigidbody>();
+			_ani = GetComponent<Animator>();
+			_fow = GetComponent<FieldOfView>();
+		}
 	}
 	
 	private void Start()
 	{
-		ChangeState(AIState.Idle);
+		if(_pv.IsMine) {
+			ChangeState(AIState.Idle);
+		}
 	}
 	
 	public void ChangeState(AIState newState)
@@ -40,6 +45,7 @@ public class AI : MonoBehaviour
 	{
 		// 애니메이션 Idle
 		_ani.SetBool("Walk", false);
+		_rb.velocity = Vector3.zero;
 		_rb.angularVelocity = Vector3.zero;
 		int changeTime = Random.Range(3, 5);
 		yield return new WaitForSeconds(changeTime);
@@ -79,7 +85,13 @@ public class AI : MonoBehaviour
 			
 			randomTime += Time.fixedDeltaTime;
 			//Debug.Log("ran : " + randomTime + "lim : " + limitTime);
-			yield return null;			
+			yield return null;
 		}
+	}
+	
+	// 도둑이나 경찰에게 죽었을 때
+	private IEnumerator Dead()
+	{
+		yield return null;
 	}
 }
